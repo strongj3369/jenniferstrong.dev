@@ -20,6 +20,29 @@
     </script>
 
     <style>
+        /* === Global Styles === */
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f0f4f7;
+            font-family: Arial, sans-serif;
+        }
+
+        /* === Responsive Styles === */
         @media only screen and (max-width: 600px) {
             .column {
                 display: block !important;
@@ -31,11 +54,31 @@
             .stack-center {
                 text-align: center !important;
             }
+
+            h1 {
+                font-size: 20px !important;
+            }
+
+            h4 {
+                font-size: 16px !important;
+            }
+
+            p {
+                font-size: 13px !important;
+            }
+
+            td[style*="padding: 30px"] {
+                padding: 20px !important;
+            }
+
+            td[style*="padding: 0 30px 30px"] {
+                padding: 0 15px 20px !important;
+            }
         }
     </style>
 </head>
 
-<body style="margin:0; padding:0; background:#f0f4f7;">
+<body>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f4f7">
         <tr>
             <td align="center">
@@ -46,7 +89,7 @@
                     <!-- Hero Image -->
                     <tr>
                         <td>
-                            <img src="/travel-email/images/header-travel.jpg" alt="Design Destinations" width="600" style="display:block; width:100%; max-width:600px;">
+                            <img src="/travel-email/images/header-travel.jpg" alt="Design Destinations" width="600" style="width:100%; max-width:600px; display:block; border-radius:8px;">
                         </td>
                     </tr>
 
@@ -85,7 +128,7 @@
                                         <p style="margin:0; font-size:14px; color:#555;">Smooth, swipeable, and made to roam.</p>
                                     </td>
                                     <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-4-travel.jpg" alt="safe Harbor" style="width:100%; border-radius:8px; display:block;">
+                                        <img src="/travel-email/images/img-4-travel.jpg" alt="Vaulted Coastline" style="width:100%; border-radius:8px; display:block;">
                                         <h4 style="margin:10px 0 5px;">🏖️ Vaulted Coastline</h4>
                                         <p style="margin:0; font-size:14px; color:#555;">Safe harbor for your content and code.</p>
                                     </td>

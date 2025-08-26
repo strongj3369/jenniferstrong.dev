@@ -1,36 +1,25 @@
 :root {
-    --bg: #fef9f5;
-    --accent: #c76b3e;
-    --dark: #3e2f2f;
-    --highlight: #ffe4c4;
-    --font: 'Quicksand', sans-serif;
+  --bg: #fef9f5;
+  --accent: #c76b3e;
+  --dark: #3e2f2f;
+  --highlight: #ffe4c4;
+  --font: 'Quicksand', sans-serif;
 }
 
-body {
-    margin: 0;
-    font-family: var(--font);
-    background: var(--bg);
-    color: var(--dark);
+* {
+  box-sizing: border-box;
 }
 
-header {
-    background: var(--highlight);
-    padding: 3rem 2rem;
-    text-align: center;
-    position: relative;
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--dark);
+  font-family: var(--font);
+  overflow-x: hidden;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-header p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-/* === Header Image Styling === */
+/* === Header === */
 header {
   background-image: url('/coffee-landing/images/coffee-img1.jpg');
   background-size: cover;
@@ -45,15 +34,15 @@ header {
   align-items: center;
   text-align: center;
   color: white;
+  position: relative;
 }
-
 
 header::before {
   content: "";
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Soft dark overlay */
+  background: rgba(0, 0, 0, 0.4);
   z-index: 0;
 }
 
@@ -62,24 +51,37 @@ header > * {
   z-index: 1;
 }
 
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
+header p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === CTA Button === */
 .cta-button {
-    background: var(--accent);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+  background: var(--accent);
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 
 .cta-button:hover {
-    transform: scale(1.05);
-    background: #a94f2c;
+  transform: scale(1.05);
+  background: #a94f2c;
 }
 
-
+/* === Images === */
 img {
   max-width: 100%;
   height: auto;
@@ -87,7 +89,6 @@ img {
   object-fit: cover;
 }
 
-/* Optional: limit specific image sizes */
 .drink-card img,
 .bundle-card img,
 .testimonial-card img {
@@ -97,7 +98,6 @@ img {
   border-radius: 8px;
 }
 
-/* Avatar-style images */
 .testimonial-card img {
   width: 80px;
   height: 80px;
@@ -105,17 +105,43 @@ img {
   object-fit: cover;
   margin-bottom: 1rem;
 }
-/* 
 
-/* featured drinks section */
+/* === Featured Drinks Grid Fix === */
+.drinks-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 100%;
+}
 
+.drink-card {
+  flex: 1 1 250px;
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
 
+/* === Mobile Breakpoint === */
+@media (max-width: 600px) {
+  .drinks-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
 
+  .drink-card {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
 
+  .drink-card img {
+    max-height: 200px;
+  }
+}
 
-
-
-/* seasonal mood board */
 
 /* === Seasonal Mood Board === */
 .mood-board {
@@ -169,17 +195,12 @@ img {
   transition: transform 0.3s ease;
 }
 
-/* Mood-specific background colors */
 .mood-card.warmth { background: #ffe4c4; }
 .mood-card.spice { background: #c76b3e; color: white; }
-.mood-card.joy { background: #f8ba6d; } /* Updated Joy color: soft cherry blossom pink */
+.mood-card.joy { background: #f8ba6d; }
 .mood-card.depth { background: #3e2f2f; color: white; }
 
-
-
-/* coffee bundles section  */
-
-/* === Bundle Section === */
+/* === Coffee Bundles Section === */
 .bundle-section {
   padding: 3rem 2rem;
   background: #f9f3ee;
@@ -196,14 +217,12 @@ img {
   margin-bottom: 2rem;
 }
 
-/* === Bundle Grid === */
 .bundle-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
 }
 
-/* === Bundle Card === */
 .bundle-card {
   background: white;
   padding: 1.5rem;
@@ -215,7 +234,6 @@ img {
   align-items: center;
 }
 
-/* === Bundle Image === */
 .bundle-card img {
   width: 100%;
   border-radius: 8px;
@@ -224,7 +242,6 @@ img {
   object-fit: cover;
 }
 
-/* === Bundle Text === */
 .bundle-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
@@ -241,12 +258,6 @@ img {
   font-size: 1.1rem;
   color: #c76b3e;
 }
-
-
-
-
-
-/* testimonial section */
 
 /* === Testimonials Section === */
 .testimonial-section {
@@ -282,15 +293,6 @@ img {
   align-items: center;
 }
 
-.testimonial-card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
 .testimonial-card .quote {
   font-style: italic;
   margin-bottom: 0.5rem;
@@ -300,7 +302,6 @@ img {
   font-size: 0.9rem;
   color: #555;
 }
-
 
 /* === Share & Win Section === */
 .share-section {
@@ -318,18 +319,17 @@ img {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
+
 .share-img {
   width: 100%;
-  max-width: 800px;         /* Prevents it from stretching too wide */
-  max-height: 400px;        /* Keeps it from going full billboard */
-  object-fit: cover;        /* Crops artistically to fill space */
+  max-width: 800px;
+  max-height: 400px;
+  object-fit: cover;
   border-radius: 12px;
   margin: 1.5rem auto;
   display: block;
 }
 
-
-/* Optional: Button styling */
 .share-button {
   background: #c76b3e;
   color: white;
@@ -345,9 +345,7 @@ img {
   background: #a94f2c;
 }
 
-
-/* === Footer Styling === */
-/* === Footer Section === */
+/* === Footer === */
 .site-footer {
   background: #3e2f2f;
   color: #f9f3ee;
@@ -355,7 +353,6 @@ img {
   text-align: center;
 }
 
-/* === Footer Images === */
 .site-footer .footer-img {
   width: 60px;
   border-radius: 50%;
@@ -369,7 +366,6 @@ img {
   margin-top: 1rem;
 }
 
-/* === Footer Text === */
 .site-footer p {
   font-size: 1.1rem;
   margin-bottom: 1rem;
@@ -379,35 +375,6 @@ img {
   color: #f9f3ee;
 }
 
-/* === Footer Divider === */
 .site-footer hr {
   border: none;
-  height: 1px;
-  background: #f9f3ee;
-  opacity: 0.2;
-  margin: 1.5rem auto;
-  width: 60%;
-}
-
-/* === Footer Links === */
-.footer-links {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
-
-.footer-links a {
-  color: #f9f3ee;
-  text-decoration: none;
-  margin: 0 0.75rem;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-/* === Copyright Line === */
-.site-footer .copyright {
-  font-size: 0.8rem;
-  margin-top: 1rem;
-  opacity: 0.6;
-}
+  height: 

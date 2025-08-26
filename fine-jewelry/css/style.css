@@ -1,13 +1,16 @@
 /* ===== Base Styles ===== */
-body {
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
   font-family: 'Nunito', sans-serif;
   background: #fffaf5;
   color: #2f2f2f;
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  
+  overflow-x: hidden;
 }
 
 .container {
@@ -15,7 +18,6 @@ body {
   margin: 0 auto;
   padding: 0 2rem;
 }
-
 
 .top-bar {
   background: linear-gradient(to right, #f7e8e2, #fff3ec);
@@ -26,9 +28,7 @@ body {
   border-bottom: 1px solid #e8ded2;
   display: flex;
   justify-content: center;
- 
 }
-
 
 .bar-content {
   max-width: 1100px;
@@ -37,7 +37,6 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-
 
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
@@ -51,7 +50,7 @@ a {
 }
 
 img {
-  max-width: 110%;
+  max-width: 100%;
   height: auto;
   display: block;
   border-radius: 2%;
@@ -66,8 +65,8 @@ img {
   background: #f9f4ee;
   padding: 4rem 2rem;
   gap: 2rem;
-  padding-top: 4rem; /* this is okay */
-  margin-top: 0;     /* make sure it’s not something like 6rem */
+  margin-top: 0;
+  text-align: center;
 }
 
 .hero-inner {
@@ -83,6 +82,7 @@ img {
 
 .hero-text {
   flex: 1 1 400px;
+  padding: 0 1rem;
 }
 
 .hero h1 {
@@ -102,7 +102,6 @@ img {
   object-fit: cover;
 }
 
-
 /* ===== Buttons ===== */
 .cta-button {
   display: inline-block;
@@ -114,6 +113,9 @@ img {
   font-size: 1rem;
   transition: background 0.3s ease, color 0.3s ease;
   text-decoration: none;
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 
 .cta-button:hover {
@@ -130,7 +132,8 @@ img {
 }
 
 /* ===== Story Section ===== */
-.story {
+.story,
+.craft-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -149,44 +152,7 @@ img {
   gap: 2rem;
 }
 
-.story-text {
-  flex: 1 1 400px;
-  padding: 1rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.story-image {
-  flex: 1 1 500px;
-}
-
-.story-image img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-/* ===== Crafted with Purpose Section ===== */
-.craft-story {
-  background: #fffefc;
-  padding: 4rem 2rem;
-  width: 100%;
-}
-
-.craft-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  justify-content: center;
-}
-
+.story-text,
 .craft-text {
   flex: 1 1 400px;
   padding: 1rem 0;
@@ -195,16 +161,12 @@ img {
   justify-content: center;
 }
 
-.craft-text p {
-  color: #5b5048;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-}
-
+.story-image,
 .craft-image {
   flex: 1 1 500px;
 }
 
+.story-image img,
 .craft-image img {
   width: 100%;
   max-width: 500px;
@@ -231,9 +193,8 @@ img {
   padding: 1.5rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
   transition: transform 0.3s ease;
-  min-height: 360px; /* or whatever keeps all cards visually even */
+  min-height: 360px;
 }
-  
 
 .product-card:hover {
   transform: translateY(-5px);
@@ -284,7 +245,6 @@ img {
   border-radius: 50%;
   object-fit: cover;
 }
-
 
 /* ===== Testimonials ===== */
 .testimonials {
@@ -360,6 +320,7 @@ img {
   font-size: 0.95rem;
   color: #5b5048;
   line-height: 1.5;
+  text-align: center;
 }
 
 /* ===== CTA Banner ===== */
@@ -393,6 +354,15 @@ img {
   display: inline-block;
   background: #b99675;
   color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  white-space: nowrap;
+  max-width: 100%;
+  text-align: center;
 }
 
 .cta-button:hover {
@@ -487,5 +457,26 @@ img {
 
   .cta-subtext {
     font-size: 1rem;
+  }
+
+  .cta-button {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .gift-block {
+    padding: 2rem 1rem;
+  }
+
+  .gift-block img {
+    width: 100px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    min-height: auto;
   }
 }

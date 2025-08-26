@@ -1,6 +1,14 @@
+/* === Debug Outline (Optional) === */
+* {
+  outline: 1px solid rgba(255, 0, 0, 0.2); /* Light red outline for debugging */
+  box-sizing: border-box;
+}
+
 /* === Base Styles === */
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   font-family: 'Helvetica Neue', sans-serif;
   background: #f4f4f7;
   color: #2c2c2c;
@@ -24,7 +32,7 @@ header p {
   opacity: 0.85;
 }
 
-
+/* === Section Headings === */
 h2 {
   text-align: center;
   font-size: 1.8rem;
@@ -33,24 +41,29 @@ h2 {
   color: #2c2c2c;
 }
 
-
-
-/* === Email Grid (HTML Email Templates) === */
+/* === Grid Layouts === */
 .email-grid,
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10rem;
-  padding: 2rem 0;
-  align-items: start;
-  max-width: 800px;       /* Constrain total grid width */
-  margin: 0 auto;         /* Center the grid on the page */
+  gap: 4rem;
+  padding: 2rem 1rem;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+  .email-grid,
+  .landing-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
 
 /* === Template Cards === */
 .template-card {
-  width: 100%;            /* Fill the grid column */
+  width: 100%;
   padding: 0.75rem;
   font-size: 0.9rem;
   background: #ffffff;
@@ -58,6 +71,7 @@ h2 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-wrap: break-word;
 }
 
 .template-card:hover {
@@ -67,12 +81,15 @@ h2 {
 
 .template-card img {
   width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 6px;
   margin-bottom: 0.6rem;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
+/* === Card Content === */
 .template-card h3 {
   font-size: 1.1rem;
   margin-bottom: 0.3rem;
@@ -83,19 +100,6 @@ h2 {
   color: #555;
   margin-bottom: 0.8rem;
 }
-
-@media (max-width: 600px) {
-  .email-grid,
-  .landing-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .template-card {
-    padding: 0.75rem;
-  }
-}
-
 
 /* === Tags === */
 .tags {
@@ -124,6 +128,7 @@ h2 {
   border-radius: 6px;
   font-size: 0.85rem;
   transition: background 0.2s ease;
+  white-space: nowrap;
 }
 
 .template-card a:hover {
@@ -134,7 +139,7 @@ h2 {
 .footer-contact {
   background: #2c2c2c;
   color: #f4f4f7;
-  padding: 1rem;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -160,6 +165,7 @@ h2 {
   font-size: 1rem;
   background-color: #f4f4f7;
   color: #2c2c2c;
+  min-width: 0;
 }
 
 textarea {
@@ -188,7 +194,8 @@ button[type="submit"]:hover {
   background: #6c63ff;
 }
 
-
 .footer-credit {
-  margin-top: 3rem; /* Adds space above the credit line */
+  margin-top: 3rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
 }
