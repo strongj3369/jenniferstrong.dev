@@ -1,0 +1,413 @@
+:root {
+    --bg: #fef9f5;
+    --accent: #c76b3e;
+    --dark: #3e2f2f;
+    --highlight: #ffe4c4;
+    --font: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font);
+    background: var(--bg);
+    color: var(--dark);
+}
+
+header {
+    background: var(--highlight);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+/* === Header Image Styling === */
+header {
+  background-image: url('/coffee-landing/images/coffee-img1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 60vh;
+  height: auto;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Soft dark overlay */
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.cta-button {
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background: #a94f2c;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* Optional: limit specific image sizes */
+.drink-card img,
+.bundle-card img,
+.testimonial-card img {
+  width: 100%;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Avatar-style images */
+.testimonial-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+/* 
+
+/* featured drinks section */
+
+
+
+
+
+
+
+/* seasonal mood board */
+
+/* === Seasonal Mood Board === */
+.mood-board {
+  background: #fffaf0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.mood-board h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.mood-board p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.mood-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.mood-card {
+  width: 180px;
+  height: 220px;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.mood-card:hover {
+  transform: translateY(-5px);
+}
+
+.mood-card img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* Mood-specific background colors */
+.mood-card.warmth { background: #ffe4c4; }
+.mood-card.spice { background: #c76b3e; color: white; }
+.mood-card.joy { background: #f8ba6d; } /* Updated Joy color: soft cherry blossom pink */
+.mood-card.depth { background: #3e2f2f; color: white; }
+
+
+
+/* coffee bundles section  */
+
+/* === Bundle Section === */
+.bundle-section {
+  padding: 3rem 2rem;
+  background: #f9f3ee;
+  text-align: center;
+}
+
+.bundle-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.bundle-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+/* === Bundle Grid === */
+.bundle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* === Bundle Card === */
+.bundle-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === Bundle Image === */
+.bundle-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* === Bundle Text === */
+.bundle-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #3e2f2f;
+}
+
+.bundle-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.bundle-card strong {
+  font-size: 1.1rem;
+  color: #c76b3e;
+}
+
+
+
+
+
+/* testimonial section */
+
+/* === Testimonials Section === */
+.testimonial-section {
+  background: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.testimonial-section p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.testimonial-card {
+  background: #fef9f5;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.testimonial-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.testimonial-card .quote {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-card .author {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+/* === Share & Win Section === */
+.share-section {
+  background: #fffaf0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.share-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.share-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.share-img {
+  width: 100%;
+  max-width: 800px;         /* Prevents it from stretching too wide */
+  max-height: 400px;        /* Keeps it from going full billboard */
+  object-fit: cover;        /* Crops artistically to fill space */
+  border-radius: 12px;
+  margin: 1.5rem auto;
+  display: block;
+}
+
+
+/* Optional: Button styling */
+.share-button {
+  background: #c76b3e;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.share-button:hover {
+  background: #a94f2c;
+}
+
+
+/* === Footer Styling === */
+/* === Footer Section === */
+.site-footer {
+  background: #3e2f2f;
+  color: #f9f3ee;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+/* === Footer Images === */
+.site-footer .footer-img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.site-footer .top-icon {
+  margin-bottom: 1rem;
+}
+
+.site-footer .bottom-icon {
+  margin-top: 1rem;
+}
+
+/* === Footer Text === */
+.site-footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.site-footer p strong {
+  color: #f9f3ee;
+}
+
+/* === Footer Divider === */
+.site-footer hr {
+  border: none;
+  height: 1px;
+  background: #f9f3ee;
+  opacity: 0.2;
+  margin: 1.5rem auto;
+  width: 60%;
+}
+
+/* === Footer Links === */
+.footer-links {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: #f9f3ee;
+  text-decoration: none;
+  margin: 0 0.75rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* === Copyright Line === */
+.site-footer .copyright {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  opacity: 0.6;
+}

@@ -1,0 +1,491 @@
+/* ===== Base Styles ===== */
+body {
+  margin: 0;
+  font-family: 'Nunito', sans-serif;
+  background: #fffaf5;
+  color: #2f2f2f;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+
+.top-bar {
+  background: linear-gradient(to right, #f7e8e2, #fff3ec);
+  color: #5b5048;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+  border-bottom: 1px solid #e8ded2;
+  display: flex;
+  justify-content: center;
+ 
+}
+
+
+.bar-content {
+  max-width: 1100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #b99675;
+  margin-bottom: 0.5rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 110%;
+  height: auto;
+  display: block;
+  border-radius: 2%;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  background: #f9f4ee;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  padding-top: 4rem; /* this is okay */
+  margin-top: 0;     /* make sure it’s not something like 6rem */
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1 1 600px;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* ===== Buttons ===== */
+.cta-button {
+  display: inline-block;
+  background: white;
+  color: #b99675;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #f2e8dd;
+  color: #8c6d50;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* ===== Story Section ===== */
+.story {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem 2rem;
+  justify-content: center;
+}
+
+.story-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.story-text {
+  flex: 1 1 400px;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-image {
+  flex: 1 1 500px;
+}
+
+.story-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Crafted with Purpose Section ===== */
+.craft-story {
+  background: #fffefc;
+  padding: 4rem 2rem;
+  width: 100%;
+}
+
+.craft-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.craft-text {
+  flex: 1 1 400px;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.craft-text p {
+  color: #5b5048;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.craft-image {
+  flex: 1 1 500px;
+}
+
+.craft-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Collection Grid ===== */
+.grid {
+  display: grid;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  min-height: 360px; /* or whatever keeps all cards visually even */
+}
+  
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+/* ===== Why We Gift ===== */
+.occasion-grid-elegant {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.occasion-card {
+  background: #fffefc;
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.icon-frame {
+  width: 110px;
+  height: 110px;
+  background: linear-gradient(to right, #f7e8e2, #fff3ec);
+  color: #5b5048;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.04);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-frame img {
+  width: 98px;
+  height: 98px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+/* ===== Testimonials ===== */
+.testimonials {
+  background: #fffefc;
+  padding: 4rem 2rem;
+}
+
+.testimonial-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.testimonial {
+  font-style: italic;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-left: 5px solid #b99675;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Gifting Made Effortless ===== */
+.gifting-ease {
+  background: #f9f4ee;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.gifting-ease h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #b99675;
+}
+
+.gifting-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.gift-block {
+  background: #fffefc;
+  padding: 2.5rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.gift-block img {
+  width: 112px;
+  margin-bottom: 1.2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  border-radius: 10%;
+}
+
+.gift-block h3 {
+  margin: 1rem 0 0.5rem;
+  color: #b99675;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+}
+
+.gift-block p {
+  font-size: 0.95rem;
+  color: #5b5048;
+  line-height: 1.5;
+}
+
+/* ===== CTA Banner ===== */
+.cta-banner {
+  background: linear-gradient(to bottom, #fdf8f2, #f3e9dc);
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cta-banner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #b99675;
+  margin-bottom: 1.5rem;
+}
+
+.cta-subtext {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #5b5048;
+  margin-bottom: 2.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #b99675;
+  color: white;
+}
+
+.cta-button:hover {
+  background: #a78363;
+  transform: translateY(-2px);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: #f9f4ee;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #5b5048;
+  border-top: 1px solid #e7ded5;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0.5rem 0 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.social-icons a {
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(100%) brightness(80%);
+  transition: filter 0.3s ease;
+}
+
+.social-icons img:hover {
+  filter: none;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    padding: 0;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+  }
+
+  .story,
+  .craft-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .story-text,
+  .craft-text {
+    padding: 0;
+  }
+
+  .gifting-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-banner h2 {
+    font-size: 2rem;
+  }
+
+  .cta-subtext {
+    font-size: 1rem;
+  }
+}
