@@ -10,31 +10,19 @@
     <link rel="canonical" href="https://yourdomain.com/design-destinations.html" />
     <meta name="robots" content="noindex, nofollow" />
 
-    <!-- - Google tag (gtag.js)  -->
-
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX593H1MQW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-EX593H1MQW');
     </script>
 
     <style>
-        /* === Global Styles === */
+        /* Global */
         * {
             box-sizing: border-box;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        table {
-            border-collapse: collapse;
         }
 
         body {
@@ -44,80 +32,96 @@
             font-family: Arial, sans-serif;
         }
 
-        /* === Responsive Styles === */
-        @media only screen and (max-width: 600px) {
-        .column {
-            display: block !important;
+        table {
+            border-collapse: collapse;
+        }
+
+        img {
+            display: block;
+            border: 0;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Utility */
+        .stack-center {
+            text-align: center !important;
+        }
+
+        .outer {
+            width: 100%;
+            max-width: 600px;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .hero-img {
             width: 100% !important;
-            max-width: 100% !important;
-            padding: 10px 0 !important;
+            max-width: 600px !important;
+            height: auto !important;
+            border-radius: 8px;
+            display: block;
         }
 
-        .stack-center {
-            text-align: center !important;
+        /* Hybrid columns (works even if media queries are ignored) */
+        .row {
+            font-size: 0;
+            text-align: center;
         }
 
-        h1 {
-            font-size: 20px !important;
+        .col {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            max-width: 270px;
+            /* two columns within ~600px container (with padding) */
         }
 
-        h4 {
-            font-size: 16px !important;
+        .col-inner {
+            padding: 10px;
+            text-align: left;
         }
 
-        p {
-            font-size: 13px !important;
-        }
+        /* Progressive enhancement for clients that do honor media queries */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 20px !important;
+            }
 
-        td[style*="padding: 30px"] {
-            padding: 20px !important;
-        }
+            h4 {
+                font-size: 16px !important;
+            }
 
-        td[style*="padding: 0 30px 30px"] {
-            padding: 0 15px 20px !important;
-        }
-    }
+            p {
+                font-size: 13px !important;
+            }
 
+            td[style*="padding: 30px"] {
+                padding: 20px !important;
+            }
 
-        .stack-center {
-            text-align: center !important;
+            td[style*="padding: 0 30px 30px"] {
+                padding: 0 15px 20px !important;
+            }
         }
-
-        h1 {
-            font-size: 20px !important;
-        }
-
-        h4 {
-            font-size: 16px !important;
-        }
-
-        p {
-            font-size: 13px !important;
-        }
-
-        td[style*="padding: 30px"] {
-            padding: 20px !important;
-        }
-
-        td[style*="padding: 0 30px 30px"] {
-            padding: 0 15px 20px !important;
-        }
-    
     </style>
 </head>
 
 <body>
     <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" bgcolor="#f0f4f7">
         <tr>
-            <td align="center">
+            <td align="center" style="padding:0; margin:0;">
 
                 <!-- Outer container -->
-                <table role="presentation" width="600" cellspacing="0" cellpadding="0" border="0" style="width:600px; max-width:100%; background:#ffffff; font-family:Arial, sans-serif;">
+                <table role="presentation" class="outer" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:600px; background:#ffffff;">
 
                     <!-- Hero Image -->
                     <tr>
-                        <td>
-                            <img src="/travel-email/images/header-travel.jpg" alt="Design Destinations" width="600" style="width:100%; max-width:600px; display:block; border-radius:8px;">
+                        <td style="padding:0;">
+                            <img src="/travel-email/images/header-travel.jpg" alt="Design Destinations" class="hero-img" style="width:100%; max-width:600px; height:auto; display:block; border-radius:8px;">
                         </td>
                     </tr>
 
@@ -133,49 +137,89 @@
                     <tr>
                         <td style="padding: 0 30px 30px;">
                             <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-
-                                <!-- Row 1 -->
                                 <tr>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-1-travel.jpg" alt="Framework Foothills" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🏔️ Framework Foothills</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">Where foundation meets flexibility.</p>
-                                    </td>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-2-travel.jpg" alt="Tag Islands" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🏝️ Tag Islands</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">Navigate your builds like a curated map.</p>
+                                    <td class="row" style="font-size:0; text-align:center;">
+
+                                        <!-- Column 1 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-1-travel.jpg" alt="Framework Foothills" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🏔️ Framework Foothills</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">Where foundation meets flexibility.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Column 2 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-2-travel.jpg" alt="Tag Islands" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🏝️ Tag Islands</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">Navigate your builds like a curated map.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </td>
                                 </tr>
 
-                                <!-- Row 2 -->
                                 <tr>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-3-travel.jpg" alt="Mobile Dunes" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🏜️ Mobile Dunes</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">Smooth, swipeable, and made to roam.</p>
-                                    </td>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-4-travel.jpg" alt="Vaulted Coastline" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🏖️ Vaulted Coastline</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">Safe harbor for your content and code.</p>
+                                    <td class="row" style="font-size:0; text-align:center;">
+
+                                        <!-- Column 3 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-3-travel.jpg" alt="Mobile Dunes" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🏜️ Mobile Dunes</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">Smooth, swipeable, and made to roam.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Column 4 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-4-travel.jpg" alt="Vaulted Coastline" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🏖️ Vaulted Coastline</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">Safe harbor for your content and code.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </td>
                                 </tr>
 
-                                <!-- Row 3 -->
                                 <tr>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-5-travel.jpg" alt="Route 66 Files" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🛣️ Route 66 Files</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">Organize smarter with naming made to travel.</p>
-                                    </td>
-                                    <td class="column" width="50%" valign="top" style="padding:10px;">
-                                        <img src="/travel-email/images/img-6-travel.jpg" alt="Spotlight Summit" style="width:100%; border-radius:8px; display:block;">
-                                        <h4 style="margin:10px 0 5px;">🌄 Spotlight Summit</h4>
-                                        <p style="margin:0; font-size:14px; color:#555;">This week’s featured explorer: Jennifer—charting her own course.</p>
+                                    <td class="row" style="font-size:0; text-align:center;">
+
+                                        <!-- Column 5 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-5-travel.jpg" alt="Route 66 Files" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🛣️ Route 66 Files</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">Organize smarter with naming made to travel.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <!-- Column 6 -->
+                                        <table role="presentation" class="col" cellspacing="0" cellpadding="0" border="0" style="display:inline-block; vertical-align:top; width:100%; max-width:270px;">
+                                            <tr>
+                                                <td class="col-inner" style="padding:10px; text-align:left;">
+                                                    <img src="/travel-email/images/img-6-travel.jpg" alt="Spotlight Summit" style="width:100%; height:auto; border-radius:8px; display:block;">
+                                                    <h4 style="margin:10px 0 5px;">🌄 Spotlight Summit</h4>
+                                                    <p style="margin:0; font-size:14px; color:#555;">This week’s featured explorer: Jennifer—charting her own course.</p>
+                                                </td>
+                                            </tr>
+                                        </table>
+
                                     </td>
                                 </tr>
-
                             </table>
                         </td>
                     </tr>
