@@ -107,40 +107,7 @@ img {
 }
 
 /* === Featured Drinks Grid Fix === */
-.drinks-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  padding: 2rem;
-  margin: 0 auto;
-  max-width: 100%;
-}
 
-.drink-card {
-  flex: 1 1 250px;
-  max-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* === Mobile Breakpoint === */
-@media (max-width: 600px) {
-  .drinks-grid {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .drink-card {
-    width: 100%;
-    margin-bottom: 1.5rem;
-  }
-
-  .drink-card img {
-    max-height: 200px;
-  }
-}
 
 
 /* === Seasonal Mood Board === */
@@ -200,6 +167,9 @@ img {
 .mood-card.joy { background: #f8ba6d; }
 .mood-card.depth { background: #3e2f2f; color: white; }
 
+
+
+
 /* === Coffee Bundles Section === */
 .bundle-section {
   padding: 3rem 2rem;
@@ -258,6 +228,14 @@ img {
   font-size: 1.1rem;
   color: #c76b3e;
 }
+
+
+
+
+
+
+
+
 
 /* === Testimonials Section === */
 .testimonial-section {

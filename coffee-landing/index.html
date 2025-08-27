@@ -13,12 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
 
-    <!-- Google Analytics -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX593H1MQW"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
+
         gtag('config', 'G-EX593H1MQW');
     </script>
 </head>
@@ -32,44 +33,45 @@
         <button class="cta-button">VIEW FULL MENU</button>
     </header>
 
-    <!-- 🎁 Featured Drinks Grid -->
-    <section style="padding: 3rem 2rem; background: #f9f3ee;">
-        <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Featured Drinks</h2>
-        <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">Warm, whimsical, and barista-approved.</p>
-        <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:2rem;">
-            <!-- Drink Cards -->
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img2.jpg" alt="Salted Caramel Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Salted Caramel Latte</h3>
-                <p>Sweet, salty, and unapologetically indulgent.</p>
-            </div>
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img3.jpg" alt="Chai Spiced Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Chai Spiced Latte</h3>
-                <p>Bold spices, warm hugs, and cosmic comfort.</p>
-            </div>
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img4.jpg" alt="Hot Chocolate" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Hot Chocolate</h3>
-                <p>Rich, velvety, and kid-at-heart approved.</p>
-            </div>
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img5.jpg" alt="Latte Art Special" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Latte Art Special</h3>
-                <p>Swirls of joy in every sip.</p>
-            </div>
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img6.jpg" alt="Espresso Rocket" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Espresso Rocket</h3>
-                <p>Bold, fast, and ready for launch.</p>
-            </div>
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img7.jpg" alt="Surprise Sip" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Surprise Sip</h3>
-                <p>Rotating seasonal magic. Ask the barista for today’s vibe.</p>
-            </div>
+<!-- 🎁 Featured Drinks Grid -->
+<section style="padding: 3rem 2rem; background: #f9f3ee;">
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Featured Drinks</h2>
+    <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">Warm, whimsical, and barista-approved.</p>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem;">
+        <!-- Drink Cards -->
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img2.jpg" alt="Salted Caramel Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Salted Caramel Latte</h3>
+            <p>Sweet, salty, and unapologetically indulgent.</p>
         </div>
-    </section>
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img3.jpg" alt="Chai Spiced Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Chai Spiced Latte</h3>
+            <p>Bold spices, warm hugs, and cosmic comfort.</p>
+        </div>
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img4.jpg" alt="Hot Chocolate" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Hot Chocolate</h3>
+            <p>Rich, velvety, and kid-at-heart approved.</p>
+        </div>
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img5.jpg" alt="Latte Art Special" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Latte Art Special</h3>
+            <p>Swirls of joy in every sip.</p>
+        </div>
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img6.jpg" alt="Espresso Rocket" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Espresso Rocket</h3>
+            <p>Bold, fast, and ready for launch.</p>
+        </div>
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img7.jpg" alt="Surprise Sip" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Surprise Sip</h3>
+            <p>Rotating seasonal magic. Ask the barista for today’s vibe.</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- 🌈 Seasonal Mood Board Section -->
     <section class="mood-board">
