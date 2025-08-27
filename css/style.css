@@ -1,8 +1,10 @@
 /* === Debug Outline (Optional) === */
-* {
+ /* {
   outline: 1px solid rgba(255, 0, 0, 0.2); /* Light red outline for debugging */
-  box-sizing: border-box;
-}
+  /* box-sizing: border-box; */
+
+
+
 
 /* === Base Styles === */
 html, body {
