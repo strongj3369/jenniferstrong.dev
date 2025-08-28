@@ -42,16 +42,16 @@ h2 {
   margin-bottom: 1rem;
   color: #2c2c2c;
 }
-
-/* === Grid Layouts === */
+/* === Grid Layouts (Updated) === */
 .email-grid,
 .landing-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   padding: 2rem 1rem;
-  max-width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
+  justify-content: center; /* NEW: centers grid content */
 }
 
 @media (max-width: 768px) {
@@ -60,8 +60,25 @@ h2 {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 1rem;
+    justify-items: center; /* NEW: centers individual cards */
   }
 }
+
+/* === Template Cards (Updated) === */
+.template-card {
+  width: 100%;
+  max-width: 350px; /* NEW: prevents cards from stretching too wide */
+  margin: 0 auto;    /* NEW: centers card within grid cell */
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow-wrap: break-word;
+}
+
 
 /* === Template Cards === */
 .template-card {
