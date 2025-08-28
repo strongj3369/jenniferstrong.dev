@@ -246,6 +246,58 @@ img {
   object-fit: cover;
 }
 
+
+/* crafted with purpose */
+
+
+/* === Crafted with Purpose Section === */
+.craft-story {
+  padding: 3rem 2rem;
+  background: #fdfaf6;
+}
+
+.craft-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.craft-text,
+.craft-image {
+  flex: 1 1 300px;
+  max-width: 600px;
+}
+
+.craft-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.craft-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.cta-link {
+  font-weight: bold;
+  color: #a87c4f;
+  text-decoration: underline;
+}
+
+.craft-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
 /* ===== Testimonials ===== */
 .testimonials {
   background: #fffefc;
