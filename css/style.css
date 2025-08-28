@@ -42,7 +42,12 @@ h2 {
   margin-bottom: 1rem;
   color: #2c2c2c;
 }
+
+
+
 /* === Grid Layouts (Updated) === */
+
+/* === Grid Layouts (tighter centering) === */
 .email-grid,
 .landing-grid {
   display: grid;
@@ -51,7 +56,7 @@ h2 {
   padding: 2rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: center; /* NEW: centers grid content */
+  justify-content: center; /* NEW: center grid tracks within container */
 }
 
 @media (max-width: 768px) {
@@ -60,15 +65,14 @@ h2 {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 1rem;
-    justify-items: center; /* NEW: centers individual cards */
+    justify-items: center;  /* NEW: center items inside each cell */
   }
 }
 
-/* === Template Cards (Updated) === */
+/* === Template Cards (precise centering) === */
 .template-card {
-  width: 100%;
-  max-width: 350px; /* NEW: prevents cards from stretching too wide */
-  margin: 0 auto;    /* NEW: centers card within grid cell */
+  width: min(100%, 340px);  /* NEW: clean width cap */
+  margin: 0 auto;           /* NEW: ensure card centers in the cell */
   padding: 0.75rem;
   font-size: 0.9rem;
   background: #ffffff;
@@ -77,28 +81,12 @@ h2 {
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   overflow-wrap: break-word;
+  box-sizing: border-box;   /* NEW: avoid width calc surprises */
 }
 
-
-/* === Template Cards === */
-.template-card {
-  width: 100%;
-  padding: 0.75rem;
-  font-size: 0.9rem;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  overflow-wrap: break-word;
-}
-
-.template-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-}
-
+/* Ensure images don’t create stray inline spacing */
 .template-card img {
+  display: block;           /* NEW */
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -107,6 +95,14 @@ h2 {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
+
+
+.template-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+
 
 /* === Card Content === */
 .template-card h3 {
@@ -153,6 +149,46 @@ h2 {
 .template-card a:hover {
   background: #6c63ff;
 }
+
+
+/* === Philosophy Section === */
+.philosophy-section {
+  width: 100%;
+  background-color: #fdfaf6; /* soft, warm contrast */
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.philosophy-section-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+
+.philosophy-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #2c2c2c;
+}
+
+.philosophy-section h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #4e4cb8;
+}
+
+.philosophy-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #555;
+}
+
+
 
 /* === Footer === */
 .footer-contact {
@@ -214,7 +250,41 @@ button[type="submit"]:hover {
 }
 
 .footer-credit {
-  margin-top: 3rem;
+  margin-top: 4rem;         /* reduced spacing */
   font-size: 0.85rem;
   opacity: 0.7;
+  text-align: center;
+  padding-bottom: 0rem;     /* adds breathing room at the bottom */
+}
+
+
+.footer-cta {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #f4f4f7;
+  border: 2px solid #6c63ff;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  text-align: center;
+  line-height: 1.6;
+  position: relative;
+}
+
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  45% { transform: rotate(14deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1.5s infinite;
+  transform-origin: 70% 70%;
 }
