@@ -30,16 +30,24 @@
             text-align: center;
         }
 
-        h1 {
+        .thank-you-card {
+            background-color: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .thank-you-card h1 {
             font-size: 2.5rem;
             margin-bottom: 1rem;
         }
 
-        p {
+        .thank-you-card p {
             font-size: 1.2rem;
             margin-bottom: 2rem;
             opacity: 0.9;
-            max-width: 600px;
         }
 
         .btn {
@@ -68,21 +76,41 @@
             text-align: center;
         }
 
+        .emoji {
+            display: inline-block;
+            animation: pulse 1.5s infinite;
+            transform-origin: center;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="page-wrapper">
         <div class="thank-you-container">
-            <h1>Message Sent!</h1>
-            <p>Thanks for reaching out. Your message has been received, and I’ll be in touch soon.</p>
-            <a href="index.html" class="btn">Return to Home</a>
+            <div class="thank-you-card">
+                <h1><span class="emoji">💌</span></h1>
+                <p>Thanks for reaching out. Your message has been received, and I’ll be in touch soon.</p>
+                <a href="index.html" class="btn">Return to Home</a>
+            </div>
         </div>
 
         <footer class="footer-credit">
             <p>Created with love ❤️ by Jennifer Strong © 2025</p>
         </footer>
-
     </div>
 </body>
 

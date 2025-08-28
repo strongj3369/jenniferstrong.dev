@@ -154,40 +154,48 @@ h2 {
 /* === Philosophy Section === */
 .philosophy-section {
   width: 100%;
-  background-color: #fdfaf6; /* soft, warm contrast */
-  padding: 4rem 2rem;
-  text-align: center;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  background-color: #fdfaf6;
+  padding: 3rem 1rem;
+  box-sizing: border-box;
 }
 
 .philosophy-section-inner {
   max-width: 900px;
   margin: 0 auto;
-  border-radius: 12px;
+  padding: 0 1rem;
+  text-align: center;
 }
 
-
 .philosophy-section h2 {
-  font-size: 2.2rem;
+  font-size: clamp(1.6rem, 5vw, 2rem);
   margin-bottom: 1rem;
   color: #2c2c2c;
 }
 
-.philosophy-section h3 {
-  font-size: 1.5rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #4e4cb8;
-}
-
 .philosophy-section p {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 4vw, 1.1rem);
   line-height: 1.6;
-  max-width: 700px;
-  margin: 0 auto 1.5rem;
   color: #555;
+  margin: 0 auto;
+  max-width: 700px;
+  padding: 0 0.5rem;
 }
 
+
+@media (max-width: 600px) {
+  .philosophy-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .philosophy-section h3 {
+    font-size: 1.2rem;
+  }
+
+  .philosophy-section p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+}
 
 
 /* === Footer === */
