@@ -34,6 +34,106 @@ header p {
   opacity: 0.85;
 }
 
+/* creative compass */
+.creative-compass {
+  background-color: #fefefe;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.compass-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.compass-inner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.compass-inner .intro,
+.compass-inner .closing {
+  font-size: 1.2rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.creative-compass {
+  background-color: #fefefe;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.compass-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.compass-inner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.compass-inner .intro,
+.compass-inner .closing {
+  font-size: 1.2rem;
+  margin: 1.5rem auto;
+  max-width: 700px;
+  line-height: 1.6;
+  color: #444;
+}
+
+.compass-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.compass-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+}
+
+.compass-card:hover {
+  transform: translateY(-5px);
+}
+
+.compass-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.compass-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive stacking on smaller screens */
+@media (max-width: 1024px) {
+  .compass-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .compass-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* === Section Headings === */
 h2 {
   text-align: center;
