@@ -51,84 +51,80 @@ img {
 
 
 
-/* Section 1: Hero */
+/* ===== Full-Cover Hero Section ===== */
 .hero-wellness {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 40px;
-  background: linear-gradient(to bottom right, #fce4ec, #e3f2fd);
-  gap: 40px;
-}
-
-.hero-content {
-  flex: 1 1 500px;
-  max-width: 600px;
-  text-align: center;
-}
-
-.hero-content h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
-}
-
-.hero-content h2 {
-  font-size: 1.5rem;
-  font-weight: 400;
-  margin-bottom: 20px;
-  color: #0077b6;
-}
-
-.hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-  color: #555;
-}
-
-.tagline {
-  font-weight: bold;
-  color: #ff6f61;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.cta-button {
-  background-color: #ff4d4d;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  white-space: nowrap;
-  max-width: 100%;
-  text-align: center;
-}
-
-.cta-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(255, 77, 77, 0.3);
-}
-
-/* Hero Image */
-.hero-image {
-  flex: 1 1 400px;
-  background-image: url('/solace-landing/images/solace-image1.jpg');
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('/images/solace-image1.jpg');
   background-size: cover;
   background-position: center;
-  min-height: 675px;
-  border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 6rem 2rem 2rem;
+  color: #ffffff;
 }
 
-/* Mobile Fixes */
-@media screen and (max-width: 768px) {
+/* Overlay */
+.hero-wellness::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+/* Text Box */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #f5e9dc;
+  margin-top: 2rem;
+  margin-left: 8%;
+  margin-right: 10%;
+}
+
+/* Headline */
+.hero-content h1 {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #f5e9dc;
+}
+
+/* Subheadline */
+.hero-content h2 {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  color: #e8d9c5;
+}
+
+/* Tagline */
+.tagline {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffbfa3;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
   .hero-wellness {
-    flex-direction: column-reverse;
-    padding: 40px 20px;
+    height: 80vh;
+    padding: 4rem 1.5rem 2rem;
+    background-position: top center;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin: 1rem auto 0;
+    padding: 1.5rem;
     text-align: center;
   }
 
@@ -137,24 +133,14 @@ img {
   }
 
   .hero-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  .cta-button {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .hero-image {
-    width: 100%;
-    min-height: 250px;
-    margin-top: 20px;
+  .tagline {
+    font-size: 0.95rem;
   }
 }
+
 
 
 
@@ -313,186 +299,38 @@ img {
 }
 
 
-.health-guide-expanded {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
 
-.health-guide-expanded h2 {
-  font-size: 2rem;
-  color: #0077b6;
-  margin-bottom: 10px;
-}
-
-.health-guide-expanded h3 {
-  font-size: 1.4rem;
-  color: #ff6f61;
-  margin-bottom: 20px;
-}
-
-.guide-intro {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #444;
-  margin-bottom: 30px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* === Learn Button === */
-.learn-button {
-  background-color: #ff4d4d;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-.learn-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(255, 77, 77, 0.3);
-}
-
-/* === Guide Topics Grid === */
-.guide-topics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  justify-content: center;
-}
-
-.topic-card {
-  background: #e3f2fd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.topic-card img.topic-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 0 6px rgba(0, 119, 182, 0.15);
-  object-fit: cover;
-}
-
-.topic-card p {
-  font-size: 1rem;
-  color: #0077b6;
-  margin: 0;
-}
-
-/* === Mobile Fixes === */
-@media screen and (max-width: 600px) {
-  .guide-topics {
-    grid-template-columns: 1fr;
-    padding: 0;
-  }
-
-  .topic-card img.topic-img {
-    max-width: 100%;
-    margin: 0 auto 10px;
-  }
-
-  .topic-card {
-    padding: 20px 10px;
-  }
-}
-
-
-
-
-/* === Section 5: Testimonials === */
+/* Section 5: Testimonials + Health Guide */
 .solace-testimonials {
-  padding: 60px 20px;
+  padding: 60px 40px;
   background-color: #f0f4f8;
   text-align: center;
 }
-
 .testimonial-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  justify-content: center;
-  max-width: 1000px;
-  margin: 0 auto;
+  margin-bottom: 40px;
 }
-
 .testimonial-card {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 30px;
-  max-width: 400px;
-  flex: 1 1 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-
 .quote {
   font-style: italic;
-  font-size: 1.1rem;
-  color: #444;
   margin-bottom: 10px;
 }
-
 .author {
   font-weight: 500;
   color: #0077b6;
-  margin-bottom: 10px;
 }
-
 .stars {
   color: #ffcc00;
   font-size: 1.2rem;
 }
 
-/* === Mobile Fixes === */
-@media screen and (max-width: 600px) {
-  .testimonial-grid {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0;
-  }
-
-  .testimonial-card {
-    max-width: 100%;
-    padding: 20px;
-  }
-
-  .quote {
-    font-size: 1rem;
-  }
-
-  .author {
-    font-size: 0.95rem;
-  }
-
-  .stars {
-    font-size: 1.1rem;
-  }
-}
-
-
-/* === Section 5: Health Guide Expanded === */
 .health-guide-expanded {
   text-align: center;
   padding: 60px 20px;
@@ -521,79 +359,6 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
-.learn-button {
-  background-color: #ff4d4d;
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin-bottom: 40px;
-  display: inline-block;
-}
-
-.learn-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(255, 77, 77, 0.3);
-}
-
-/* === Guide Topics Grid === */
-.guide-topics {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  justify-content: center;
-}
-
-.topic-card {
-  background: #e3f2fd;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.topic-card img.topic-img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  box-shadow: 0 0 0 6px rgba(0, 119, 182, 0.15);
-  object-fit: cover;
-}
-
-.topic-card p {
-  font-size: 1rem;
-  color: #0077b6;
-  margin: 0;
-}
-
-/* === Mobile Fixes === */
-@media screen and (max-width: 600px) {
-  .guide-topics {
-    grid-template-columns: 1fr;
-    padding: 0;
-  }
-
-  .topic-card img.topic-img {
-    max-width: 100%;
-    margin: 0 auto 10px;
-  }
-
-  .topic-card {
-    padding: 20px 10px;
-  }
-}
-
-
 
 .learn-button {
   background-color: #ff4d4d;
@@ -642,15 +407,6 @@ img {
   color: #0077b6;
   margin: 0;
 }
-
-
-
-
-
-
-
-
-
 
 
 
