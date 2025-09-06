@@ -33,58 +33,64 @@
         <button class="cta-button">VIEW FULL MENU</button>
     </header>
 
-    
-    <!-- 🎁 Featured Drinks Grid -->
-    <section style="padding: 3rem 2rem; background: #f9f3ee;">
-        <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Featured Drinks</h2>
-        <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">Warm, whimsical, and barista-approved.</p>
-    
-        <div style="
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        ">
+<!-- 🎁 Featured Drinks Grid -->
+<section style="padding: 3rem 2rem; background: #f9f3ee;">
+    <h2 style="text-align:center; font-size:2rem; margin-bottom:1rem;">Featured Drinks</h2>
+    <p style="text-align:center; font-size:1.1rem; margin-bottom:2rem;">Warm, whimsical, and barista-approved.</p>
 
+    <style>
+        @media (max-width: 768px) {
+            .drink-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 
-            <!-- Drink Cards -->
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img2.jpg" alt="Salted Caramel Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Salted Caramel Latte</h3>
-                <p>Sweet, salty, and unapologetically indulgent.</p>
-            </div>
-    
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img3.jpg" alt="Chai Spiced Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Chai Spiced Latte</h3>
-                <p>Bold spices, warm hugs, and cosmic comfort.</p>
-            </div>
-    
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img4.jpg" alt="Hot Chocolate" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Hot Chocolate</h3>
-                <p>Rich, velvety, and kid-at-heart approved.</p>
-            </div>
-    
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img5.jpg" alt="Latte Art Special" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Latte Art Special</h3>
-                <p>Swirls of joy in every sip.</p>
-            </div>
-    
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img6.jpg" alt="Espresso Rocket" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Espresso Rocket</h3>
-                <p>Bold, fast, and ready for launch.</p>
-            </div>
-    
-            <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
-                <img src="/coffee-landing/images/coffee-img7.jpg" alt="Surprise Sip" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
-                <h3>Surprise Sip</h3>
-                <p>Rotating seasonal magic. Ask the barista for today’s vibe.</p>
-            </div>
+    <div class="drink-grid" style="
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  ">
+
+        <!-- Drink Cards -->
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img2.jpg" alt="Salted Caramel Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Salted Caramel Latte</h3>
+            <p>Sweet, salty, and unapologetically indulgent.</p>
         </div>
-    </section>
 
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img3.jpg" alt="Chai Spiced Latte" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Chai Spiced Latte</h3>
+            <p>Bold spices, warm hugs, and cosmic comfort.</p>
+        </div>
+
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img4.jpg" alt="Hot Chocolate" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Hot Chocolate</h3>
+            <p>Rich, velvety, and kid-at-heart approved.</p>
+        </div>
+
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img5.jpg" alt="Latte Art Special" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Latte Art Special</h3>
+            <p>Swirls of joy in every sip.</p>
+        </div>
+
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img6.jpg" alt="Espresso Rocket" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Espresso Rocket</h3>
+            <p>Bold, fast, and ready for launch.</p>
+        </div>
+
+        <div style="background:white; padding:1.5rem; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.1); text-align:center;">
+            <img src="/coffee-landing/images/coffee-img7.jpg" alt="Surprise Sip" style="width:100%; border-radius:8px; margin-bottom:1rem;" />
+            <h3>Surprise Sip</h3>
+            <p>Rotating seasonal magic. Ask the barista for today’s vibe.</p>
+        </div>
+
+    </div>
+</section>
 
 
 
