@@ -396,3 +396,16 @@ button[type="submit"]:hover {
   animation: wave 1.5s infinite;
   transform-origin: 70% 70%;
 }
+
+
+.footer-email-link {
+  color: #6c63ff; /* base purple */
+  text-decoration: underline;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-email-link:hover {
+  color: #e88ab0; /* lighter lavender-purple for hover */
+}

@@ -322,13 +322,13 @@ img {
 .share-button:hover {
   background: #a94f2c;
 }
-
 /* === Footer === */
 .site-footer {
   background: #3e2f2f;
   color: #f9f3ee;
-  padding: 2rem 1.5rem;
+  padding: 3rem 1.5rem;
   text-align: center;
+  min-height: 200px;
 }
 
 .site-footer .footer-img {
@@ -355,4 +355,32 @@ img {
 
 .site-footer hr {
   border: none;
-  height: 
+  height: 1px;
+  background-color: #f9f3ee;
+  margin: 1.5rem auto;
+  width: 80%;
+}
+
+.site-footer .footer-nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.site-footer .footer-nav a {
+  color: #f9f3ee;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.site-footer .footer-nav a:hover {
+  color: #e88ab0; /* soft pink hover */
+}
+
+.site-footer .footer-credit {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

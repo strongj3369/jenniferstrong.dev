@@ -37,33 +37,33 @@
         <p>Modular, joyful, and built with clarity & creativity ✨</p>
     </header>
 
-<section class="creative-compass">
-    <div class="compass-inner">
-        <h2>✨ Creative Compass</h2>
-        <p class="intro">Before the grids and gradients, before the buttons and breakpoints—there’s intention.</p>
+    <section class="creative-compass">
+        <div class="compass-inner">
+            <h2>✨ Creative Compass</h2>
+            <p class="intro">Before the grids and gradients, before the buttons and breakpoints—there’s intention.</p>
 
-        <div class="compass-columns">
-            <div class="compass-card">
-                <h3>🧠 Clarity</h3>
-                <p>I strip away noise to make space for meaning. Every layout begins with a clear purpose.</p>
+            <div class="compass-columns">
+                <div class="compass-card">
+                    <h3>🧠 Clarity</h3>
+                    <p>I strip away noise to make space for meaning. Every layout begins with a clear purpose.</p>
+                </div>
+                <div class="compass-card">
+                    <h3>💖 Emotional Intelligence</h3>
+                    <p>Design should feel good—for the end user and the team I build with: empathy, warmth, and resonance.</p>
+                </div>
+                <div class="compass-card">
+                    <h3>🧱 Modularity</h3>
+                    <p>Systems that scale, components that flex. I build for reuse, reimagining, and joyful iteration.</p>
+                </div>
+                <div class="compass-card">
+                    <h3>📍 Real-World Impact</h3>
+                    <p>Every pixel has a job. I design to teach, inspire, and solve—whether it’s a promo card or a patient portal.</p>
+                </div>
             </div>
-            <div class="compass-card">
-                <h3>💖 Emotional Intelligence</h3>
-                <p>Design should feel good—for the end user and the team I build with: empathy, warmth, and resonance.</p>
-            </div>
-            <div class="compass-card">
-                <h3>🧱 Modularity</h3>
-                <p>Systems that scale, components that flex. I build for reuse, reimagining, and joyful iteration.</p>
-            </div>
-            <div class="compass-card">
-                <h3>📍 Real-World Impact</h3>
-                <p>Every pixel has a job. I design to teach, inspire, and solve—whether it’s a promo card or a patient portal.</p>
-            </div>
+
+            <p class="closing">This is my compass. It guides every template, every touchpoint, every moment of creative care.</p>
         </div>
-
-        <p class="closing">This is my compass. It guides every template, every touchpoint, every moment of creative care.</p>
-    </div>
-</section>
+    </section>
 
 
 
@@ -196,18 +196,32 @@
             <input type="hidden" name="_next" value="https://jenniferstrong.dev/thank-you.html">
 
             <div class="form-row">
-                <input type="text"
-                        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-      </div>
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
 
-      <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+            <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
+            <button type="submit">Send Message</button>
+        </form>
 
-    <p class="footer-credit">Created with love 💗 by Jennifer Strong</p>
-  </footer>
+        <!-- Email Link with GA4 Tracking -->
+        <p style="text-align:center; margin-top:1rem;">
+            Or reach out directly:
+            <a href="mailto:jstrong264@gmail.com" onclick="console.log('Email link clicked'); gtag('event', 'email_click', {
+     event_category: 'engagement',
+     event_label: 'Footer Email Link'
+   });" class="footer-email-link">
+                jstrong264@gmail.com
+            </a>
+
+
+
+        </p>
+
+        <p class="footer-credit">Created with love 💗 by Jennifer Strong</p>
+    </footer>
+
 </body>
 
 </html>
