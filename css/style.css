@@ -184,7 +184,7 @@ h2 {
   box-sizing: border-box;   /* NEW: avoid width calc surprises */
 }
 
-/* Ensure images don’t create stray inline spacing */
+/* Ensure images don't create stray inline spacing */
 .template-card img {
   display: block;           /* NEW */
   width: 100%;
@@ -408,4 +408,98 @@ button[type="submit"]:hover {
 
 .footer-email-link:hover {
   color: #e88ab0; /* lighter lavender-purple for hover */
+}
+
+
+/* === Extended Code Featured Project Section === */
+.extended-code-section {
+  background: #f9f9f9;
+  padding: 4rem 2rem;
+  margin: 0;
+}
+
+.extended-code-section h2 {
+  font-size: 2.5rem;
+  color: #2c2c2c;
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+.extended-code-section .subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  text-align: left;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.extended-code-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 12px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.extended-code-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.extended-code-content .tech-stack {
+  font-size: 1rem;
+  color: #666;
+  margin: 1.5rem 0;
+  font-style: italic;
+}
+
+.extended-code-content .intention {
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 0.5rem;
+}
+
+.extended-code-cta {
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.extended-code-cta a {
+  display: inline-block;
+  padding: 0.9rem 2rem;
+  background: #4e4cb8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.extended-code-cta a:hover {
+  background: #6c63ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(78, 76, 184, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .extended-code-section {
+    padding: 3rem 1rem;
+  }
+  
+  .extended-code-section h2 {
+    font-size: 2rem;
+  }
+  
+  .extended-code-content {
+    padding: 1.5rem;
+  }
+  
+  .extended-code-content p {
+    font-size: 1rem;
+  }
 }
