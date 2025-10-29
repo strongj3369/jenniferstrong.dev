@@ -415,92 +415,103 @@ button[type="submit"]:hover {
 .project-card {
   background: white;
   border-radius: 12px;
-  padding: 2.5rem;
+  padding: 3rem;
   margin: 4rem auto;
-  max-width: 1200px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
   width: 100%;
-  max-width: 800px;
+  max-width: 600px;
   height: auto;
   border-radius: 8px;
-  margin: 0 auto 2rem;
+  margin: 0 auto 2.5rem;
   display: block;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .project-card h3 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   color: #2c2c2c;
-  margin-bottom: 0.5rem;
-}
-
-.project-label {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 2rem;
-  font-weight: 500;
-}
-
-.project-card p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 1.5rem;
-}
-
-.design-philosophy {
-  background: #f9f9f9;
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid #4e4cb8;
-  margin: 2rem 0;
-}
-
-.design-philosophy strong {
-  color: #2c2c2c;
+  margin-bottom: 0.3rem;
   font-weight: 600;
 }
 
-.project-tech {
+.project-label {
   font-size: 1rem;
-  color: #666;
-  font-style: italic;
+  color: #6c63ff;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.project-card > p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.design-philosophy {
+  background: linear-gradient(135deg, #f0f0ff 0%, #e8e8ff 100%);
+  padding: 1.5rem 2rem;
+  border-radius: 10px;
+  border-left: 5px solid #4e4cb8;
   margin: 2rem 0;
+  font-size: 1.05rem;
+}
+
+.design-philosophy strong {
+  color: #4e4cb8;
+  font-weight: 700;
+}
+
+.project-tech {
+  font-size: 0.95rem;
+  color: #888;
+  font-style: italic;
+  margin: 2rem 0 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
 }
 
 .project-link {
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 1rem 2.5rem;
   background: #4e4cb8;
   color: white;
   text-decoration: none;
   border-radius: 8px;
   font-size: 1.1rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(78, 76, 184, 0.3);
 }
 
 .project-link:hover {
   background: #6c63ff;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(78, 76, 184, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(78, 76, 184, 0.4);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .project-card {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     margin: 2rem 1rem;
   }
   
   .project-card h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   
-  .project-card p {
+  .project-card > p {
     font-size: 1rem;
+  }
+  
+  .design-philosophy {
+    padding: 1.2rem 1.5rem;
   }
 }
