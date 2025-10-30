@@ -413,10 +413,11 @@ button[type="submit"]:hover {
 
 /* === Extended Code Project Grid === */
 .funnel-footer-feature {
-  background: #fdfaf6;
-  padding: 4rem 2rem;
-  border-top: 2px solid #eee;
+  background-color: #ffffff;
+  padding: 4rem 2rem 6rem;
+  border-top: 1px solid #eaeaea; /* optional soft divider */
 }
+
 
 .funnel-content {
   display: flex;
@@ -434,7 +435,7 @@ button[type="submit"]:hover {
 
 .funnel-image img {
   width: 100%;
-  max-width: 480px; /* cap the size */
+  max-width: 480px;
   height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
