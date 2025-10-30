@@ -434,10 +434,16 @@ button[type="submit"]:hover {
 
 .funnel-image img {
   width: 100%;
+  max-width: 480px; /* cap the size */
   height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 auto;
 }
+
 
 .funnel-text {
   flex: 1;
@@ -501,3 +507,15 @@ button[type="submit"]:hover {
     padding: 0.9rem 1.8rem;
   }
 }
+
+@media (max-width: 768px) {
+  .funnel-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .funnel-image img {
+    margin-bottom: 2rem;
+  }
+}
+
