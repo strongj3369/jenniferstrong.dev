@@ -16,6 +16,15 @@ html, body {
   color: #2c2c2c;
 }
 
+/* === Section Layout === */
+section {
+  padding: 5rem 2rem;
+}
+
+section:not(:last-child) {
+  border-bottom: 1px solid #eaeaea;
+}
+
 /* === Header === */
 .hero {
   background-color: #1a1a1a;
@@ -68,6 +77,8 @@ html, body {
   background-color: #e04e4e;
   transform: translateY(-2px);
 }
+
+
 
 /* === Creative Compass Section === */
 .creative-compass {
@@ -134,23 +145,36 @@ html, body {
 .closing {
   text-align: center;
   font-size: 1.2rem;
-  margin: 3rem auto 0;
+  margin: 3rem auto 4rem; /* added bottom margin */
   max-width: 640px;
   color: #444;
   font-style: italic;
   opacity: 0.9;
 }
 
+
+/* H2 headers */
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c2c2c;
+}
+
+
+
 /* === Template Grids (Email + Landing) === */
 .email-grid,
 .landing-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+  grid-template-columns: 1fr;
+  gap: 3rem;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 700px;
   margin: 0 auto;
 }
+
 
 .template-card {
   width: 100%;
