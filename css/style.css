@@ -4,6 +4,9 @@
   /* box-sizing: border-box; */
 
 
+html {
+  scroll-behavior: smooth;
+}
 
 
 /* === Base Styles === */
@@ -16,9 +19,6 @@ html, body {
   color: #2c2c2c;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 /* === Section Layout === */
 section {
