@@ -440,17 +440,18 @@ button[type="submit"]:hover {
 
 /* === Extended Code Section - Enhanced === */
 
+/* === Extended Code Section - Clean & Modern === */
+
 .funnel-footer-feature {
-  background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+  background-color: #ffffff;
   padding: 6rem 2rem;
-  border-top: 3px solid #6c63ff;
-  position: relative;
+  border-top: 1px solid #eaeaea;
 }
 
 .funnel-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 5rem;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
@@ -463,124 +464,107 @@ button[type="submit"]:hover {
 
 .funnel-image img {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   height: auto;
   object-fit: contain;
-  border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(108, 99, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   display: block;
   margin: 0 auto;
-  border: 2px solid #6c63ff;
 }
 
 .funnel-text {
   flex: 1;
   min-width: 320px;
-  text-align: left;
 }
 
 .funnel-text h2 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1.25rem;
   color: #2c2c2c;
   line-height: 1.2;
   font-weight: 700;
 }
 
-.value-prop {
-  font-size: 1.2rem;
+.intro-text {
+  font-size: 1.15rem;
   line-height: 1.7;
-  color: #444;
-  margin-bottom: 2rem;
-  font-weight: 400;
+  color: #555;
+  margin-bottom: 2.5rem;
 }
 
-/* Benefits Box */
-.benefits-box {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-left: 4px solid #6c63ff;
+/* Benefits List */
+.benefits-list {
+  margin-bottom: 2.5rem;
 }
 
-.benefits-box h3 {
-  font-size: 1.4rem;
-  margin-bottom: 1rem;
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: flex-start;
+}
+
+.benefit-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.benefit-item strong {
+  display: block;
+  font-size: 1.1rem;
   color: #2c2c2c;
+  margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
-.funnel-benefits {
-  list-style: none;
-  padding: 0;
+.benefit-item p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
   margin: 0;
 }
 
-.funnel-benefits li {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 0.75rem;
-  padding-left: 0;
-}
-
-.funnel-benefits li strong {
-  color: #2c2c2c;
-  font-weight: 600;
-}
-
-/* CTA Box */
-.cta-box {
-  background: linear-gradient(135deg, #6c63ff 0%, #5b59d8 100%);
-  border-radius: 16px;
-  padding: 2.5rem;
+/* CTA Area */
+.early-access-cta {
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f0ff 100%);
+  border-radius: 12px;
+  padding: 2rem;
   text-align: center;
-  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.3);
-  position: relative;
+  border: 2px solid #e8e6ff;
 }
 
-.urgency-text {
-  font-size: 1.15rem;
-  color: #ffffff;
-  margin-bottom: 1.5rem;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.urgency-text strong {
-  font-weight: 700;
-  text-decoration: underline;
+.cta-label {
+  font-size: 1.1rem;
+  color: #4e4cb8;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 .primary-cta {
   display: inline-block;
-  padding: 1.25rem 3rem;
-  background: #ffffff;
-  color: #5b59d8;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #5b59d8 0%, #6c63ff 100%);
+  color: #ffffff;
   text-decoration: none;
   border-radius: 50px;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.15rem;
+  font-weight: 600;
   transition: all 0.3s ease;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.15);
-  margin: 0.5rem 0;
-  text-align: center;
-  border: 3px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(108, 99, 255, 0.3);
 }
 
 .primary-cta:hover {
-  background: #f0f0ff;
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(135deg, #6c63ff 0%, #8b83ff 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(108, 99, 255, 0.4);
 }
 
-.subtext {
+.cta-subtext {
   font-size: 0.95rem;
-  color: #e8e6ff;
+  color: #666;
   margin-top: 1rem;
-  font-style: italic;
   line-height: 1.5;
 }
 
@@ -596,29 +580,24 @@ button[type="submit"]:hover {
   }
 
   .funnel-image img {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .funnel-text h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
-  .value-prop {
-    font-size: 1.1rem;
+  .intro-text {
+    font-size: 1.05rem;
   }
 
   .primary-cta {
-    font-size: 1.1rem;
-    padding: 1rem 2rem;
+    font-size: 1rem;
+    padding: 0.9rem 2rem;
     width: 100%;
-    max-width: 100%;
   }
 
-  .benefits-box {
+  .early-access-cta {
     padding: 1.5rem;
-  }
-
-  .cta-box {
-    padding: 2rem 1.5rem;
   }
 }
