@@ -16,6 +16,10 @@ html, body {
   color: #2c2c2c;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* === Section Layout === */
 section {
   padding: 5rem 2rem;
