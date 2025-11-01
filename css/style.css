@@ -62,7 +62,7 @@ section:not(:last-child) {
 }
 
 .cta-button {
-  background-color: #ff5f5f;
+  background-color: #4e4cb8;
   color: #fff;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
@@ -74,7 +74,7 @@ section:not(:last-child) {
 }
 
 .cta-button:hover {
-  background-color: #e04e4e;
+  background-color: #6c63ff;
   transform: translateY(-2px);
 }
 
