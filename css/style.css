@@ -83,7 +83,7 @@ section {
 /* === Creative Compass Section === */
 .creative-compass {
   background: linear-gradient(135deg, #f9f9fb 0%, #fdfaff 100%);
-  padding: 5rem 2rem 6rem;
+  padding: 5rem 2rem 8rem;
   text-align: center;
   border-bottom: none;
 }
@@ -108,7 +108,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 3rem 1rem 0;
   max-width: 1100px;
 }
 
