@@ -83,7 +83,7 @@ section {
 /* === Creative Compass Section === */
 .creative-compass {
   background: linear-gradient(135deg, #f9f9fb 0%, #fdfaff 100%);
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 2rem 5rem;
   text-align: center;
   border-bottom: none;
 }
