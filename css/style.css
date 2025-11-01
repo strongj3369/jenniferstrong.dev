@@ -83,7 +83,7 @@ section {
 /* === Creative Compass Section === */
 .creative-compass {
   background: linear-gradient(135deg, #f9f9fb 0%, #fdfaff 100%);
-  padding: 5rem 2rem 5rem;
+  padding: 5rem 2rem 6rem;
   text-align: center;
   border-bottom: none;
 }
@@ -108,8 +108,8 @@ section {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin: 0 auto;
-  padding: 0 2rem;
-  max-width: 1000px;
+  padding: 0 1rem;
+  max-width: 1100px;
 }
 
 .compass-card {
