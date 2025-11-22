@@ -1,0 +1,1872 @@
+<?php
+
+
+/**
+ * Template Name: Builder Tier SaaS Agency Light
+ */
+
+?>
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SYNCRA — AI Automation Systems for Modern Companies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <style>
+        :root {
+            --bg-page: #f4f6fb;
+            --bg-card: #ffffff;
+            --bg-glass: rgba(255, 255, 255, 0.75);
+            --border-subtle: #dde3ef;
+            --border-strong: #c5cfdf;
+
+            --chrome-edge: #aab1bb;
+            --chrome-deep: #7a828e;
+
+            --cyan: #3fd7ff;
+            --cyan-soft: #d6f6ff;
+            --cyan-line: rgba(63, 215, 255, 0.4);
+
+            --mint: #6df7d9;
+            --mint-deep: #0abf9e;
+
+            --text-main: #0d1117;
+            --text-soft: #5d6472;
+            --text-muted: #8d94a2;
+
+            --radius-lg: 26px;
+            --radius-md: 18px;
+            --radius-sm: 12px;
+
+            --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+            --shadow-hard: 0 22px 50px rgba(15, 23, 42, 0.12);
+
+            --transition: 180ms ease-out;
+
+            /* extra spacing token for the image + alt sections */
+            --section-gap: 72px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+            background: radial-gradient(circle at top, #ffffff 0, #f4f6fb 38%, #e7ebf6 100%);
+            color: var(--text-main);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .syncra-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 32px 20px 80px;
+        }
+
+        @media (min-width: 1280px) {
+            .syncra-shell {
+                max-width: 1240px;
+            }
+        }
+
+
+        /* ================================================
+   THEME TOGGLE — MATCHES STRATEGY SESSION BADGE
+   CLEAN + MERGED + NO DUPLICATES
+   ================================================ */
+
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 0.78rem;
+            font-weight: 500;
+            cursor: pointer;
+
+            /* Remove underline always */
+            text-decoration: none !important;
+
+            /* Light mode glass look */
+            background: linear-gradient(120deg, #ffffffcc, #f3f6fe);
+            border: 1px solid rgba(199, 210, 228, 0.9);
+            box-shadow: 0 10px 24px rgba(148, 163, 184, 0.25);
+            color: #374151;
+            backdrop-filter: blur(10px);
+
+            transition:
+                background 0.25s ease,
+                transform 0.15s ease,
+                box-shadow 0.25s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            background: linear-gradient(120deg, #ffffff, #eef2ff);
+            box-shadow: 0 14px 32px rgba(148, 163, 184, 0.35);
+            transform: translateY(-1px);
+        }
+
+        /* ================================================
+   DARK MODE VERSION — LUXURY SOFT-GLOW GLASS
+   ================================================ */
+        body.dark .theme-toggle-btn {
+            background: linear-gradient(160deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.18));
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            color: #e5e7eb;
+            box-shadow: 0 12px 26px rgba(0, 0, 0, 0.45);
+        }
+
+        body.dark .theme-toggle-btn:hover {
+            background: rgba(255, 255, 255, 0.22);
+            transform: translateY(-1px);
+        }
+
+        /* Ensure no underline ever appears */
+        .theme-toggle-btn:visited,
+        .theme-toggle-btn:active,
+        .theme-toggle-btn:focus {
+            text-decoration: none !important;
+        }
+
+
+
+        /* HEADER */
+
+        .syncra-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 32px;
+        }
+
+        .syncra-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .syncra-logo-mark {
+            width: 36px;
+            height: 36px;
+            border-radius: 999px;
+            background:
+                radial-gradient(circle at 0 0, #ffffff 0, #f7fbff 35%, #e0e7f3 60%, #c0cadd 100%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+                0 14px 30px rgba(15, 23, 42, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            color: #1f2933;
+        }
+
+        .syncra-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .syncra-brand-text strong {
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .syncra-brand-text span {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .syncra-header-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 13px;
+            border-radius: 999px;
+            border: 1px solid rgba(199, 210, 228, 0.9);
+            background: linear-gradient(120deg, #ffffff, #f3f6fe);
+            box-shadow: 0 10px 24px rgba(148, 163, 184, 0.25);
+            font-size: 11px;
+            color: var(--text-soft);
+        }
+
+        .syncra-header-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background: radial-gradient(circle, var(--mint), var(--mint-deep));
+            box-shadow: 0 0 0 4px rgba(109, 247, 217, 0.35);
+        }
+
+        /* HERO */
+
+        .syncra-hero {
+            position: relative;
+            border-radius: var(--radius-lg);
+            background:
+                linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(240, 244, 252, 0.98));
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            box-shadow: var(--shadow-hard);
+            padding: 32px 30px 26px;
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+            gap: 32px;
+            overflow: hidden;
+            margin-bottom: var(--section-gap);
+        }
+
+        .syncra-hero::before {
+            content: "";
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            border-radius: 999px;
+            background: radial-gradient(circle, rgba(63, 215, 255, 0.23), transparent 65%);
+            top: -140px;
+            right: -80px;
+            pointer-events: none;
+        }
+
+        @media (max-width: 900px) {
+            .syncra-hero {
+                grid-template-columns: minmax(0, 1fr);
+                padding: 26px 20px 22px;
+            }
+        }
+
+        .syncra-hero-left {
+            position: relative;
+            z-index: 1;
+            max-width: 540px;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .syncra-hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 11px;
+            border-radius: 999px;
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            background: linear-gradient(120deg, #ffffff, #f3f6ff);
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+            color: var(--text-muted);
+        }
+
+        .syncra-hero-title {
+            font-size: clamp(2.1rem, 3vw, 2.7rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            margin: 0;
+        }
+
+        .syncra-hero-title span {
+            background: linear-gradient(to right, var(--cyan), #1a8ee5);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .syncra-hero-subtitle {
+            font-size: 0.98rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            max-width: 480px;
+        }
+
+        .syncra-hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .syncra-btn-primary {
+            border-radius: 999px;
+            border: none;
+            padding: 11px 21px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            background:
+                linear-gradient(135deg, #ffffff, #f4f8ff) padding-box,
+                linear-gradient(135deg, #f9fafb, #3fd7ff) border-box;
+            border: 1px solid transparent;
+            color: #0b1120;
+            box-shadow:
+                0 14px 30px rgba(148, 163, 184, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+        }
+
+        .syncra-btn-primary:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.03);
+            box-shadow:
+                0 18px 40px rgba(148, 163, 184, 0.45),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+        }
+
+        .syncra-btn-secondary {
+            border-radius: 999px;
+            padding: 10px 18px;
+            font-size: 0.88rem;
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            background: linear-gradient(135deg, #ffffff, #f5f7fb);
+            color: var(--text-soft);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: background var(--transition), transform var(--transition), color var(--transition), box-shadow var(--transition);
+        }
+
+        .syncra-btn-secondary:hover {
+            background: #ffffff;
+            transform: translateY(-1px);
+            color: #111827;
+            box-shadow: 0 14px 30px rgba(148, 163, 184, 0.28);
+        }
+
+        .syncra-hero-highlights {
+            margin-top: 6px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.82rem;
+        }
+
+        .syncra-hero-chip {
+            border-radius: 999px;
+            padding: 5px 10px;
+            background: #ffffff;
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 8px 18px rgba(148, 163, 184, 0.25);
+        }
+
+        .syncra-hero-chip strong {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .syncra-hero-chip-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 999px;
+            background: radial-gradient(circle, var(--mint), var(--mint-deep));
+        }
+
+        /* HERO RIGHT – BRIGHT DEVICE MOCKUP */
+
+        .syncra-hero-right {
+            position: relative;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .syncra-device-shell {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            border-radius: 24px;
+            padding: 12px;
+            background:
+                linear-gradient(145deg, #fdfefe, #e4e8f1);
+            box-shadow:
+                0 20px 52px rgba(15, 23, 42, 0.16),
+                0 0 0 1px rgba(209, 213, 224, 0.9);
+            transform: perspective(1200px) rotateY(-10deg) rotateX(4deg);
+        }
+
+        .syncra-device-frame {
+            position: relative;
+            width: 100%;
+            border-radius: 18px;
+            padding: 14px 14px 12px;
+            background:
+                linear-gradient(155deg, #f9fbff, #e8edf7);
+            box-shadow:
+                inset 0 0 0 1px rgba(255, 255, 255, 0.9),
+                0 0 0 1px rgba(199, 210, 228, 0.8);
+            overflow: hidden;
+        }
+
+        .syncra-device-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .syncra-device-logo {
+            font-size: 0.78rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #6b7280;
+        }
+
+        .syncra-device-pill {
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            background: rgba(255, 255, 255, 0.9);
+            font-size: 0.7rem;
+            color: var(--text-soft);
+        }
+
+        .syncra-device-main {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .syncra-device-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 6px;
+            margin-bottom: 8px;
+        }
+
+        .syncra-device-metric {
+            border-radius: 10px;
+            padding: 6px 7px;
+            background:
+                linear-gradient(145deg, #ffffff, #edf2fb);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            box-shadow: 0 10px 26px rgba(148, 163, 184, 0.28);
+        }
+
+        .syncra-device-metric label {
+            display: block;
+            font-size: 0.64rem;
+            color: var(--text-muted);
+            margin-bottom: 2px;
+        }
+
+        .syncra-device-metric strong {
+            font-size: 0.9rem;
+            color: #111827;
+        }
+
+        .syncra-device-chart {
+            border-radius: 12px;
+            padding: 8px 9px 10px;
+            background: linear-gradient(145deg, #ffffff, #f2f7ff);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .syncra-device-chart-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .syncra-device-chart-line {
+            position: relative;
+            height: 38px;
+            border-radius: 999px;
+            background: linear-gradient(to top, #e5edf9, #ffffff);
+            overflow: hidden;
+        }
+
+        .syncra-device-chart-line::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 0 100%, rgba(63, 215, 255, 0.4), transparent 55%),
+                linear-gradient(120deg, rgba(63, 215, 255, 0.8), rgba(26, 142, 229, 0.9));
+            clip-path: path("M 0 30 C 40 10, 80 25, 120 18 C 160 12, 200 24, 240 16 C 280 9, 320 24, 360 12 L 360 40 L 0 40 Z");
+            opacity: 0.9;
+        }
+
+        .syncra-device-main-right {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .syncra-device-ai-panel {
+            border-radius: 11px;
+            background: var(--bg-glass);
+            border: 1px solid rgba(148, 163, 184, 0.7);
+            padding: 7px 8px;
+            font-size: 0.72rem;
+            color: var(--text-soft);
+            box-shadow: 0 10px 24px rgba(148, 163, 184, 0.28);
+        }
+
+        .syncra-device-ai-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3px;
+        }
+
+        .syncra-device-ai-header span:first-child {
+            font-weight: 600;
+            color: #111827;
+            font-size: 0.72rem;
+        }
+
+        .syncra-device-ai-badge {
+            padding: 2px 7px;
+            border-radius: 999px;
+            background: #ecfdf5;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            font-size: 0.62rem;
+        }
+
+        .syncra-device-ai-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 3px;
+        }
+
+        .syncra-device-ai-list li {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .syncra-device-ai-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: radial-gradient(circle, var(--mint), var(--mint-deep));
+            flex-shrink: 0;
+        }
+
+        .syncra-device-log {
+            border-radius: 12px;
+            padding: 8px 8px;
+            background: linear-gradient(135deg, #ffffff, #edf2fc);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            display: grid;
+            gap: 4px;
+        }
+
+        .syncra-device-log-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 6px;
+        }
+
+        .syncra-device-log-label {
+            color: #4b5563;
+            font-weight: 500;
+        }
+
+        .syncra-device-log-time {
+            color: var(--text-muted);
+        }
+
+        .syncra-device-footer {
+            margin-top: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: var(--text-muted);
+        }
+
+        .syncra-device-footer-pill {
+            padding: 3px 7px;
+            border-radius: 999px;
+            border: 1px solid rgba(209, 213, 224, 0.8);
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* SECTIONS */
+
+        .syncra-section {
+            margin-top: 40px;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.92);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            box-shadow: var(--shadow-soft);
+            padding: 24px 24px 20px;
+        }
+
+        .syncra-section-header {
+            margin-bottom: 16px;
+        }
+
+        .syncra-section-kicker {
+            font-size: 0.72rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .syncra-section-title {
+            font-size: 1.4rem;
+            margin: 0 0 4px;
+            letter-spacing: -0.03em;
+        }
+
+        .syncra-section-subtitle {
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            max-width: 460px;
+            line-height: 1.7;
+        }
+
+        /* FEATURES GRID */
+
+        .syncra-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        @media (max-width: 960px) {
+            .syncra-features-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .syncra-features-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .syncra-feature-card {
+            border-radius: var(--radius-md);
+            padding: 15px 14px 14px;
+            background:
+                linear-gradient(150deg, rgba(255, 255, 255, 1), rgba(244, 247, 255, 0.96));
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            box-shadow: var(--shadow-soft);
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .syncra-feature-card::before {
+            content: "";
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(circle at 0 0, rgba(63, 215, 255, 0.25), transparent 60%);
+            opacity: 0;
+            transition: opacity var(--transition);
+            pointer-events: none;
+        }
+
+        .syncra-feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hard);
+            border-color: rgba(148, 163, 184, 0.9);
+        }
+
+        .syncra-feature-card:hover::before {
+            opacity: 1;
+        }
+
+        .syncra-feature-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            background:
+                radial-gradient(circle at 20% 0, #ffffff, #dfe7f4);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #0b1120;
+            box-shadow:
+                0 8px 20px rgba(148, 163, 184, 0.35),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+        }
+
+        .syncra-feature-title {
+            font-size: 0.98rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .syncra-feature-copy {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        /* TRUST + TESTIMONIALS */
+
+        .syncra-trust-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            gap: 18px;
+            margin-top: 8px;
+        }
+
+        @media (max-width: 880px) {
+            .syncra-trust-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .syncra-trust-list {
+            display: grid;
+            gap: 10px;
+        }
+
+        .syncra-trust-item {
+            border-radius: 16px;
+            padding: 12px 11px;
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid rgba(209, 213, 224, 0.9);
+            display: grid;
+            grid-template-columns: 32px minmax(0, 1fr);
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .syncra-trust-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 999px;
+            background:
+                radial-gradient(circle at 20% 0, #ffffff, #dfe4f2);
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: #0b1120;
+            box-shadow: 0 8px 20px rgba(148, 163, 184, 0.35);
+        }
+
+        .syncra-trust-item h4 {
+            margin: 0 0 4px;
+            font-size: 0.95rem;
+        }
+
+        .syncra-trust-item p {
+            margin: 0;
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .syncra-stack-card {
+            border-radius: 18px;
+            padding: 14px 12px;
+            background: linear-gradient(140deg, #ffffff, #f1f5ff);
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .syncra-stack-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .syncra-stack-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-bottom: 10px;
+        }
+
+        .syncra-stack-pill {
+            padding: 4px 9px;
+            border-radius: 999px;
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            background: rgba(255, 255, 255, 0.96);
+            font-size: 0.78rem;
+            color: #374151;
+            box-shadow: 0 8px 16px rgba(148, 163, 184, 0.2);
+        }
+
+        .syncra-stack-copy {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .syncra-testimonials-row {
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
+        }
+
+        @media (max-width: 720px) {
+            .syncra-testimonials-row {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .syncra-testimonial {
+            border-radius: 18px;
+            padding: 14px 14px 11px;
+            background: linear-gradient(145deg, #ffffff, #f0f4ff);
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            box-shadow: var(--shadow-soft);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+
+        .syncra-testimonial:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-hard);
+        }
+
+        .syncra-testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+
+        .syncra-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 999px;
+            background:
+                radial-gradient(circle at 0 0, #ffffff, #dfe7f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #111827;
+            font-weight: 700;
+            font-size: 0.86rem;
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            box-shadow: 0 10px 24px rgba(148, 163, 184, 0.3);
+        }
+
+        .syncra-testimonial-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+        }
+
+        .syncra-testimonial-meta strong {
+            font-size: 0.88rem;
+        }
+
+        .syncra-testimonial-meta span {
+            font-size: 0.76rem;
+            color: var(--text-muted);
+        }
+
+        .syncra-testimonial-body {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+        }
+
+        .syncra-testimonial-tag {
+            margin-top: 4px;
+            font-size: 0.74rem;
+            color: var(--text-muted);
+        }
+
+        /* CTA SECTION */
+
+        .syncra-cta-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+            gap: 22px;
+            align-items: flex-start;
+        }
+
+        @media (max-width: 880px) {
+            .syncra-cta-layout {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+
+        .syncra-cta-bullets {
+            margin: 12px 0 16px;
+            padding-left: 0;
+            list-style: none;
+            display: grid;
+            gap: 8px;
+            font-size: 0.88rem;
+            color: #111827;
+        }
+
+        .syncra-cta-bullets li {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .syncra-cta-bullet-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 999px;
+            background: radial-gradient(circle, var(--mint), var(--mint-deep));
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            color: #ffffff;
+            flex-shrink: 0;
+        }
+
+        .syncra-cta-footnote {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        .syncra-cta-form-card {
+            border-radius: var(--radius-lg);
+            padding: 16px 16px 14px;
+            background:
+                linear-gradient(150deg, rgba(255, 255, 255, 0.9), rgba(239, 246, 255, 0.95));
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .syncra-cta-form-card::before {
+            content: "";
+            position: absolute;
+            inset: -40%;
+            background: radial-gradient(circle at 0 0, rgba(63, 215, 255, 0.3), transparent 60%);
+            pointer-events: none;
+        }
+
+        .syncra-cta-form-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .syncra-cta-form-title {
+            font-size: 0.96rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .syncra-cta-form-sub {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .syncra-cta-form-tag {
+            padding: 4px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(148, 163, 184, 0.9);
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 0.7rem;
+            color: var(--text-soft);
+            box-shadow: 0 8px 20px rgba(148, 163, 184, 0.28);
+        }
+
+        .syncra-form {
+            display: grid;
+            gap: 8px;
+            position: relative;
+            z-index: 1;
+            margin-top: 4px;
+        }
+
+        .syncra-field-group {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .syncra-field-label {
+            font-size: 0.78rem;
+            color: #111827;
+        }
+
+        .syncra-field-label span {
+            color: #f97316;
+            margin-left: 2px;
+        }
+
+        .syncra-input,
+        .syncra-select,
+        .syncra-textarea {
+            border-radius: 11px;
+            border: 1px solid rgba(209, 213, 224, 0.95);
+            padding: 8px 9px;
+            font-size: 0.84rem;
+            color: #111827;
+            background: rgba(255, 255, 255, 0.98);
+            outline: none;
+            transition: border-color var(--transition), box-shadow var(--transition), background var(--transition), transform var(--transition);
+        }
+
+        .syncra-input::placeholder,
+        .syncra-textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        .syncra-textarea {
+            min-height: 70px;
+            resize: vertical;
+        }
+
+        .syncra-input:focus,
+        .syncra-select:focus,
+        .syncra-textarea:focus {
+            border-color: var(--cyan);
+            box-shadow:
+                0 0 0 1px rgba(63, 215, 255, 0.8),
+                0 0 0 10px rgba(148, 163, 184, 0.15);
+            background: #ffffff;
+            transform: translateY(-1px);
+        }
+
+        .syncra-cta-form-footer {
+            margin-top: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .syncra-cta-submit {
+            border-radius: 999px;
+            border: none;
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            background:
+                linear-gradient(135deg, #ffffff, #f4f8ff) padding-box,
+                linear-gradient(135deg, #f9fafb, #3fd7ff) border-box;
+            border: 1px solid transparent;
+            color: #0b1120;
+            box-shadow:
+                0 14px 34px rgba(148, 163, 184, 0.4),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+            transition: transform var(--transition), box-shadow var(--transition), filter var(--transition);
+            text-align: center;
+        }
+
+        .syncra-cta-submit:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.03);
+            box-shadow:
+                0 18px 42px rgba(148, 163, 184, 0.5),
+                0 0 0 1px rgba(255, 255, 255, 0.9);
+        }
+
+        .syncra-cta-disclaimer {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .syncra-cta-disclaimer strong {
+            color: #111827;
+        }
+
+        /* FOOTER MINI */
+
+        .syncra-footer {
+            margin-top: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .syncra-footer-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .syncra-footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .syncra-footer-links a:hover {
+            color: #111827;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .syncra-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .syncra-footer {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        /* Apple-style full-width image strips */
+        .apple-strip {
+            max-width: 1020px;
+            margin: var(--section-gap) auto;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--border-subtle);
+            background: #ffffff;
+        }
+
+        .apple-strip img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        /* Alternating SaaS Sections */
+        .alt-section {
+            max-width: 1120px;
+            margin: var(--section-gap) auto;
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+            gap: 60px;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .alt-img {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-subtle);
+            box-shadow: var(--shadow-soft);
+            background: #ffffff;
+        }
+
+        .alt-img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .alt-text h2 {
+            font-size: 1.7rem;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin: 0 0 12px;
+        }
+
+        .alt-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 460px;
+            color: var(--text-soft);
+        }
+
+        /* Default: image left, text right */
+        .alt-section .alt-img {
+            order: 1;
+        }
+
+        .alt-section .alt-text {
+            order: 2;
+        }
+
+        /* Reversed layout: text left, image right */
+        .alt-section.reverse .alt-text {
+            order: 1;
+        }
+
+        .alt-section.reverse .alt-img {
+            order: 2;
+        }
+
+        /* Mobile behavior */
+        @media (max-width: 900px) {
+            .alt-section {
+                grid-template-columns: minmax(0, 1fr);
+                gap: 28px;
+                text-align: center;
+            }
+
+            .alt-section .alt-img,
+            .alt-section .alt-text,
+            .alt-section.reverse .alt-img,
+            .alt-section.reverse .alt-text {
+                order: initial;
+            }
+
+            .alt-text p {
+                margin: 0 auto;
+            }
+        }
+
+        /* ENTERPRISE FOOTER */
+        .syncra-footer-enterprise {
+            margin-top: 60px;
+            padding: 60px 20px 40px;
+            background: linear-gradient(180deg, #f7f9fc 0%, #eef2f8 100%);
+            border-top: 1px solid rgba(209, 213, 224, 0.7);
+        }
+
+        .syncra-footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .syncra-footer-logo {
+            font-size: 1.15rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            margin-bottom: 14px;
+            color: #111827;
+        }
+
+        .syncra-footer-tagline {
+            font-size: 0.86rem;
+            line-height: 1.6;
+            color: #6b7280;
+            max-width: 240px;
+        }
+
+        .syncra-footer-col h4 {
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 12px;
+            color: #374151;
+        }
+
+        .syncra-footer-col ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 8px;
+        }
+
+        .syncra-footer-col ul li a {
+            color: #6b7280;
+            font-size: 0.86rem;
+            text-decoration: none;
+            transition: color 160ms ease;
+        }
+
+        .syncra-footer-col ul li a:hover {
+            color: #111827;
+        }
+
+        .syncra-footer-bottom {
+            max-width: 1200px;
+            margin: 35px auto 0;
+            padding-top: 18px;
+            border-top: 1px solid rgba(209, 213, 224, 0.6);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.82rem;
+            color: #6b7280;
+        }
+
+        .syncra-footer-bottom-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .syncra-footer-bottom-links a {
+            color: #6b7280;
+            text-decoration: none;
+            transition: color 150ms ease;
+        }
+
+        .syncra-footer-bottom-links a:hover {
+            color: #111827;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 980px) {
+            .syncra-footer-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 640px) {
+            .syncra-footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .syncra-footer-bottom {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="syncra-shell">
+
+        <!-- HEADER -->
+        <header class="syncra-header">
+            <div class="syncra-brand">
+                <div class="syncra-logo-mark">S</div>
+                <div class="syncra-brand-text">
+                    <strong>SYNCRA</strong>
+                    <span>AI automation systems for modern companies</span>
+                </div>
+            </div>
+            <div class="syncra-header-tag">
+                <div class="syncra-header-dot"></div>
+                Strategy sessions available this week
+            </div>
+            <!-- THE TOGGLE BUTTON GOES RIGHT HERE -->
+            <a class="theme-toggle-btn" href="http://learning-platform.local/builder-saas-agency-dark/">
+                🌙 Dark Mode
+            </a>
+
+
+        </header>
+
+        <!-- HERO -->
+        <section class="syncra-hero">
+            <div class="syncra-hero-left">
+                <div class="syncra-hero-eyebrow">Automation • Workflows • AI</div>
+
+                <h1 class="syncra-hero-title">
+                    The new standard for automated operations.
+                </h1>
+
+                <p class="syncra-hero-subtitle">
+                    SYNCRA designs and deploys AI-powered workflows that remove friction from your customer journey — without
+                    sacrificing control, visibility, or trust.
+                </p>
+
+                <div class="syncra-hero-actions">
+                    <button class="syncra-btn-primary">
+                        <span>⚡</span>
+                        <span>Book a workflow consult</span>
+                    </button>
+                    <button class="syncra-btn-secondary">
+                        <span>View automation examples</span>
+                    </button>
+                </div>
+
+                <div class="syncra-hero-highlights">
+                    <div class="syncra-hero-chip">
+                        <div class="syncra-hero-chip-dot"></div>
+                        <span><strong>40+ hours</strong> saved per team each month</span>
+                    </div>
+                    <div class="syncra-hero-chip">
+                        <span><strong>4-week</strong> rollout, <strong>90-day</strong> optimization</span>
+                    </div>
+                    <div class="syncra-hero-chip">
+                        <span><strong>100% mapped</strong> before anything ships</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="syncra-hero-right">
+                <div class="syncra-device-shell">
+                    <div class="syncra-device-frame">
+                        <div class="syncra-device-top">
+                            <div class="syncra-device-logo">SYNCRA</div>
+                            <div class="syncra-device-pill">Live automation overview</div>
+                        </div>
+
+                        <div class="syncra-device-main">
+                            <div>
+                                <div class="syncra-device-metrics">
+                                    <div class="syncra-device-metric">
+                                        <label>Tasks automated</label>
+                                        <strong>12,384</strong>
+                                    </div>
+                                    <div class="syncra-device-metric">
+                                        <label>Faster responses</label>
+                                        <strong>3.4×</strong>
+                                    </div>
+                                    <div class="syncra-device-metric">
+                                        <label>Manual work</label>
+                                        <strong>-61%</strong>
+                                    </div>
+                                    <div class="syncra-device-metric">
+                                        <label>On-time routing</label>
+                                        <strong>98.1%</strong>
+                                    </div>
+                                </div>
+
+                                <div class="syncra-device-chart">
+                                    <div class="syncra-device-chart-header">
+                                        <span>Weekly workflow volume</span>
+                                        <span>+24% vs last month</span>
+                                    </div>
+                                    <div class="syncra-device-chart-line"></div>
+                                </div>
+                            </div>
+
+                            <div class="syncra-device-main-right">
+                                <div class="syncra-device-ai-panel">
+                                    <div class="syncra-device-ai-header">
+                                        <span>AI actions</span>
+                                        <span class="syncra-device-ai-badge">Active</span>
+                                    </div>
+                                    <ul class="syncra-device-ai-list">
+                                        <li>
+                                            <div class="syncra-device-ai-dot"></div>
+                                            <span>Triaged 12 new inbound leads</span>
+                                        </li>
+                                        <li>
+                                            <div class="syncra-device-ai-dot"></div>
+                                            <span>Routed 7 tickets to CX priority queue</span>
+                                        </li>
+                                        <li>
+                                            <div class="syncra-device-ai-dot"></div>
+                                            <span>Tagged 4 accounts as “expansion-ready”</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="syncra-device-log">
+                                    <div class="syncra-device-log-row">
+                                        <span class="syncra-device-log-label">10:02</span>
+                                        <span>AI scored lead from pricing page visit</span>
+                                    </div>
+                                    <div class="syncra-device-log-row">
+                                        <span class="syncra-device-log-label">10:09</span>
+                                        <span>Slack alert: “High intent demo request”</span>
+                                    </div>
+                                    <div class="syncra-device-log-row">
+                                        <span class="syncra-device-log-label">10:17</span>
+                                        <span>Ticket routed to specialist queue</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="syncra-device-footer">
+                            <span>AI in the loop for every touchpoint.</span>
+                            <span class="syncra-device-footer-pill">Ops • CX • RevOps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FULL-WIDTH IMAGE STRIP 1 -->
+        <section class="apple-strip">
+            <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/11/builer-SaaS4-1.png"
+                alt="AI workflow automation dashboard">
+        </section>
+
+        <!-- FEATURES -->
+        <section class="syncra-section">
+            <div class="syncra-section-header">
+                <div class="syncra-section-kicker">Workflow automation</div>
+                <h2 class="syncra-section-title">Automation that starts where your tools already live.</h2>
+                <p class="syncra-section-subtitle">
+                    We don’t ask you to rip anything out. SYNCRA layers AI workflows across your existing CRM, inbox,
+                    support tools, and data stack.
+                </p>
+            </div>
+
+            <div class="syncra-features-grid">
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">⚙️</div>
+                    <h3 class="syncra-feature-title">End-to-end workflows</h3>
+                    <p class="syncra-feature-copy">
+                        Orchestrate multi-step processes across email, CRM, support, and billing with a single automation map.
+                    </p>
+                </article>
+
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">💬</div>
+                    <h3 class="syncra-feature-title">AI chat & assist</h3>
+                    <p class="syncra-feature-copy">
+                        Deploy brand-trained assistants that answer, route, and summarize — and escalate when a human is needed.
+                    </p>
+                </article>
+
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">🎯</div>
+                    <h3 class="syncra-feature-title">Lead scoring & routing</h3>
+                    <p class="syncra-feature-copy">
+                        Blend behavior, firmographics, and product usage into scores your sales team can actually trust.
+                    </p>
+                </article>
+
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">📊</div>
+                    <h3 class="syncra-feature-title">Data cleaning pipelines</h3>
+                    <p class="syncra-feature-copy">
+                        Clean, enrich, and normalize data before it hits your warehouse, dashboard, or downstream tools.
+                    </p>
+                </article>
+
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">🤖</div>
+                    <h3 class="syncra-feature-title">AI “team members”</h3>
+                    <p class="syncra-feature-copy">
+                        Dedicated AI for ops, CX, or marketing — with logging, guardrails, and documented boundaries.
+                    </p>
+                </article>
+
+                <article class="syncra-feature-card">
+                    <div class="syncra-feature-icon">📈</div>
+                    <h3 class="syncra-feature-title">Predictive signals</h3>
+                    <p class="syncra-feature-copy">
+                        Spot churn risk, upsell windows, and health changes before your customers ever raise a hand.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ALT SECTION WITH IMAGE 2 -->
+        <section class="alt-section">
+            <div class="alt-img">
+                <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/11/builder-SaaS-2.png"
+                    alt="Customer journey automation map">
+            </div>
+
+            <div class="alt-text">
+                <h2>See your customer journey as a living map.</h2>
+                <p>
+                    Customer journey automation maps make your flows easy to understand for every team —
+                    so product, marketing, sales, and support can all see where AI is helping work move faster.
+                </p>
+            </div>
+        </section>
+
+        <!-- TRUST + TESTIMONIALS -->
+        <section class="syncra-section">
+            <div class="syncra-section-header">
+                <div class="syncra-section-kicker">Why teams choose SYNCRA</div>
+                <h2 class="syncra-section-title">Automation that leadership understands — and teams actually use.</h2>
+                <p class="syncra-section-subtitle">
+                    Every build ships with diagrams, documentation, and clear before-and-after metrics. No black boxes,
+                    no “just trust the AI” pitches.
+                </p>
+            </div>
+
+            <div class="syncra-trust-layout">
+                <div class="syncra-trust-list">
+                    <div class="syncra-trust-item">
+                        <div class="syncra-trust-icon">📐</div>
+                        <div>
+                            <h4>Architecture-first approach</h4>
+                            <p>We start by mapping what’s happening today, then design automations that support people — not replace them.</p>
+                        </div>
+                    </div>
+                    <div class="syncra-trust-item">
+                        <div class="syncra-trust-icon">🔒</div>
+                        <div>
+                            <h4>Security-aligned from day one</h4>
+                            <p>Role-based access, scoped permissions, and patterns your security and legal teams are already familiar with.</p>
+                        </div>
+                    </div>
+                    <div class="syncra-trust-item">
+                        <div class="syncra-trust-icon">📊</div>
+                        <div>
+                            <h4>Metrics that make sense</h4>
+                            <p>Hours saved, response time, conversion lift — numbers your leadership team cares about and can track.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <aside class="syncra-stack-card">
+                    <div class="syncra-stack-label">Built around your stack</div>
+                    <div class="syncra-stack-row">
+                        <span class="syncra-stack-pill">HubSpot</span>
+                        <span class="syncra-stack-pill">Salesforce</span>
+                        <span class="syncra-stack-pill">Intercom</span>
+                        <span class="syncra-stack-pill">Front</span>
+                        <span class="syncra-stack-pill">Zendesk</span>
+                        <span class="syncra-stack-pill">Notion</span>
+                        <span class="syncra-stack-pill">Slack</span>
+                        <span class="syncra-stack-pill">Zapier / Make</span>
+                        <span class="syncra-stack-pill">OpenAI</span>
+                    </div>
+                    <p class="syncra-stack-copy">
+                        SYNCRA plugs into the tools your team already lives in, so adoption is smooth and your workflows don’t
+                        depend on yet another platform login.
+                    </p>
+                </aside>
+            </div>
+
+            <div class="syncra-testimonials-row">
+                <article class="syncra-testimonial">
+                    <div class="syncra-testimonial-header">
+                        <div class="syncra-avatar">KS</div>
+                        <div class="syncra-testimonial-meta">
+                            <strong>Kelsey Singh</strong>
+                            <span>VP of Revenue, B2B SaaS</span>
+                        </div>
+                    </div>
+                    <p class="syncra-testimonial-body">
+                        “Within six weeks we had workflows in place that our reps and CS team now rely on every day.
+                        It feels less like ‘AI’ and more like the way our systems always should’ve worked.”
+                    </p>
+                    <div class="syncra-testimonial-tag">
+                        41 hours / month freed across RevOps and CS.
+                    </div>
+                </article>
+
+                <article class="syncra-testimonial">
+                    <div class="syncra-testimonial-header">
+                        <div class="syncra-avatar">DM</div>
+                        <div class="syncra-testimonial-meta">
+                            <strong>Diego Morales</strong>
+                            <span>Founder, eCommerce portfolio</span>
+                        </div>
+                    </div>
+                    <p class="syncra-testimonial-body">
+                        “Support, returns, and VIP outreach now flow through SYNCRA’s systems.
+                        Our team spends far less time searching and far more time talking to the right customers.”
+                    </p>
+                    <div class="syncra-testimonial-tag">
+                        27% drop in time-to-resolution on support tickets.
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ALT SECTION WITH IMAGE 3 (Reversed Layout) -->
+        <section class="alt-section reverse">
+            <div class="alt-text">
+                <h2>Support that feels human, even when AI is helping.</h2>
+                <p>
+                    AI assistants that summarize conversations, route priorities, and reduce manual effort —
+                    while your human team delivers exceptional support.
+                </p>
+            </div>
+
+            <div class="alt-img">
+                <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/11/builder-SaaS-3.png"
+                    alt="AI support interface">
+            </div>
+        </section>
+
+        <!-- CTA / LEAD FORM -->
+        <section class="syncra-section">
+            <div class="syncra-cta-layout">
+                <div>
+                    <div class="syncra-section-kicker">Next step</div>
+                    <h2 class="syncra-section-title">Tell us where work feels slow — we’ll map the workflow.</h2>
+                    <p class="syncra-section-subtitle">
+                        Share a few details about your team, tools, and bottlenecks. We’ll come to the session with a draft
+                        automation map and realistic rollout plan.
+                    </p>
+
+                    <ul class="syncra-cta-bullets">
+                        <li>
+                            <div class="syncra-cta-bullet-dot">✓</div>
+                            30-minute call with a systems architect — not a sales rep.
+                        </li>
+                        <li>
+                            <div class="syncra-cta-bullet-dot">✓</div>
+                            Clear “do-first” roadmap even if we don’t work together.
+                        </li>
+                        <li>
+                            <div class="syncra-cta-bullet-dot">✓</div>
+                            Focused on real impact — hours saved, speed gained, errors removed.
+                        </li>
+                    </ul>
+
+                    <button class="syncra-btn-primary">
+                        <span>📅</span>
+                        <span>Request your automation consult</span>
+                    </button>
+
+                    <p class="syncra-cta-footnote">
+                        Most SYNCRA clients are between 10–250 employees with live customers and an existing tool stack.
+                    </p>
+                </div>
+
+                <aside class="syncra-cta-form-card" id="lead-form">
+                    <div class="syncra-cta-form-header">
+                        <div>
+                            <div class="syncra-cta-form-title">Share your workflow context.</div>
+                            <div class="syncra-cta-form-sub">We’ll respond within one business day.</div>
+                        </div>
+                        <div class="syncra-cta-form-tag">Secure intake</div>
+                    </div>
+
+                    <form class="syncra-form">
+                        <div class="syncra-field-group">
+                            <label class="syncra-field-label">Name<span>*</span></label>
+                            <input class="syncra-input" type="text" name="name" placeholder="Jordan Lee" />
+                        </div>
+
+                        <div class="syncra-field-group">
+                            <label class="syncra-field-label">Work email<span>*</span></label>
+                            <input class="syncra-input" type="email" name="email" placeholder="jordan@company.com" />
+                        </div>
+
+                        <div class="syncra-field-group">
+                            <label class="syncra-field-label">Company / product<span>*</span></label>
+                            <input class="syncra-input" type="text" name="company"
+                                placeholder="Acme, Inc. — B2B SaaS for finance teams" />
+                        </div>
+
+                        <div class="syncra-field-group">
+                            <label class="syncra-field-label">Team size<span>*</span></label>
+                            <select class="syncra-select" name="team_size">
+                                <option value="">Select range</option>
+                                <option value="1-10">1–10</option>
+                                <option value="11-25">11–25</option>
+                                <option value="26-50">26–50</option>
+                                <option value="51-100">51–100</option>
+                                <option value="100+">100+</option>
+                            </select>
+                        </div>
+
+                        <div class="syncra-field-group">
+                            <label class="syncra-field-label">What feels slow, manual, or inconsistent right now?<span>*</span></label>
+                            <textarea class="syncra-textarea" name="goals"
+                                placeholder="e.g. lead follow-up is manual, onboarding is inconsistent, ticket routing is noisy…"></textarea>
+                        </div>
+
+                        <div class="syncra-cta-form-footer">
+                            <button type="submit" class="syncra-cta-submit">
+                                Submit and request session
+                            </button>
+                            <p class="syncra-cta-disclaimer">
+                                <strong>No spam.</strong> We’ll only use this information to prepare for your call and to send
+                                a short summary of potential automations.
+                            </p>
+                        </div>
+                    </form>
+                </aside>
+            </div>
+
+            <footer class="syncra-footer">
+                <div>© SYNCRA. Conceptual AI automation studio landing page.</div>
+                <div class="syncra-footer-links">
+                    <a href="#lead-form">Request a consult</a>
+                    <a href="#top">Back to top</a>
+                </div>
+            </footer>
+        </section>
+
+        <!-- FINAL FULL-WIDTH IMAGE STRIP 4 -->
+        <section class="apple-strip">
+            <img src="<?php echo wp_upload_dir()['baseurl']; ?>/2025/11/builer-SaaS4-1.png"
+                alt="CRM lead scoring dashboard">
+        </section>
+
+    </div>
+
+    <!-- ENTERPRISE FOOTER -->
+    <footer class="syncra-footer-enterprise">
+        <div class="syncra-footer-container">
+
+            <!-- Column 1 -->
+            <div class="syncra-footer-col">
+                <div class="syncra-footer-logo">SYNCRA</div>
+                <p class="syncra-footer-tagline">
+                    AI automation systems that streamline operations, accelerate workflows,
+                    and unlock scale—without adding complexity.
+                </p>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="syncra-footer-col">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="#">Workflow Automation</a></li>
+                    <li><a href="#">AI Assist & Support</a></li>
+                    <li><a href="#">Customer Journey Mapping</a></li>
+                    <li><a href="#">Lead Scoring & Routing</a></li>
+                    <li><a href="#">Predictive Signals</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3 -->
+            <div class="syncra-footer-col">
+                <h4>Platform</h4>
+                <ul>
+                    <li><a href="#">Integrations</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">API Access</a></li>
+                    <li><a href="#">System Architecture</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4 -->
+            <div class="syncra-footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Case Studies</a></li>
+                    <li><a href="#">Partnerships</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5 -->
+            <div class="syncra-footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Security Statement</a></li>
+                    <li><a href="#">Data Processing Addendum</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="syncra-footer-bottom">
+            <span>© 2025 SYNCRA. All rights reserved.</span>
+            <div class="syncra-footer-bottom-links">
+                <a href="#">Status</a>
+                <a href="#">Security</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
