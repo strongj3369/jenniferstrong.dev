@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Book a Session – Clear Path Therapy</title>
+
+    <style>
+        :root {
+            --sage: #9FB8A8;
+            --deep-sage: #5A6F63;
+            --warm-gold: #D9C39B;
+            --rich-gold: #C7A86C;
+            --sand: #F5EEE2;
+            --charcoal: #2B322D;
+            --offwhite: #FAFAF7;
+            --card-bg: #faf6f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: var(--charcoal);
+            line-height: 1.6;
+        }
+
+        /* =============================
+           TOP NAV — MATCH HOME PAGE
+        ============================= */
+        /* DARK BACKGROUND BEHIND NAV – MATCH HOME HERO GRADIENT */
+        .nav-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            /* same height impression as home */
+            background: radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
+                linear-gradient(135deg, #1A1A1A, #2b3430);
+            z-index: 1;
+        }
+
+        /* NAV BAR STYLING EXACTLY LIKE HOME */
+        .therapy-nav {
+            position: relative;
+            z-index: 2;
+            /* so it sits above the nav background */
+            width: 100%;
+            padding: 1.8rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .therapy-nav .logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            color: white;
+        }
+
+        .therapy-nav a {
+            color: rgba(255, 255, 255, 0.85);
+            margin-left: 24px;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        .cta-small {
+            padding: 8px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+            transition: all 0.25s ease;
+        }
+
+
+        /* BOOK A SESSION — HOVER ELEVATION */
+        .cta-small:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+            transition: all 0.25s ease;
+        }
+
+
+        /* =============================
+           PAGE WRAPPER / HERO
+        ============================= */
+
+        .intake-page {
+            background: linear-gradient(to bottom,
+                    #f5f1e9 0%,
+                    #f8f5f0 40%,
+                    #ffffff 100%);
+            padding: 4.5rem 5vw 5rem;
+            min-height: 100vh;
+        }
+
+        .intake-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .intake-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intake-header h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 2.6rem;
+            margin-bottom: 0.4rem;
+            color: #2b322d;
+        }
+
+        .intake-header h2 {
+            font-family: "Inter", sans-serif;
+            font-size: 1.4rem;
+            color: #555;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.5px;
+        }
+
+        .intake-header p {
+            color: #666;
+            max-width: 520px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        /* =============================
+           FORM STYLING
+        ============================= */
+
+        form.intake-form {
+            background: var(--card-bg);
+            padding: 2.2rem 2.4rem;
+            border-radius: 16px;
+            border: 1px solid rgba(199, 168, 108, 0.25);
+            box-shadow: 0 10px 26px rgba(0, 0, 0, 0.07);
+            margin-top: 2.6rem;
+        }
+
+        .form-section {
+            margin-bottom: 2rem;
+        }
+
+        .form-section h3 {
+            font-family: "Playfair Display", serif;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #2b322d;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.35rem;
+            font-size: 0.95rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            background: #ffffff;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.2rem;
+        }
+
+        .checkbox-row input {
+            width: 18px;
+            height: 18px;
+            margin-right: 8px;
+        }
+
+        /* Submit Button */
+        .submit-btn {
+            background: var(--rich-gold);
+            color: #ffffff;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* =============================
+           SUCCESS MESSAGE
+        ============================= */
+
+        .success-message {
+            display: none;
+            background: #e3f5e5;
+            border-left: 4px solid #4caf50;
+            padding: 1.2rem 1.4rem;
+            border-radius: 10px;
+            margin-bottom: 1.8rem;
+            color: #2b4c2f;
+            font-size: 1.05rem;
+        }
+
+  /* ==============================
+           UPDATED FOOTER STYLE
+        ============================== */
+  .therapy-footer {
+  background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(199, 168, 108, 0.28);
+  margin-top: 3rem;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #2b322d;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem; /* tighter spacing */
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #2b322d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--deep-sage); /* or #6a4ea8 if you prefer purple hover */
+}
+
+.footer-copy {
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- TOP NAV -->
+    <header class="site-header">
+        <!-- MATCH HOME PAGE NAV BAR -->
+        <div class="nav-background"></div>
+
+        <nav class="therapy-nav">
+            <div class="logo">Clear Path</div>
+<div class="nav-items">
+    <a href="page-builder-therapy-main.html">Home</a>
+    <a href="page-builder-therapy-testimonial.html">Trust</a>
+    <a href="page-builder-therapy-book-session.html">Book a Session</a>
+
+</div>
+
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="intake-page">
+        <div class="intake-container">
+
+            <!-- HEADER -->
+            <header class="intake-header">
+                <h1>Begin Your Healing Journey</h1>
+                <h2>Client Intake Form</h2>
+                <p>Please share a few details so we can better understand your needs and prepare for your first session.</p>
+            </header>
+
+            <!-- SUCCESS MESSAGE -->
+            <div id="successMessage" class="success-message">
+                Thank you — your form has been received. We will reach out shortly.
+            </div>
+
+            <!-- INTAKE FORM -->
+            <form class="intake-form" id="intakeForm">
+
+                <!-- SECTION 1 — CLIENT INFO -->
+                <div class="form-section">
+                    <h3>Client Information</h3>
+
+                    <label>Full Name</label>
+                    <input type="text" required>
+
+                    <label>Email Address</label>
+                    <input type="email" required>
+
+                    <label>Phone Number</label>
+                    <input type="tel" required>
+
+                    <label>Preferred Contact Method</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>Text Message</option>
+                    </select>
+
+                    <label>Preferred Appointment Type</label>
+                    <select required>
+                        <option value="">Select an option</option>
+                        <option>Individual Therapy</option>
+                        <option>Couples Counseling</option>
+                        <option>Coaching Session</option>
+                        <option>Telehealth / Online Session</option>
+                        <option>In-Person Session</option>
+                    </select>
+
+                    <label>Preferred Days / Times</label>
+                    <textarea placeholder="Weekdays, evenings, weekends, etc."></textarea>
+                </div>
+
+                <!-- SECTION 2 — REASON FOR THERAPY -->
+                <div class="form-section">
+                    <h3>Reason for Therapy</h3>
+                    <textarea required placeholder="Briefly describe what brings you in."></textarea>
+                </div>
+
+                <!-- SECTION 3 — INSURANCE -->
+                <div class="form-section">
+                    <h3>Insurance Information (Optional)</h3>
+
+                    <label>Insurance Provider</label>
+                    <input type="text">
+
+                    <label>Member ID (optional)</label>
+                    <input type="text">
+
+                    <div class="checkbox-row">
+                        <input type="checkbox" id="selfpay">
+                        <label for="selfpay">I am self-pay</label>
+                    </div>
+                </div>
+
+                <!-- SECTION 4 — EMERGENCY CONTACT -->
+                <div class="form-section">
+                    <h3>Emergency Contact</h3>
+
+                    <label>Contact Name</label>
+                    <input type="text" required>
+
+                    <label>Relationship</label>
+                    <input type="text" required>
+
+                    <label>Phone Number</label>
+                    <input type="tel" required>
+                </div>
+
+                <!-- SECTION 5 — TREATMENT GOALS -->
+                <div class="form-section">
+                    <h3>Treatment Goals</h3>
+                    <textarea placeholder="What would you like to work on? (e.g., confidence, communication, emotional balance…)"></textarea>
+                </div>
+
+                <!-- SECTION 6 — ADDITIONAL NOTES -->
+                <div class="form-section">
+                    <h3>Additional Notes (Optional)</h3>
+                    <textarea placeholder="Anything else you’d like to share?"></textarea>
+                </div>
+
+                <!-- CONSENT -->
+                <div class="checkbox-row">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">I understand this form is not monitored 24/7 and should not be used in emergencies.</label>
+                </div>
+
+                <!-- SUBMIT -->
+                <button type="submit" class="submit-btn">Submit Intake Form</button>
+
+            </form>
+        </div>
+    </main>
+
+
+
+     <!-- !-- FOOTER --> 
+    <footer class="therapy-footer">
+        <div class="footer-tagline">
+            Guiding your journey toward clarity, balance, and emotional well-being.
+        </div>
+    
+        <div class="footer-links">
+            <a href="page-builder-therapy-main.html">Home</a>
+            <a href="page-builder-therapy-testimonial.html">Trust</a>
+            <a href="page-builder-therapy-about.html">About</a>
+            <a href="page-builder-therapy-book-session.html">Book a Session</a>
+        </div>
+    
+        <div class="footer-copy">
+            © <span id="year"></span> Clear Path Therapy • All rights reserved.
+        </div>
+    
+        <script>
+            document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
+    </footer>
+
+    </div>
+
+
+
+
+    <script>
+        // =============================
+        // SEMI-WORKING FORM SCRIPT
+        // =============================
+
+        document.getElementById('intakeForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Show success box
+            document.getElementById('successMessage').style.display = 'block';
+
+            // Clear form inputs
+            this.reset();
+
+            // Scroll user to the success alert
+            window.scrollTo({
+                top: document.getElementById('successMessage').offsetTop - 80,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

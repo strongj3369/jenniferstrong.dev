@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Clear Path Therapy – About</title>
+
+    <style>
+        :root {
+            --sage: #9FB8A8;
+            --deep-sage: #5A6F63;
+            --warm-gold: #D9C39B;
+            --rich-gold: #C7A86C;
+            --sand: #F5EEE2;
+            --charcoal: #2B322D;
+            --offwhite: #FAFAF7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #ffffff;
+            color: var(--charcoal);
+            line-height: 1.5;
+        }
+
+        /* ==============================
+           TOP NAV BAR (MATCHES HOME PAGE)
+        =============================== */
+        .therapy-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.8rem 5vw;
+            background: #ffffff;
+            border-bottom: 1px solid #eee;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--charcoal);
+            letter-spacing: -0.4px;
+        }
+
+        .nav-items a {
+            margin-left: 28px;
+            color: #2b322d;
+            text-decoration: none;
+            font-size: 0.98rem;
+            transition: 0.2s;
+        }
+
+        .nav-items a:hover {
+            color: var(--deep-sage);
+        }
+
+        .cta-small {
+            background: var(--rich-gold);
+            padding: 8px 18px;
+            border-radius: 999px;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        /* ==============================
+           PROFILE SECTION (TOP AREA)
+        =============================== */
+        .therapist-profile {
+            padding: 6rem 5vw;
+            background: linear-gradient(to bottom,
+                    #f5f1e9 0%,
+                    #f7f4ef 40%,
+                    #ffffff 100%);
+        }
+
+        .profile-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .profile-image-wrap {
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            box-shadow:
+                0 10px 28px rgba(0, 0, 0, 0.16),
+                0 0 0 10px rgba(199, 168, 108, 0.10);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-content {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .profile-name {
+            font-family: "Playfair Display", serif;
+            font-size: 2.6rem;
+            margin-bottom: 0.5rem;
+            color: var(--charcoal);
+        }
+
+        .gold-underline {
+            width: 70px;
+            height: 5px;
+            background: var(--rich-gold);
+            border-radius: 4px;
+            margin-bottom: 1.6rem;
+        }
+
+        .profile-intro {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 1.8rem;
+            max-width: 700px;
+        }
+
+        .profile-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+        }
+
+        .badge {
+            background: #fff;
+            padding: 8px 16px;
+            font-size: 0.9rem;
+            border-radius: 20px;
+            border: 1px solid rgba(199, 168, 108, 0.28);
+            color: var(--charcoal);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ==============================
+           SERVICES SECTION (GRID)
+        =============================== */
+        .therapy-services {
+            padding: 6rem 5vw;
+            background: #ffffff;
+        }
+
+        .services-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .services-title {
+            font-size: 2.6rem;
+            font-family: "Playfair Display", serif;
+            margin-bottom: 0.7rem;
+        }
+
+        .services-sub {
+            color: #666;
+            max-width: 540px;
+            margin: 0 auto 3rem auto;
+            font-size: 1.15rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: #faf8f4;
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(199, 168, 108, 0.22);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.06);
+            text-align: left;
+            transition: 0.2s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.10);
+        }
+
+        .service-card h3 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            color: #555;
+        }
+
+        /* ======================
+           RESPONSIVE
+        ====================== */
+        @media (max-width: 900px) {
+
+            .therapist-profile,
+            .therapy-services {
+                padding: 4.5rem 2rem;
+            }
+
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .gold-underline {
+                margin-inline: auto;
+            }
+        }
+
+   /* ==============================
+           UPDATED FOOTER STYLE
+        ============================== */
+  .therapy-footer {
+  background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
+  padding: 2.5rem 1.5rem 2rem;
+  text-align: center;
+  border-top: 1px solid rgba(199, 168, 108, 0.28);
+  margin-top: 3rem;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  color: #2b322d;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem; /* tighter spacing */
+  margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+  color: #2b322d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-links a:hover {
+  color: var(--deep-sage); /* or #6a4ea8 if you prefer purple hover */
+}
+
+.footer-copy {
+  color: #555;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav class="therapy-nav">
+        <div class="logo">Clear Path</div>
+
+<div class="nav-items">
+    <a href="page-builder-therapy-main.html">Home</a>
+    <a href="page-builder-therapy-testimonial.html">Trust</a>
+    <a href="page-builder-therapy-book-session.html">Book a Session</a>
+
+</div>
+
+
+    </nav>
+
+    <!-- PROFILE SECTION -->
+    <section class="therapist-profile">
+        <div class="profile-container">
+
+            <div class="profile-image-wrap">
+                <img
+                    src="/therapy-4-page/builder-therapy-therapist-img.png"
+                    alt="Therapist portrait"
+                    class="profile-img" />
+            </div>
+
+            <div class="profile-content">
+                <h2 class="profile-name">Alicia Bennett, LMFT</h2>
+                <div class="gold-underline"></div>
+
+                <p class="profile-intro">
+                    With over a decade of experience helping individuals and couples navigate emotional challenges,
+                    I bring a warm, grounded, and compassionate approach to therapy. My focus is to help you process,
+                    reconnect, and move forward with clarity and confidence.
+                </p>
+
+                <div class="profile-badges">
+                    <span class="badge">10+ Years Experience</span>
+                    <span class="badge">Licensed LMFT</span>
+                    <span class="badge">Trauma-Informed</span>
+                    <span class="badge">Mindfulness-Based</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="therapy-services">
+        <div class="services-container">
+
+            <h2 class="services-title">How I Can Help</h2>
+            <p class="services-sub">
+                Thoughtfully designed support to guide your personal healing and growth.
+            </p>
+
+            <div class="services-grid">
+
+                <div class="service-card">
+                    <h3>Individual Therapy</h3>
+                    <p>Safe, one-on-one sessions focused on emotional clarity, self-awareness, and long-term resilience.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Couples Counseling</h3>
+                    <p>Strengthening communication, connection, and trust through supportive relationship-focused work.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Anxiety & Stress Support</h3>
+                    <p>Tools and strategies to navigate overwhelm, build calm, and create sustainable inner balance.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Life Transitions</h3>
+                    <p>Guidance
+
+                        during periods of change—career shifts, separation, loss, or personal reinvention.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Emotional Resilience Coaching</h3>
+                    <p>Strength-based support to help you regulate emotions, rebuild stability, and cultivate long-term resilience.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Self-Esteem & Confidence Work</h3>
+                    <p>Compassionate guidance to help you strengthen self-worth, rebuild confidence, and reconnect to your inner voice.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+<div class="therapy-footer">
+
+    <h3>Clear Path Therapy</h3>
+    <p class="footer-tagline">Guiding your journey toward clarity, balance, and emotional well-being.</p>
+
+    <div class="nav-items">
+        <a href="page-builder-therapy-main.html">Home</a>
+        <a href="page-builder-therapy-testimonial.html">Trust</a>
+        <a href="page-builder-therapy-about.html">About</a>
+        <a href="page-builder-therapy-book-session.html">Book a Session</a>
+    </div>
+
+
+    <div class="footer-copy">
+        © <span id="year"></span> Clear Path Therapy • All rights reserved.
+    </div>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</div>
+
+</html>
