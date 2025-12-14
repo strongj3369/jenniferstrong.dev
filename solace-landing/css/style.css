@@ -443,6 +443,10 @@ img {
   .solace-pillars-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .guide-topics {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
 }
 
 @media screen and (min-width: 900px) {
