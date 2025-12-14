@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chickenverse Launchpad</title>
+    <meta name="description" content="Join the Chickenverse—where cosmic chickens, quirky bios, and coop-powered missions await. A modular landing page built for joy and discovery.">
+    <meta name="author" content="Jennifer Strong">
+    <link rel="canonical" href="https://yourusername.github.io/templates/blue-chicken.html" />
+
+    <!-- Styles & Fonts -->
+    <link rel="stylesheet" href="/blue-chicken/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EX593H1MQW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-EX593H1MQW');
+    </script>
+</head>
+
+<body>
+
+    <section class="hero">
+        <div class="starfield">
+            <span class="star twinkle" style="top: 20px; left: 50px;"></span>
+            <span class="star twinkle" style="top: 80px; left: 120px;"></span>
+            <span class="star twinkle" style="top: 60px; left: 200px;"></span>
+            <span class="star twinkle" style="top: 100px; left: 300px;"></span>
+            <span class="star twinkle" style="top: 200px; left: 400px;"></span>
+            <span class="star twinkle" style="top: 50px; left: 500px;"></span>
+            <span class="star twinkle" style="top: 180px; left: 600px;"></span>
+            <span class="star twinkle" style="top: 90px; left: 700px;"></span>
+            <span class="star twinkle" style="top: 160px; left: 800px;"></span>
+        </div>
+
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1>Welcome to the Chickenverse</h1>
+                <p>Bold. Bizarre. Beaked. Our chickens are ready to launch.</p>
+                <a href="#signup" class="btn-primary">Join the Flock</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="/images/blueChicken-img1.jpg" alt="Chicken in space helmet" />
+            </div>
+        </div>
+    </section>
+
+    <!-- 🧬 Chicken Profiles -->
+    <section class="profiles">
+        <h2>Meet the Crew</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="/images/bluechicken-img2.jpg" alt="Captain Cluck" />
+                <h3>Captain Cluck</h3>
+                <p>Fearless leader. Loves corn and cosmic justice.</p>
+                <button class="btn-primary open-modal" data-chicken="Captain Cluck">Learn More</button>
+            </div>
+
+            <div class="card">
+                <img src="/images/bluechicken-img3.jpg" alt="Eggnaut" />
+                <h3>Eggnaut</h3>
+                <p>Space explorer. Fluent in peep and chirp.</p>
+                <button class="btn-primary open-modal" data-chicken="Eggnaut">Learn More</button>
+            </div>
+
+            <div class="card">
+                <img src="/images/bluechicken-img4.jpg" alt="Feathertron" />
+                <h3>Feathertron</h3>
+                <p>Cyber chicken. Powered by sass and solar panels.</p>
+                <button class="btn-primary open-modal" data-chicken="Feathertron">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🎯 Features -->
+    <section class="features">
+        <h2>Why Join the Chickenverse?</h2>
+        <ul>
+            <li><i class="fas fa-egg"></i> Exclusive merch drops</li>
+            <li><i class="fas fa-feather-alt"></i> Chicken-powered content</li>
+            <li><i class="fas fa-rocket"></i> Early access to coop missions</li>
+        </ul>
+    </section>
+
+    <!-- 📬 Signup Form -->
+    <section class="signup" id="signup">
+        <h2>Get Cluckified</h2>
+        <form>
+            <input type="email" placeholder="Your email" required />
+            <button type="submit" class="btn-primary">Sign Me Up</button>
+        </form>
+    </section>
+
+    <!-- 🐓 Footer -->
+    <footer>
+        <p>&copy; 2025 Chickenverse Inc. All feathers reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <!-- 🧬 Modal -->
+    <div class="modal" id="chickenModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalBio"></p>
+        </div>
+    </div>
+
+    <!-- 🧠 JavaScript -->
+    <script>
+        const modal = document.getElementById('chickenModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalBio = document.getElementById('modalBio');
+        const closeBtn = document.querySelector('.close');
+
+        const bios = {
+            "Captain Cluck": "Captain Cluck is the fearless leader of the Chickenverse. He once pecked a meteor out of orbit.",
+            "Eggnaut": "Eggnaut has traveled to the edge of the coop galaxy. She speaks fluent chirp.",
+            "Feathertron": "Feathertron is 80% sass, 20% solar panels. She’s the tech genius of the flock."
+        };
+
+        document.querySelectorAll('.open-modal').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-chicken');
+                modalTitle.textContent = name;
+                modalBio.textContent = bios[name] || "No bio available.";
+                modal.style.display = 'flex';
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
