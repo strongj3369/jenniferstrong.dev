@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary Meta Tags -->
+    <title>ExtendedCode | Build Real Projects With AI</title>
+    <meta name="title" content="ExtendedCode | Build Real Projects With AI">
+    <meta name="description" content="Extended Code teaches you how to build with AI tools like Claude, ChatGPT, and Cursor. Learn prompting strategies, create client-ready templates, and build a portfolio that gets noticed.">
+    <meta name="keywords" content="learn AI coding, build with ChatGPT, Claude prompting, Cursor AI, portfolio projects, AI web development, email templates, landing pages, real coding practice">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://extendedcode.com/">
+    <meta property="og:title" content="Learn to Build with AI — Portfolio Projects, Prompting Skills, Real Practice | Extended Code">
+    <meta property="og:description" content="Build 20+ portfolio-ready templates using AI. Learn to direct Claude, ChatGPT & Cursor to create client-ready work.">
+    <meta property="og:image" content="https://extendedcode.com/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://extendedcode.com/">
+    <meta property="twitter:title" content="Learn to Build with AI — Portfolio Projects, Prompting Skills, Real Practice | Extended Code">
+    <meta property="twitter:description" content="Build 20+ portfolio-ready templates using AI. Learn to direct Claude, ChatGPT & Cursor to create client-ready work.">
+    <meta property="twitter:image" content="https://extendedcode.com/og-image.jpg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://extendedcode.com/">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L7KHTCLTWJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+
+        gtag('js', new Date());
+
+        const trafficType = localStorage.getItem('traffic_type');
+        if (trafficType === 'internal') {
+            gtag('config', 'G-L7KHTCLTWJ', {
+                user_properties: {
+                    traffic_type: 'internal'
+                }
+            });
+        } else {
+            gtag('config', 'G-L7KHTCLTWJ');
+        }
+
+        // Scroll depth tracking (fires once at 75%)
+        window.addEventListener('scroll', function () {
+            const scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.body.scrollHeight * 100);
+            if (scrollDepth >= 75 && !window.scrollTracked) {
+                gtag('event', 'scroll_75', {
+                    event_category: 'engagement',
+                    event_label: 'Scrolled 75%',
+                    value: scrollDepth
+                });
+                window.scrollTracked = true;
+            }
+        });
+
+        // Time-on-page tracking (fires once after 30 seconds)
+        setTimeout(function () {
+            gtag('event', 'time_on_page_30s', {
+                event_category: 'engagement',
+                event_label: 'Stayed 30s',
+                value: 30
+            });
+        }, 30000);
+
+        // CTA button click tracking
+        window.addEventListener('DOMContentLoaded', function () {
+            const cta = document.getElementById('cta-button');
+            if (cta) {
+                cta.addEventListener('click', function () {
+                    gtag('event', 'cta_click', {
+                        event_category: 'engagement',
+                        event_label: 'Start Free Trial',
+                        value: 1
+                    });
+                });
+            }
+        });
+
+        // Form view tracking (iframe load)
+        window.addEventListener('DOMContentLoaded', function () {
+            const formIframe = document.querySelector('iframe');
+            if (formIframe) {
+                formIframe.addEventListener('load', function () {
+                    gtag('event', 'form_view', {
+                        event_category: 'engagement',
+                        event_label: 'AI Platform Waitlist Viewed'
+                    });
+                });
+            }
+        });
+    </script>
+
+
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        color: #f4f1ea;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 700px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .logo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #ffa559;
+        margin-bottom: 0.5rem;
+        letter-spacing: 1px;
+    }
+
+    .tagline {
+        font-size: 1.3rem;
+        color: #ffa559;
+        margin-bottom: 2rem;
+        font-weight: 500;
+    }
+
+    .status {
+        display: inline-block;
+        background: rgba(76, 175, 80, 0.2);
+        color: #81c784;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        margin-bottom: 2rem;
+        border: 1px solid #81c784;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 1.5rem;
+        color: #ffffff;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .highlight {
+        color: #ffa559;
+        font-weight: 800;
+    }
+
+    .description {
+        font-size: 1.3rem;
+        color: #d4d4d4;
+        margin-bottom: 2.5rem;
+        line-height: 1.8;
+    }
+
+    .value-props {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        margin: 3rem 0;
+        text-align: left;
+    }
+
+    .value-prop {
+        background: rgba(255, 165, 89, 0.1);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 4px solid #ffa559;
+    }
+
+    .value-prop h3 {
+        color: #ffa559;
+        margin-bottom: 0.5rem;
+        font-size: 1.1rem;
+    }
+
+    .value-prop p {
+        color: #c8c8c8;
+        font-size: 0.95rem;
+    }
+
+
+    .cta-button {
+        margin-bottom: 2rem;
+    }
+
+
+    .problem-section {
+        background: rgba(255, 89, 89, 0.05);
+        padding: 2rem;
+        border-radius: 16px;
+        margin: 3rem 0;
+        border-left: 4px solid #ff5959;
+        text-align: left;
+    }
+
+    .problem-section h2 {
+        color: #ff5959;
+        margin-bottom: 1.5rem;
+        font-size: 1.6rem;
+        text-align: center;
+        /* ✅ CENTERED */
+    }
+
+    .problem-section ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
+    }
+
+    .problem-section li {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.2rem;
+        position: relative;
+        padding-left: 2.2rem;
+        /* ✅ EXTRA SPACE */
+        text-align: left;
+    }
+
+    .problem-section li::before {
+        content: "❌";
+        position: absolute;
+        left: 0;
+        font-size: 1.2rem;
+        color: #ff5959;
+    }
+
+
+
+
+    .solution-section {
+        background: rgba(76, 175, 80, 0.1);
+        padding: 2rem;
+        border-radius: 16px;
+        margin: 3rem 0;
+        border-left: 4px solid #81c784;
+    }
+
+    .solution-section h2 {
+        color: #81c784;
+        margin-bottom: 1rem;
+        font-size: 1.6rem;
+    }
+
+    .solution-section ul {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+    }
+
+    .solution-section li {
+        padding: 0.8rem 0;
+        color: #d4d4d4;
+        font-size: 1.1rem;
+    }
+
+    .solution-section li::before {
+        content: "✅ ";
+        margin-right: 0.5rem;
+    }
+
+    .preview-section {
+        margin: 4rem 0 3rem;
+        text-align: center;
+    }
+
+    .preview-section h2 {
+        color: #ffffff;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .preview-subtitle {
+        color: #b8b8b8;
+        margin-bottom: 2.5rem;
+        font-size: 1.1rem;
+    }
+
+    .template-previews {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .preview-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(255, 165, 89, 0.2);
+        transition: transform 0.3s, border-color 0.3s;
+    }
+
+    .preview-card:hover {
+        transform: translateY(-5px);
+        border-color: rgba(255, 165, 89, 0.5);
+    }
+
+    .preview-icon {
+        font-size: 3rem;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .preview-card h4 {
+        color: #ffa559;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .preview-card p {
+        color: #c8c8c8;
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .feature-highlight {
+        background: rgba(255, 165, 89, 0.08);
+        padding: 1.5rem;
+        border-radius: 10px;
+        border-left: 4px solid #ffa559;
+        margin-top: 2rem;
+    }
+
+    .feature-highlight p {
+        color: #d4d4d4;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    .feature-highlight strong {
+        color: #ffa559;
+    }
+
+    .form-container {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2.5rem;
+        border-radius: 16px;
+        margin: 3rem 0;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 165, 89, 0.2);
+    }
+
+    .form-container h2 {
+        color: #ffa559;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+    }
+
+    .form-container p {
+        color: #b8b8b8;
+        margin-bottom: 2rem;
+        font-size: 1.1rem;
+    }
+
+    .urgency {
+        background: rgba(255, 165, 89, 0.15);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        border: 2px solid #ffa559;
+    }
+
+    .urgency p {
+        color: #ffa559;
+        font-weight: 600;
+        margin: 0;
+        font-size: 1rem;
+    }
+
+    iframe {
+        width: 100%;
+        min-height: 400px;
+        border: none;
+        border-radius: 8px;
+    }
+
+
+
+
+    .footer {
+        margin-top: 4rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        color: #888;
+        font-size: 0.9rem;
+    }
+
+    .footer a {
+        color: #ffa559;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .footer a:hover {
+        color: #ffb876;
+    }
+
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 2rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+        }
+
+        .description {
+            font-size: 1.1rem;
+        }
+
+        .value-props {
+            grid-template-columns: 1fr;
+        }
+
+        .template-previews {
+            grid-template-columns: 1fr;
+        }
+
+        .form-container {
+            padding: 1.5rem;
+        }
+
+        .preview-section h2 {
+            font-size: 1.5rem;
+        }
+    }
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">Extended Code</div>
+        <p class="tagline">Stop Watching Tutorials. Start Building Client-Ready Work With AI.</p>
+
+        <a href="#waitlist" class="cta-button" style="background-color: #4CAF50; color: white; padding: 12px 24px; font-size: 1.2rem; border-radius: 6px; text-decoration: none; display: inline-block;">
+            Join the Waitlist + Get Bonus Templates
+        </a>
+
+
+        <h1>Learn to Build with AI — Portfolio Projects, Prompting Skills, Real Practice</h1>
+
+
+        <div class="promise-section">
+            <h2>What Changes With ExtendedCode</h2>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li><strong>✅ Real Projects, Not Just Practice</strong><br>Build client-ready apps with AI — from templates to full-stack builds.</li>
+                <li><strong>🧠 Prompting That Actually Works</strong><br>Learn how to direct AI to build, debug, and ship faster than ever.</li>
+                <li><strong>⏱️ Async-First Learning</strong><br>No live calls, no fluff — just guided tasks that respect your time.</li>
+                <li><strong>🚀 Portfolio That Converts</strong><br>Ship work that shows employers and clients what you can really do.</li>
+            </ul>
+        </div>
+
+
+        <!-- Problem/Solution -->
+        <div class="problem-section">
+            <h2>Sound Familiar?</h2>
+            <ul>
+                <li>Watched 10+ tutorials but still can’t build a real app that works end-to-end</li>
+                <li>No client-ready work in your portfolio — just half-finished experiments</li>
+                <li>AI sounds promising, but prompting it to build what you need feels like guesswork</li>
+                <li>Async-first learning sounds ideal, but most courses still waste your time and energy</li>
+            </ul>
+        </div>
+
+
+        <div class="solution-section">
+            <h2>Here's What Changes With Extended Code:</h2>
+            <ul>
+                <li>Build 20+ real templates businesses pay freelancers $500-2000 to create</li>
+                <li>Learn AI prompting strategies that turn designs into working code</li>
+                <li>Get step-by-step instructions on directing Claude, ChatGPT, Cursor</li>
+                <li>Walk away with a portfolio of billable work, not toy projects</li>
+            </ul>
+        </div>
+
+        <div class="value-props">
+            <div class="value-prop">
+                <h3>🤖 AI-Powered Learning</h3>
+                <p>Learn to build WITH AI, not from scratch. Get exact prompts to use in Claude, ChatGPT & Cursor</p>
+            </div>
+            <div class="value-prop">
+                <h3>💼 Portfolio-Ready</h3>
+                <p>Every template is client work businesses actually hire for—order confirmations, landing pages, brochures</p>
+            </div>
+            <div class="value-prop">
+                <h3>⚡ Practice, Not Tutorials</h3>
+                <p>No hand-holding videos. Just real designs, AI strategies, and you building</p>
+            </div>
+        </div>
+
+        <!-- Sneak Peek Section -->
+        <div class="preview-section">
+            <h2>What You'll Build With AI</h2>
+            <p class="preview-subtitle">Real templates. Real AI guidance. Real portfolio pieces.</p>
+
+            <div class="template-previews">
+                <div class="preview-card">
+                    <span class="preview-icon">📧</span>
+                    <h4>Email Templates</h4>
+                    <p>Build client-ready emails like order confirmations, travel promos, and onboarding flows — guided by AI prompting strategies.</p>
+                </div>
+
+                <div class="preview-card">
+                    <span class="preview-icon">🎨</span>
+                    <h4>Landing Pages</h4>
+                    <p>Design and deploy pages for pet services, coffee shops, and local startups — learn how to prompt AI for conversion-focused layouts.</p>
+                </div>
+
+                <div class="preview-card">
+                    <span class="preview-icon">🚀</span>
+                    <h4>Client-Ready Work</h4>
+                    <p>Every build is designed to be portfolio-worthy — with real-world use cases you can charge for or showcase to employers.</p>
+                </div>
+            </div>
+
+            <div class="feature-highlight">
+                <p><strong>Each template includes:</strong> The design reference • Step-by-step AI prompting instructions • Common AI mistakes to avoid • Quality checkpoints • <em>No tutorials—just you, AI, and real building</em></p>
+            </div>
+        </div>
+
+
+
+        <div class="form-container" id="waitlist">
+            <h2>Ready to Build Smarter?</h2>
+            <p>Join the waitlist and get early access + bonus templates. Limited spots. Lifetime discount for early builders.</p>
+            <div class="urgency">
+                <p>⚡ We’re capping early access to ensure quality support. Join now to lock in your spot.</p>
+            </div>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfH4ScK8wnGvfJ-4HqkUNJS393_fHr6GuePkoq4o3JqsU9UUA/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" style="border: none;">Loading…</iframe>
+        </div>
+
+
+        <div class="footer">
+            <p>Questions? Email us at <a href="mailto:team@extendedcode.com">team@extendedcode.com</a></p>
+            <p style="margin-top: 1rem;">© 2025 Extended Code. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Track form views -->
+    <script> document.querySelector('iframe').addEventListener('load', function () { if (typeof gtag !== 'undefined') { gtag('event', 'form_view', { 'event_category': 'engagement', 'event_label': 'AI Platform Waitlist Viewed' }); } }); </script>
+</body>
+
+</html>
