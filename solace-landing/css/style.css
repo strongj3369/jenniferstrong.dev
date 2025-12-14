@@ -56,7 +56,7 @@ img {
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url('/images/solace-image1.jpg');
+  background-image: url('/solace-landing/images/solace-image1.jpg');
   background-size: cover;
   background-position: center;
   display: flex;
