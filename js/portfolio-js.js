@@ -17,16 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
   // Slider state
   let currentIndex = 0;
   const totalSlides = slides.length;
-  const cardWidth = 450; // Match the CSS width exactly
-  
+
+  // Dynamically calculate card width
+  function getCardWidth() {
+    return slides[0].offsetWidth;
+  }
+
   // Update slider position
   function updateSlider() {
-    const moveAmount = currentIndex * cardWidth;
-    
-    console.log('Current index:', currentIndex, '| Moving:', moveAmount + 'px');
-    
+    const moveAmount = currentIndex * getCardWidth();
     sliderTrack.style.transform = `translateX(-${moveAmount}px)`;
-    
     updateDots();
     updateButtons();
   }
@@ -34,39 +34,19 @@ document.addEventListener('DOMContentLoaded', function() {
   // Update active dot
   function updateDots() {
     if (!dots.length) return;
-    
     dots.forEach((dot, index) => {
-      if (index === currentIndex) {
-        dot.classList.add('active');
-      } else {
-        dot.classList.remove('active');
-      }
+      dot.classList.toggle('active', index === currentIndex);
     });
   }
   
   // Update button disabled states
   function updateButtons() {
-    // Disable prev button at start
-    if (currentIndex === 0) {
-      prevButton.style.opacity = '0.5';
-      prevButton.style.cursor = 'not-allowed';
-      prevButton.disabled = true;
-    } else {
-      prevButton.style.opacity = '1';
-      prevButton.style.cursor = 'pointer';
-      prevButton.disabled = false;
-    }
-    
-    // Disable next button at end
-    if (currentIndex >= totalSlides - 1) {
-      nextButton.style.opacity = '0.5';
-      nextButton.style.cursor = 'not-allowed';
-      nextButton.disabled = true;
-    } else {
-      nextButton.style.opacity = '1';
-      nextButton.style.cursor = 'pointer';
-      nextButton.disabled = false;
-    }
+    prevButton.disabled = currentIndex === 0;
+    nextButton.disabled = currentIndex >= totalSlides - 1;
+    prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+    nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
+    prevButton.style.cursor = prevButton.disabled ? 'not-allowed' : 'pointer';
+    nextButton.style.cursor = nextButton.disabled ? 'not-allowed' : 'pointer';
   }
   
   // Go to next slide
@@ -136,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function() {
   function handleSwipe() {
     const swipeThreshold = 50;
     const swipeDistance = touchStartX - touchEndX;
-    
     if (Math.abs(swipeDistance) > swipeThreshold) {
       if (swipeDistance > 0) {
         nextSlide();
@@ -146,9 +125,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
+  // Resize listener to recalc widths
+  window.addEventListener('resize', updateSlider);
+  
   // Initialize slider
   updateSlider();
-  
   console.log('Slider initialized with', totalSlides, 'slides');
   
 });
