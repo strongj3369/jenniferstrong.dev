@@ -5,13 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Airline Email Template</title>
+    <style>
+        @media screen and (max-width: 600px) {
+            /* Make main table fluid */
+            .email-container {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+            
+            /* Stack input fields vertically */
+            .input-row {
+                display: block !important;
+                width: 100% !important;
+            }
+            
+            .input-cell {
+                display: block !important;
+                width: 100% !important;
+                padding: 0 0 10px 0 !important;
+            }
+            
+            /* Make inputs full width */
+            input {
+                width: 100% !important;
+                max-width: 100% !important;
+                box-sizing: border-box !important;
+            }
+            
+            /* Adjust header text */
+            h1 {
+                font-size: 20px !important;
+            }
+            
+            h2 {
+                font-size: 18px !important;
+            }
+        }
+    </style>
 </head>
 
 <body style="margin: 0; padding: 0; background-color: #FFF8F0;">
     <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #FFF8F0;">
         <tr>
             <td align="center">
-                <table width="600" cellpadding="0" cellspacing="0" border="0" style="background-color: #ffffff; max-width: 600px;">
+                <table width="600" cellpadding="0" cellspacing="0" border="0" class="email-container" style="background-color: #ffffff; max-width: 600px;">
 
                     <!-- Header -->
                     <tr>
@@ -55,19 +92,19 @@
                     <tr>
                         <td style="background-color: #FFFDF9; padding: 30px 20px; font-family: Arial, sans-serif;">
                             <table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 500px; margin: 0 auto;">
-                                <tr>
-                                    <td width="50%" style="padding: 0 5px 10px 0;">
+                                <tr class="input-row">
+                                    <td width="50%" class="input-cell" style="padding: 0 5px 10px 0;">
                                         <input type="text" placeholder="From Where?" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; font-family: Arial, sans-serif;" />
                                     </td>
-                                    <td width="50%" style="padding: 0 0 10px 5px;">
+                                    <td width="50%" class="input-cell" style="padding: 0 0 10px 5px;">
                                         <input type="text" placeholder="To Where?" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; font-family: Arial, sans-serif;" />
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td width="50%" style="padding: 0 5px 10px 0;">
+                                <tr class="input-row">
+                                    <td width="50%" class="input-cell" style="padding: 0 5px 10px 0;">
                                         <input type="text" placeholder="Depart" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; font-family: Arial, sans-serif;" />
                                     </td>
-                                    <td width="50%" style="padding: 0 0 10px 5px;">
+                                    <td width="50%" class="input-cell" style="padding: 0 0 10px 5px;">
                                         <input type="text" placeholder="Return" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; font-family: Arial, sans-serif;" />
                                     </td>
                                 </tr>
