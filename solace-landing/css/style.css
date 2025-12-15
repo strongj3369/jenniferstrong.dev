@@ -330,13 +330,19 @@ img {
   color: #ffcc00;
   font-size: 1.2rem;
 }
-
 .health-guide-expanded {
-  text-align: center;
-  padding: 60px 20px;
-  max-width: 1000px;
+  padding: 60px 5vw;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.health-guide-expanded img {
+  width: 100%;
+  height: auto;
+  display: block;
   margin: 0 auto;
 }
+
 
 .health-guide-expanded h2 {
   font-size: 2rem;
@@ -407,6 +413,14 @@ img {
   color: #0077b6;
   margin: 0;
 }
+
+
+@media screen and (max-width: 375px) {
+  .health-guide-expanded {
+    padding: 40px 16px;
+  }
+}
+
 
 
 
