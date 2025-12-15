@@ -154,74 +154,81 @@
             backdrop-filter: blur(3px);
         }
 
-        /* MOBILE RESPONSIVE */
-        @media screen and (max-width: 768px) {
-            .therapy-hero {
-                padding: 1.5rem;
-                min-height: auto;
-            }
+/* MOBILE RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .therapy-hero {
+    padding: 1.5rem;
+    min-height: auto;
+  }
 
-            .therapy-nav {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-                margin-bottom: 2rem;
-            }
+  .therapy-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
 
-            .logo {
-                font-size: 1.2rem;
-            }
+  .logo {
+    font-size: 1.2rem;
+  }
 
-            .nav-items {
-                display: flex;
-                flex-direction: column;
-                gap: 0.5rem;
-                width: 100%;
-            }
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
 
-            .nav-items a {
-                margin-left: 0;
-                padding: 0.5rem 0;
-                font-size: 0.9rem;
-            }
+  .nav-items a {
+    margin-left: 0;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+  }
 
-            .hero-inner {
-                flex-direction: column;
-                gap: 2rem;
-                margin-top: 1rem;
-            }
+  .nav-items a:hover {
+    opacity: 0.8;
+  }
 
-            .hero-left {
-                max-width: 100%;
-            }
+  .hero-inner {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 1rem;
+  }
 
-            .hero-left h1 {
-                font-size: 2.5rem;
-                line-height: 1.2;
-            }
+  .hero-left {
+    max-width: 100%;
+  }
 
-            .hero-sub {
-                font-size: 1rem;
-                margin-bottom: 1.5rem;
-            }
+  .hero-left h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
 
-            .hero-credential-note {
-                font-size: 0.85rem;
-                margin-bottom: 1.5rem;
-            }
+  .hero-sub {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
 
-            .hero-cta {
-                padding: 12px 24px;
-                font-size: 0.95rem;
-                width: 100%;
-                text-align: center;
-            }
+  .hero-credential-note {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+  }
 
-            /* Hide image on mobile */
-            .hero-image-wrap {
-                display: none;
-            }
-        }
+  .hero-cta {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Hide image on mobile */
+  .hero-image-wrap {
+    display: none;
+  }
+}
+
     </style>
 </head>
 
@@ -230,15 +237,18 @@
     <!-- HERO (NAV INSIDE, LIKE ORIGINAL) -->
     <section class="therapy-hero">
 
-        <!-- NAV -->
-        <nav class="therapy-nav">
-            <div class="logo">Clear Path</div>
+   
+      <!-- NAVIGATION BLOCK -->
+    <nav class="therapy-nav">
+      <div class="logo">Clear Path</div>
+    
+      <div class="nav-items">
+        <a href="page-builder-therapy-main.html">Home</a>
+        <a href="page-builder-therapy-testimonial.html">Trust</a>
+        <a href="page-builder-therapy-book-session.html">Book a Session</a>
+      </div>
+    </nav>
 
-             <div class="footer-links">
-            <a href="page-builder-therapy-main.html">Home</a>
-            <a href="page-builder-therapy-testimonial.html">Trust</a>
-            <a href="page-builder-therapy-book-session.html">Book a Session</a>
-        </div>
 
         </nav>
 
@@ -277,5 +287,6 @@
 </body>
 
 </html>
+
 
 
