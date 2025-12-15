@@ -428,25 +428,25 @@ section { padding: 5rem 2rem; }
   overflow: hidden;
   position: relative;
 }
-
 .slider-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .slider-card {
-  width: 450px;
-  min-width: 450px;
-  max-width: 450px;
-  flex-shrink: 0;
+  flex: 0 0 100%;       /* Each card takes full width of viewport */
+  max-width: 100%;      /* Prevent overflow on small screens */
+  box-sizing: border-box;
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
-  background: #F8F8F4; 
+  background: #F8F8F4;
   padding: 1.5rem;
-  display: flex; 
+  display: flex;
   flex-direction: column;
 }
+
 
 .slider-card:hover {
   border-color: rgba(212, 175, 55, 0.4);
@@ -607,6 +607,12 @@ section { padding: 5rem 2rem; }
 }
 
 
+@media screen and (min-width: 1024px) {
+  .slider-card {
+    flex: 0 0 450px;
+    max-width: 450px;
+  }
+}
 
 
 
