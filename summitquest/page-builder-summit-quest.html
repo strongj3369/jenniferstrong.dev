@@ -515,11 +515,24 @@
             margin-right: auto;
         }
 
-        @media (min-width: 768px) {
-            .bt-route-section {
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
+        @media screen and (max-width: 768px) {
+          .bt-route-premium-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 1.5rem;
+          }
+        
+          .bt-route-premium-wrapper > div {
+            width: 100%;
+          }
+        
+          .bt-route-premium-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+          }
         }
 
         /* Title */
@@ -1813,3 +1826,4 @@
 
 
 </html>
+
