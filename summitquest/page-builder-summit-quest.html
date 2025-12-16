@@ -263,19 +263,17 @@
         }
 
 
-        .bt-hero-dash-tag span {
-            display: inline-block;
-            padding: 0.28rem 0.9rem;
-            border-radius: var(--bt-radius-pill);
-            font-size: 0.75rem;
-            background: rgba(15, 23, 42, 0.85);
-            /* dark glass */
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            /* subtle white border */
-            color: var(--bt-text-soft);
-            backdrop-filter: blur(6px);
-        }
-
+.bt-hero-dash-tag span {
+    display: block;
+    padding: 0.28rem 0.9rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--bt-radius-pill);
+    font-size: 0.75rem;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    color: var(--bt-text-soft);
+    backdrop-filter: blur(6px);
+}
 
 
 
@@ -1002,22 +1000,25 @@
             }
 
 
-            /* HERO BUTTONS – MOBILE */
-            @media (max-width: 480px) {
-                .bt-button-row {
-                    flex-direction: column;
-                    align-items: stretch;
-                }
+      /* HERO BUTTONS – MOBILE */
+@media (max-width: 480px) {
+    .bt-button-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
 
-                .bt-btn {
-                    width: 100%;
-                    font-size: 0.9rem;
-                    padding: 0.85rem 1.4rem;
-                    background: inherit;
-                    box-shadow: inherit;
-                }
-            }
-
+    .bt-btn {
+        width: 100%;
+        font-size: 0.9rem;
+        padding: 0.85rem 1.4rem;
+    }
+    
+    /* Keep the green button green! */
+    .bt-btn-primary {
+        background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
+        box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
+    }
+}
 
             /* UNIVERSAL 1-COLUMN COLLAPSE */
             .bt-grid-2,
@@ -1826,4 +1827,5 @@
 
 
 </html>
+
 
