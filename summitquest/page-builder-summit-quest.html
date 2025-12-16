@@ -257,11 +257,10 @@
 
 
 
-        .bt-hero-overlay {
-            position: relative;
-            z-index: 2;
-        }
-
+.bt-hero-overlay {
+    position: relative;
+    z-index: 2;
+}
 
 .bt-hero-dash-tag span {
     display: block;
@@ -275,34 +274,33 @@
     backdrop-filter: blur(6px);
 }
 
+.bt-hero-badges {
+    position: absolute;
+    right: 1rem;
+    top: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem !important;
+}
 
+.bt-hero-badge {
+    padding: 0.3rem 0.9rem;
+    border-radius: var(--bt-radius-pill);
+    background: rgba(15, 23, 42, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    font-size: 0.75rem;
+    color: var(--bt-text-soft);
+}
 
+.bt-hero-dash-tag {
+    margin-bottom: 0.6rem;
+    font-size: 0.8rem;
+    color: var(--bt-text-soft);
+}
 
-        .bt-hero-badges {
-            position: absolute;
-            right: 1rem;
-            top: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            margin-bottom: 1rem !important;
-        }
-
-        .bt-hero-badge {
-            padding: 0.3rem 0.9rem;
-            border-radius: var(--bt-radius-pill);
-            background: rgba(15, 23, 42, 0.9);
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            font-size: 0.75rem;
-            color: var(--bt-text-soft);
-        }
-
-        .bt-hero-dash-tag {
-            margin-bottom: 0.6rem;
-            font-size: 0.8rem;
-            color: var(--bt-text-soft);
-        }
-
+ 
+        
         .bt-hero-dash {
             background: rgba(2, 6, 23, 0.96);
             border-radius: 20px;
@@ -499,156 +497,162 @@
         }
 
 
+/* ROUTE MAP (outer wrapper) */
+.bt-route-section {
+    position: relative;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        /* ROUTE MAP (outer wrapper) */
-        .bt-route-section {
-            position: relative;
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
-            box-sizing: border-box;
-            width: 100%;
-            max-width: none;
-            /* let inner wrapper control width */
-            margin-left: auto;
-            margin-right: auto;
-        }
+/* Title */
+.bt-route-title-wrap {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
-        @media screen and (max-width: 768px) {
-          .bt-route-premium-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 1.5rem;
-          }
-        
-          .bt-route-premium-wrapper > div {
-            width: 100%;
-          }
-        
-          .bt-route-premium-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-          }
-        }
+/* Mobile: stacked layout with clean spacing */
+.bt-route-premium-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
 
-        /* Title */
-        .bt-route-title-wrap {
-            text-align: center;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+@media (min-width: 768px) {
+    .bt-route-premium-wrapper {
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+    }
+}
 
-        /* Mobile: stacked layout with clean spacing */
-        .bt-route-premium-wrapper {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding-left: 0.75rem;
-            padding-right: 0.75rem;
-            box-sizing: border-box;
-            max-width: 1600px;
-            /* expanded canvas for desktop */
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 4rem;
-            /* move the whole section down from the title */
-        }
+/* Desktop: wide grid, generous columns for cards and image */
+@media (min-width: 1024px) {
+    .bt-route-premium-wrapper {
+        display: grid;
+        grid-template-columns:
+            minmax(400px, 1.5fr)
+            minmax(700px, 2.2fr)
+            minmax(400px, 1.5fr);
+        gap: 4rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
 
-        @media (min-width: 768px) {
-            .bt-route-premium-wrapper {
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
-            }
-        }
+/* Card columns */
+.bt-route-floating {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
 
-        /* Desktop: wide grid, generous columns for cards and image */
-        @media (min-width: 1024px) {
-            .bt-route-premium-wrapper {
-                display: grid;
-                grid-template-columns:
-                    minmax(400px, 1.5fr)
-                    /* left cards: wider minimum */
-                    minmax(700px, 2.2fr)
-                    /* image: larger minimum */
-                    minmax(400px, 1.5fr);
-                /* right cards: wider minimum */
-                gap: 4rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-        }
+/* Cards */
+.bt-route-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1.25rem 1.6rem;
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    width: 100%;
+}
 
-        /* Card columns */
-        .bt-route-floating {
-            display: flex;
-            flex-direction: column;
-            gap: 1.4rem;
-            margin-top: 0.5rem;
-            /* slight nudge down to align with image */
-        }
+@media (min-width: 1024px) {
+    .bt-route-card {
+        font-size: 1.06rem;
+        padding: 1.7rem 1.9rem;
+    }
+}
 
-        /* Cards */
-        .bt-route-card {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 1.25rem 1.6rem;
-            border-radius: 18px;
-            backdrop-filter: blur(14px);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
+.bt-route-card h4 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+}
 
-        @media (min-width: 1024px) {
-            .bt-route-card {
-                font-size: 1.06rem;
-                padding: 1.7rem 1.9rem;
-                /* comfortable desktop padding */
-            }
-        }
+.bt-route-card p {
+    margin: 0;
+    color: var(--bt-text-soft);
+}
 
-        .bt-route-card h4 {
-            margin: 0 0 0.35rem;
-            font-size: 1rem;
-        }
+/* Image wrapper */
+.bt-route-premium-image {
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
 
-        .bt-route-card p {
-            margin: 0;
-            color: var(--bt-text-soft);
-        }
+/* Image: responsive on all screens */
+.bt-route-premium-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
 
-        /* Image wrapper: let grid spacing do the work */
-        .bt-route-premium-image {
-            box-sizing: border-box;
-            padding: 0;
-            display: flex;
-            /* enables align stretch on desktop */
-            align-items: stretch;
-        }
+@media (min-width: 1024px) {
+    .bt-route-premium-image img {
+        height: 100%;
+        object-fit: cover;
+        min-height: 680px;
+    }
+}
 
-        /* Image: taller, fills center column */
-        .bt-route-premium-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: none;
-            border-radius: 22px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
-            margin: 0;
-        }
-
-        @media (min-width: 1024px) {
-            .bt-route-premium-image img {
-                height: 100%;
-                object-fit: cover;
-                min-height: 680px;
-                /* make the image longer; adjust to taste */
-            }
-        }
-
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    .bt-route-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .bt-route-premium-wrapper {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        margin-top: 2rem;
+    }
+    
+    .bt-route-floating {
+        width: 100%;
+        margin-top: 0;
+    }
+    
+    .bt-route-card {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .bt-route-premium-image {
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+    
+    .bt-route-premium-image img {
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+}
 
         /* ITINERARY / FEATURE PANEL */
         .bt-feature-row {
@@ -987,17 +991,28 @@
                 min-height: 260px !important;
             }
 
-            .bt-hero-badges {
-                top: 0.6rem !important;
-                right: 0.6rem !important;
-                gap: 0.45rem !important;
-            }
-
-            .bt-hero-dash {
-                margin-top: 1.1rem !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
+            
+              .bt-hero-badges {
+                    top: 4rem !important;
+                    right: 0.8rem !important;
+                    gap: 0.4rem !important;
+                }
+                
+                .bt-hero-badge {
+                    font-size: 0.65rem !important;
+                    padding: 0.25rem 0.7rem !important;
+                }
+                
+                .bt-hero-dash-tag {
+                    margin-top: 1rem !important;
+                    margin-bottom: 0.8rem !important;
+                }
+                
+                .bt-hero-dash-tag span {
+                    font-size: 0.7rem !important;
+                    padding: 0.25rem 0.8rem !important;
+                }
+                    }
 
 
       /* HERO BUTTONS – MOBILE */
@@ -1827,5 +1842,6 @@
 
 
 </html>
+
 
 
