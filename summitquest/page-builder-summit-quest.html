@@ -3,7 +3,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Builder Summit Quest - learning platformSummitQuest Adventures</title>
 
-
     <style>
         :root {
             --bt-bg-page: #020617;
@@ -29,7 +28,6 @@
             --bt-container-max: 1200px;
         }
 
-  
         /* PAGE */
         body.summitquest-body {
             margin: 0;
@@ -250,7 +248,7 @@
             right: 0.7rem;
             bottom: 1.6rem;
             border-radius: 22px;
-            background-image: url('/images/builder-hero-summit.png');
+            background-image: url('/summitquest/images/builder-hero-summit.png');
             background-size: cover;
             background-position: center;
             opacity: 0.7;
@@ -504,6 +502,9 @@
 
 
 
+
+
+
         /* ROUTE MAP (outer wrapper) */
         .bt-route-section {
             position: relative;
@@ -523,6 +524,7 @@
                 padding-right: 2rem;
             }
         }
+
 
         /* Title */
         .bt-route-title-wrap {
@@ -548,6 +550,8 @@
             /* move the whole section down from the title */
         }
 
+
+
         @media (min-width: 768px) {
             .bt-route-premium-wrapper {
                 padding-left: 1.25rem;
@@ -555,93 +559,90 @@
             }
         }
 
+/* Mobile: stacked layout with clean spacing */
+.bt-route-premium-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    box-sizing: border-box;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4rem;
+}
 
+/* Card columns */
+.bt-route-floating {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    margin-top: 0.5rem;
+}
 
-        /* Desktop: wide grid, generous columns for cards and image */
-        @media (min-width: 1024px) {
-            .bt-route-premium-wrapper {
-                display: grid;
-                grid-template-columns:
-                    minmax(400px, 1.5fr)
-                    /* left cards: wider minimum */
-                    minmax(700px, 2.2fr)
-                    /* image: larger minimum */
-                    minmax(400px, 1.5fr);
-                /* right cards: wider minimum */
-                gap: 4rem;
-                padding-left: 2rem;
-                padding-right: 2rem;
-            }
-        }
+/* Cards */
+.bt-route-card {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 1.25rem 1.6rem;
+    border-radius: 18px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(148, 163, 184, 0.4);
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
 
-        /* Card columns */
-        .bt-route-floating {
-            display: flex;
-            flex-direction: column;
-            gap: 1.4rem;
-            margin-top: 0.5rem;
-            /* slight nudge down to align with image */
-        }
+.bt-route-card h4 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+}
 
-        /* Cards */
-        .bt-route-card {
-            background: rgba(255, 255, 255, 0.04);
-            padding: 1.25rem 1.6rem;
-            border-radius: 18px;
-            backdrop-filter: blur(14px);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
-            border: 1px solid rgba(148, 163, 184, 0.4);
-            font-size: 0.95rem;
-            box-sizing: border-box;
-        }
+.bt-route-card p {
+    margin: 0;
+    color: var(--bt-text-soft);
+}
 
-        @media (min-width: 1024px) {
-            .bt-route-card {
-                font-size: 1.06rem;
-                padding: 1.7rem 1.9rem;
-                /* comfortable desktop padding */
-            }
-        }
+/* Image wrapper */
+.bt-route-premium-image {
+    box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    align-items: stretch;
+}
 
-        .bt-route-card h4 {
-            margin: 0 0 0.35rem;
-            font-size: 1rem;
-        }
+/* Image */
+.bt-route-premium-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
 
-        .bt-route-card p {
-            margin: 0;
-            color: var(--bt-text-soft);
-        }
-
-        /* Image wrapper: let grid spacing do the work */
-        .bt-route-premium-image {
-            box-sizing: border-box;
-            padding: 0;
-            display: flex;
-            /* enables align stretch on desktop */
-            align-items: stretch;
-        }
-
-        /* Image: taller, fills center column */
-        .bt-route-premium-image img {
-            display: block;
-            width: 100%;
-            height: auto;
-            max-width: none;
-            border-radius: 22px;
-            box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
-            margin: 0;
-        }
-
-        @media (min-width: 1024px) {
-            .bt-route-premium-image img {
-                height: 100%;
-                object-fit: cover;
-                min-height: 680px;
-                /* make the image longer; adjust to taste */
-            }
-        }
-
+/* Desktop: wide grid, generous columns for cards and image */
+@media (min-width: 1200px) {
+    .bt-route-premium-wrapper {
+        display: grid;
+        grid-template-columns: minmax(280px, 1fr) minmax(500px, 1.8fr) minmax(280px, 1fr);
+        gap: 2.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    
+    .bt-route-card {
+        font-size: 1.06rem;
+        padding: 1.7rem 1.9rem;
+    }
+    
+    .bt-route-premium-image img {
+        height: 100%;
+        object-fit: cover;
+        min-height: 680px;
+    }
+}
 
         /* ITINERARY / FEATURE PANEL */
         .bt-feature-row {
@@ -674,7 +675,7 @@
         .bt-feature-panel {
             background:
                 linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)),
-                url('/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
+                url('/summitquest/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
             padding: 1.6rem 1.8rem;
             border-radius: 24px;
             border: 1px solid rgba(148, 163, 184, 0.35);
@@ -1017,15 +1018,14 @@
                     box-shadow: inherit;
                 }
 
-                bt-btn-primary {
+                .bt-btn-primary {
                     background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
                     color: #052e16 !important;
                     box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
+                }
             }
 
 
-
-                
             /* UNIVERSAL 1-COLUMN COLLAPSE */
             .bt-grid-2,
             .bt-grid-3,
@@ -1117,24 +1117,22 @@
                 text-align: left !important;
                 padding: 0 0.2rem !important;
             }
-        }
 
-        /* EXTRA SMALL PHONES */
-        @media (max-width: 480px) {
-            .bt-heading-xl {
-                font-size: 1.9rem !important;
-            }
 
-            .bt-heading-lg {
-                font-size: 1.4rem !important;
-            }
-
-            .bt-card-thumb {
-                height: 160px !important;
-            }
-
-            /* Tighten tiny screens */
+         /* EXTRA SMALL PHONES */
             @media (max-width: 480px) {
+                .bt-heading-xl {
+                    font-size: 1.9rem !important;
+                }
+
+                .bt-heading-lg {
+                    font-size: 1.4rem !important;
+                }
+
+                .bt-card-thumb {
+                    height: 160px !important;
+                }
+ 
                 .bt-button-row {
                     gap: 10px;
                 }
@@ -1149,20 +1147,19 @@
             @media (min-width: 640px) {
                 .bt-button-row {
                     justify-content: flex-start;
-                    /* or space-between depending on layout */
                 }
 
                 .bt-button {
                     width: auto;
-                    /* stop full-width at tablet */
                     flex: 0 1 240px;
-                    /* grow/shrink nicely */
                 }
             }
-        }
-    </style>
 
+        }  /* <-- This closes the main @media (max-width: 768px) */
+    </style>
 </head>
+
+
 
 <body class="summitquest-body">
     <div class="bt-page">
@@ -1261,9 +1258,6 @@
             </div>
         </section>
 
-
-
-        
         <!-- ABOUT & HIGHLIGHTS -->
         <section class="bt-section bt-section--dark" id="sq-highlights">
             <div class="bt-container">
@@ -1299,7 +1293,7 @@
 
                         <!-- Himalayan Villages -->
                         <div class="bt-card">
-                            <div class="bt-card-header">    
+                            <div class="bt-card-header">
                                 <h3 class="bt-heading-md">Trek through Himalayan “villages”</h3>
                                 <span class="bt-card-tag bt-card-tag--accent">Guided</span>
                             </div>
@@ -1349,7 +1343,7 @@
                             Navigate “thin air” challenges designed to sharpen your pacing, teamwork, mindset, and split-second
                             judgment — without the frostbite.
                         </p>
-                        <div class="bt-card-thumb" style="background-image:url('/summitquest/images/builder-summit-training-day4.png');"></div>
+                        <div class="bt-card-thumb" style="background-image:url('/sumitquest/images/builder-summit-training-day4.png');"></div>
                     </div>
 
                     <!-- Summit Simulation (Signature Highlight) -->
@@ -1391,8 +1385,6 @@
 
 
 
-
-        
         <!-- ROUTE MAP SECTION -->
         <section class="bt-section bt-route-section">
             <div class="bt-container bt-route-title-wrap">
@@ -1445,11 +1437,6 @@
             </div>
         </section>
 
-
-
-
-
-        
         <!-- ITINERARY -->
         <section class="bt-section" id="sq-itinerary">
             <div class="bt-container">
@@ -1842,18 +1829,4 @@
     </script>
 </body>
 
-
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
