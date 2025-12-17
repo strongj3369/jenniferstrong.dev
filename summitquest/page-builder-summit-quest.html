@@ -29,7 +29,7 @@
             --bt-container-max: 1200px;
         }
 
-        /* PAGE */
+    /* PAGE */
         body.summitquest-body {
             margin: 0;
             padding: 0;
@@ -249,7 +249,7 @@
             right: 0.7rem;
             bottom: 1.6rem;
             border-radius: 22px;
-            background-image: url('/summitquest/images/builder-hero-summit.png');
+            background-image: url('/images/builder-hero-summit.png');
             background-size: cover;
             background-position: center;
             opacity: 0.7;
@@ -284,7 +284,7 @@
         .bt-hero-badges {
             position: absolute;
             right: 1rem;
-            top: 2.7rem;
+            top: 1.2rem;
             display: flex;
             flex-direction: column;
             gap: 0.6rem;
@@ -503,7 +503,6 @@
 
 
 
-
         /* ROUTE MAP (outer wrapper) */
         .bt-route-section {
             position: relative;
@@ -672,7 +671,7 @@
         .bt-feature-panel {
             background:
                 linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)),
-                url('/summitquest/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
+                url('/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
             padding: 1.6rem 1.8rem;
             border-radius: 24px;
             border: 1px solid rgba(148, 163, 184, 0.35);
@@ -943,75 +942,75 @@
             display: none !important;
         }
 
-        
-/* ============================================================
+        /* ============================================================
    MOBILE FIXES – ONLY UNDER 768px
 ============================================================ */
-        
-@media (max-width: 768px) {
-    html,
-    body,
-    .bt-page {
-        overflow-x: hidden !important;
-    }
-    
-    .bt-container {
-        padding: 0 1.2rem !important;
-    }
-    
-    .bt-section {
-        padding: 3rem 0 !important;
-    }
-    
-    /* HERO */
-    .bt-hero {
-        padding-top: 3rem !important;
-        padding-bottom: 1.5rem !important;
-    }
-    
-    .bt-hero-grid {
-        grid-template-columns: 1fr !important;
-        gap: 2rem !important;
-    }
-    
-    .bt-hero-panel {
-        padding: 2.3rem !important;
-        min-height: 350px !important;
-    }
-    
-    .bt-hero-badges {
-        top: 2.2rem !important;
-        right: 3rem !important;
-        gap: 0.45rem !important;
-    }
-    
-    .bt-hero-dash {
-        margin-top: 4.7rem !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-}
+        @media (max-width: 768px) {
 
-/* SMALL PHONES - SEPARATE MEDIA QUERY */
-@media (max-width: 480px) {
-    .bt-button-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .bt-btn {
-        width: 100%;
-        font-size: 0.9rem;
-        padding: 0.85rem 1.4rem;
-    }
-    
-    /* Keep green button green! */
-    .bt-btn-primary {
-        background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
-        color: #052e16 !important;
-        box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
-    }
-}
+            html,
+            body,
+            .bt-page {
+                overflow-x: hidden !important;
+            }
+
+            .bt-container {
+                padding: 0 1.2rem !important;
+            }
+
+            .bt-section {
+                padding: 3rem 0 !important;
+            }
+
+            /* HERO */
+            .bt-hero {
+                padding-top: 3rem !important;
+                padding-bottom: 1.5rem !important;
+            }
+
+            .bt-hero-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+
+            .bt-hero-panel {
+                padding: 2.3rem !important;
+                min-height: 350px !important;
+            }
+
+            .bt-hero-badges {
+                top: 2.2rem !important;
+                right: 3.8rem !important;
+                gap: 0.45rem !important;
+            }
+
+
+            .bt-hero-dash {
+                margin-top: 1.1rem !important;
+                width: 100% !important;
+                box-sizing: border-box !important;
+            }
+
+
+            /* HERO BUTTONS – MOBILE */
+            @media (max-width: 480px) {
+                .bt-button-row {
+                    flex-direction: column;
+                    align-items: stretch;
+                }
+
+                .bt-btn {
+                    width: 100%;
+                    font-size: 0.9rem;
+                    padding: 0.85rem 1.4rem;
+                    background: inherit;
+                    box-shadow: inherit;
+                }
+
+                bt-btn-primary {
+                    background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
+                    color: #052e16 !important;
+                    box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
+            }
 
 
             /* UNIVERSAL 1-COLUMN COLLAPSE */
@@ -1832,6 +1831,7 @@
 
 
 </html>
+
 
 
 
