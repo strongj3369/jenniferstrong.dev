@@ -503,11 +503,10 @@
 
 
 
-      /* ROUTE MAP SECTION - Desktop */
+/* ROUTE MAP SECTION - Desktop */
 .bt-route-section {
     position: relative;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    padding: 5rem 1.25rem;
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
@@ -524,23 +523,17 @@
 
 .bt-route-premium-wrapper {
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) minmax(500px, 1.5fr) minmax(250px, 1fr);
-    gap: 2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    box-sizing: border-box;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
     align-items: start;
 }
 
 .bt-route-floating {
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
-    width: 100%;
+    gap: 1.5rem;
 }
 
 .bt-route-card {
@@ -550,15 +543,12 @@
     backdrop-filter: blur(14px);
     box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
     border: 1px solid rgba(148, 163, 184, 0.4);
-    box-sizing: border-box;
-    width: 100%;
 }
 
 .bt-route-card h4 {
     margin: 0 0 0.5rem;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--bt-text-primary);
 }
 
 .bt-route-card p {
@@ -570,20 +560,13 @@
 
 .bt-route-premium-image {
     width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
 }
 
 .bt-route-premium-image img {
     width: 100%;
     height: auto;
-    max-width: 100%;
     border-radius: 22px;
     box-shadow: 0 30px 70px rgba(0, 0, 0, 0.7);
-    display: block;
 }
 
         @media (min-width: 768px) {
@@ -741,7 +724,7 @@
         .bt-feature-panel {
             background:
                 linear-gradient(to bottom, rgba(15, 23, 42, 0.88), rgba(15, 23, 42, 0.96)),
-                url('/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
+                url('/summitquest/images/builder-summit-summit-ridge5.png') center/cover no-repeat;
             padding: 1.6rem 1.8rem;
             border-radius: 24px;
             border: 1px solid rgba(148, 163, 184, 0.35);
@@ -1049,8 +1032,8 @@
     }
     
     .bt-hero-badges {
-        top: 0.6rem !important;
-        right: 0.6rem !important;
+        top: 2.2rem !important;
+        right: 3rem !important;
         gap: 0.45rem !important;
     }
     
@@ -1901,6 +1884,7 @@
 
 
 </html>
+
 
 
 
