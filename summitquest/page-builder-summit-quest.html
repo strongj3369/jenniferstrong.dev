@@ -1034,25 +1034,34 @@
                 .bt-hero-badge-stack {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.8rem;
-                  }
+                    align-items: center;
+                    gap: 0.6rem;
+                }
                 
-                .bt-hero-badge-stack > * {
+                .bt-hero-dash-tag {
+                    order: -1; /* move to top */
                     width: 100%;
-                  }
-
-                 .bt-hero-badges {
-                    position: static !important;
-                    display: flex !important;
-                    flex-direction: column !important;
-                    align-items: stretch !important;
-                    gap: 0.6rem !important;
-                    margin-bottom: 1rem !important;
-                 }
+                    text-align: center;
+                }
                 
-                 .bt-hero-badges > * {
-                    width: 100% !important;
-                 }
+                .bt-hero-badges {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.6rem;
+                    width: 100%;
+                }
+                
+                .bt-hero-badge {
+                    width: 100%;
+                    max-width: 280px;
+                    margin: 0 auto;
+                    text-align: center;
+                    padding: 0.6rem 1rem;
+                    border-radius: 999px;
+                    background-color: #f0fdf4;
+                    color: #166534;
+                    font-size: 0.85rem;
+                }
                 
 
 
@@ -1862,6 +1871,7 @@
 </body>
 
 </html>
+
 
 
 
