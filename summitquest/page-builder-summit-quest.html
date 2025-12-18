@@ -982,17 +982,17 @@
             }
 
               
-          .bt-hero-badges {
+         .bt-hero-badges {
             position: absolute;
             right: 1rem;
-            top: 2.5rem; /* Move down to make room for dash-tag */
+            top: 2.5rem;
             display: flex;
-            flex-direction: column; /* Stack badges vertically */
+            flex-direction: column;
             gap: 0.6rem;
             margin-bottom: 1rem !important;
-            align-items: flex-end; /* Align badges to the right */
+            align-items: flex-end;
           }
-          
+                  
           .bt-hero-badge {
             position: relative;
             right: auto;
@@ -1000,16 +1000,16 @@
             margin: 0; /* Remove any margin that might mess with stacking */
           }
           
-          .bt-hero-dash-tag {
+        .bt-hero-dash-tag {
             position: absolute;
-            right: 1rem;
-            top: 0.6rem; /* Position at the top */
+            right: 1rem; /* Match the badges right position */
+            top: 0.6rem;
             margin-bottom: 0;
             font-size: 0.8rem;
             color: var(--bt-text-soft);
-            text-align: center;
+            text-align: right; /* Align text to the right */
           }
-        
+                
 
             .bt-hero-dash {
                 margin-top: 8rem !important;
@@ -1853,6 +1853,7 @@
 </body>
 
 </html>
+
 
 
 
