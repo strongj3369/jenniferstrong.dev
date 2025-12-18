@@ -946,7 +946,7 @@
             display: none !important;
         }
 
-        /* ============================================================
+         /* ============================================================
    MOBILE FIXES – ONLY UNDER 768px
 ============================================================ */
         @media (max-width: 768px) {
@@ -981,35 +981,18 @@
                 min-height: 350px !important;
             }
 
-              
-         .bt-hero-badges {
-            position: absolute;
-            right: 1rem;
-            top: 2.5rem;
-            display: flex;
-            flex-direction: column;
-            gap: 0.6rem;
-            margin-bottom: 1rem !important;
-            align-items: flex-end;
-          }
-                  
-          .bt-hero-badge {
-            position: relative;
-            right: auto;
-            top: auto;
-            margin: 0; /* Remove any margin that might mess with stacking */
-          }
-          
-        .bt-hero-dash-tag {
-            position: absolute;
-            right: 1rem; /* Match the badges right position */
-            top: 0.6rem;
-            margin-bottom: 0;
-            font-size: 0.8rem;
-            color: var(--bt-text-soft);
-            text-align: right; /* Align text to the right */
-          }
-                
+            .bt-hero-badges {
+                top: 2.2rem !important;
+                right: 6rem !important;
+                gap: 0.45rem !important;
+            }
+
+            .bt-hero-dash-tag {
+                margin-bottom: 0.6rem;
+                font-size: 0.8rem;
+                color: var(--bt-text-soft);
+            }
+
 
             .bt-hero-dash {
                 margin-top: 8rem !important;
@@ -1023,7 +1006,7 @@
                 color: #052e16 !important;
                 box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
             }
-
+        }
 
 
             /* HERO BUTTONS – MOBILE */
@@ -1046,7 +1029,26 @@
                     color: #052e16 !important;
                     box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
                 }
-            }
+
+                    
+                .bt-hero-badges {
+                    top: -5.7rem !important;
+                    right: 2.5rem !important;
+                    gap: 0.45rem !important;
+                    color: var(--bt-text-soft);
+                    position: absolute;
+                }
+
+
+                .bt-hero-dash-tag {
+                    margin-bottom: 1rem;
+                    font-size: 0.8rem;
+                    color: var(--bt-text-soft);
+                    position: absolute;
+                    right: 3rem;
+                    top: -8rem;
+                }
+
 
 
             /* UNIVERSAL 1-COLUMN COLLAPSE */
@@ -1853,6 +1855,7 @@
 </body>
 
 </html>
+
 
 
 
