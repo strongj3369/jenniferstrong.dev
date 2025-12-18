@@ -1031,25 +1031,15 @@
                 }
 
                     
-                .bt-hero-badges {
-                    top: -5.7rem !important;
-                    right: 2.5rem !important;
-                    gap: 0.45rem !important;
-                    color: var(--bt-text-soft);
-                    position: absolute;
-                }
-
-
-                 .bt-hero-dash-tag {
-                    margin-bottom: 1rem;
-                    font-size: 0.8rem;
-                    color: var(--bt-text-soft);
-                    position: absolute;
-                    right: 3rem;
-                    top: -8rem;
-                    padding-left: 1.5rem;
-                    padding-right: 1.5rem;
-                }
+                .bt-hero-badge-stack {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.8rem;
+                  }
+                
+                .bt-hero-badge-stack > * {
+                    width: 100%;
+                  }
 
 
 
@@ -1238,14 +1228,16 @@
                             <div class="bt-hero-photo"></div>
 
                             <div class="bt-hero-overlay">
-                                <div class="bt-hero-badges">
+                                <div class="bt-hero-badge-stack">
+                                  <div class="bt-hero-badges">
                                     <div class="bt-hero-badge">Spring 2026 · Everest Cohort</div>
                                     <div class="bt-hero-badge">Live guides · Small group format</div>
+                                  </div>
+                                  <div class="bt-hero-dash-tag">
+                                    <span>Everest Expedition Dashboard</span>
+                                  </div>
                                 </div>
 
-                                <div class="bt-hero-dash-tag">
-                                    <span>Everest Expedition Dashboard</span>
-                                </div>
 
                                 <div class="bt-hero-dash">
                                     <div class="bt-hero-dash-header">
@@ -1857,6 +1849,7 @@
 </body>
 
 </html>
+
 
 
 
