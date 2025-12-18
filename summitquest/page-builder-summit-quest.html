@@ -981,51 +981,51 @@
                 min-height: 350px !important;
             }
 
-        .bt-hero-badge-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
+ @media (max-width: 768px) {
+  .bt-hero-badge-stack {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
   }
 
-  /* Pills container must be in flow */
-  .bt-hero-badges {
-    position: static !important;       /* stop floating */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
-    width: 100%;
-  }
-
-  /* Make each pill the same visual width */
-  .bt-hero-badge {
-    display: block;
-    width: 100%;
-    max-width: 280px;                  /* match dash tag width */
-    margin: 0 auto;
-    text-align: center;
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    /* keep existing colors/shadows (no overrides here) */
-  }
-
-  /* Make the dash tag visually match the pills */
   .bt-hero-dash-tag {
-    width: 100%;
-    display: flex;                     /* center the inner span */
-    justify-content: center;
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
+
   .bt-hero-dash-tag > span {
-    display: block;
-    width: 100%;
-    max-width: 280px;                  /* same as pills */
-    margin: 0 auto;
-    text-align: center;
-    padding: 0.6rem 1rem;              /* same vertical rhythm */
-    border-radius: 999px;              /* optional: match pill shape */
-    /* keep existing colors/shadows (no overrides here) */
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 999px !important;
   }
+
+  .bt-hero-badges {
+    position: static !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.6rem !important;
+    width: 100% !important;
+    margin-top: 0.4rem !important;
+  }
+
+  .bt-hero-badge {
+    display: block !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+    padding: 0.6rem 1rem !important;
+    border-radius: 999px !important;
+    font-size: 0.85rem !important;
+  }
+
                             
             .bt-btn-primary {
                 background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
@@ -1056,42 +1056,12 @@
                     box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
                 }
 
-
-  .bt-hero-badge-stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
+    .bt-hero-badge,
+  .bt-hero-dash-tag > span {
+    max-width: 220px;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.9rem;
   }
-
-  .bt-hero-dash-tag {
-    order: -1; /* dashboard tag always on top */
-    width: 100%;
-    text-align: center;
-  }
-
-  .bt-hero-badges {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    width: 100%;
-    align-items: center;
-  }
-
-  .bt-hero-badge {
-    width: 100%;
-    max-width: 280px; /* keeps pills from being too long */
-    margin: 0 auto;
-    text-align: center;
-    padding: 0.6rem 1rem;
-    border-radius: 999px;
-    font-size: 0.85rem;
-    /* no background or color overrides — keeps your original styling */
-  }
-
-
-                
-
 
             /* UNIVERSAL 1-COLUMN COLLAPSE */
             .bt-grid-2,
@@ -1899,6 +1869,7 @@
 </body>
 
 </html>
+
 
 
 
