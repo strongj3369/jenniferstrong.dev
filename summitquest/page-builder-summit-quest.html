@@ -981,26 +981,39 @@
                 min-height: 350px !important;
             }
 
-            .bt-hero-badges {
-                top: 2.2rem !important;
-                right: 6rem !important;
-                gap: 0.45rem !important;
-            }
+          .bt-hero-badge-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
 
-            .bt-hero-dash-tag {
-                margin-bottom: 0.6rem;
-                font-size: 0.8rem;
-                color: var(--bt-text-soft);
-            }
+  .bt-hero-dash-tag {
+    order: -1; /* dashboard tag always on top */
+    width: 100%;
+    text-align: center;
+  }
 
+  .bt-hero-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: center;
+  }
 
-            .bt-hero-dash {
-                margin-top: 8rem !important;
-                width: 100% !important;
-                box-sizing: border-box !important;
-            }
+  .bt-hero-badge {
+    width: 100%;
+    max-width: 280px; /* keeps pills from being too long */
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    /* no background or color overrides — keeps your original styling */
+  }
 
-
+            
             .bt-btn-primary {
                 background: radial-gradient(circle at top left, #4ade80, #22c55e 30%, #16a34a 80%) !important;
                 color: #052e16 !important;
@@ -1030,38 +1043,40 @@
                     box-shadow: 0 12px 25px rgba(34, 197, 94, 0.35) !important;
                 }
 
-                    
-                .bt-hero-badge-stack {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 0.6rem;
-                }
-                
-                .bt-hero-dash-tag {
-                    order: -1; /* move to top */
-                    width: 100%;
-                    text-align: center;
-                }
-                
-                .bt-hero-badges {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.6rem;
-                    width: 100%;
-                }
-                
-                .bt-hero-badge {
-                    width: 100%;
-                    max-width: 280px;
-                    margin: 0 auto;
-                    text-align: center;
-                    padding: 0.6rem 1rem;
-                    border-radius: 999px;
-                    background-color: #f0fdf4;
-                    color: #166534;
-                    font-size: 0.85rem;
-                }
+
+  .bt-hero-badge-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .bt-hero-dash-tag {
+    order: -1; /* dashboard tag always on top */
+    width: 100%;
+    text-align: center;
+  }
+
+  .bt-hero-badges {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .bt-hero-badge {
+    width: 100%;
+    max-width: 280px; /* keeps pills from being too long */
+    margin: 0 auto;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    /* no background or color overrides — keeps your original styling */
+  }
+
+
                 
 
 
@@ -1871,6 +1886,7 @@
 </body>
 
 </html>
+
 
 
 
