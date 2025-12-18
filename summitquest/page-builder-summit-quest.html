@@ -981,35 +981,35 @@
                 min-height: 350px !important;
             }
 
-            .bt-hero-dash-tag {
-         @media (max-width: 768px) {
-              .bt-hero-badges {
-                position: absolute;
-                right: 1rem;
-                top: 1.2rem;
-                display: flex;
-                flex-direction: column; /* Stack vertically */
-                gap: 0.6rem;
-                margin-bottom: 1rem !important;
-              }
               
-              .bt-hero-badge {
-                /* Remove any positioning that might interfere */
-                position: relative;
-                right: auto;
-                top: auto;
-              }
-              
-              .bt-hero-dash-tag {
-                margin-bottom: 0.6rem;
-                font-size: 0.8rem;
-                color: var(--bt-text-soft);
-                position: absolute;
-                right: 1rem; /* Align with badges */
-                top: 0.4rem; /* Position above badges */
-                text-align: center;
-                width: auto;
-              }
+          .bt-hero-badges {
+            position: absolute;
+            right: 1rem;
+            top: 2.5rem; /* Move down to make room for dash-tag */
+            display: flex;
+            flex-direction: column; /* Stack badges vertically */
+            gap: 0.6rem;
+            margin-bottom: 1rem !important;
+            align-items: flex-end; /* Align badges to the right */
+          }
+          
+          .bt-hero-badge {
+            position: relative;
+            right: auto;
+            top: auto;
+            margin: 0; /* Remove any margin that might mess with stacking */
+          }
+          
+          .bt-hero-dash-tag {
+            position: absolute;
+            right: 1rem;
+            top: 0.6rem; /* Position at the top */
+            margin-bottom: 0;
+            font-size: 0.8rem;
+            color: var(--bt-text-soft);
+            text-align: center;
+          }
+        
 
             .bt-hero-dash {
                 margin-top: 8rem !important;
@@ -1853,5 +1853,6 @@
 </body>
 
 </html>
+
 
 
