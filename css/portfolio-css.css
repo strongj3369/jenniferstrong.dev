@@ -358,13 +358,22 @@ section { padding: 5rem 2rem; }
 .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.1rem; }
 .tag {
   display: inline-block;
+  padding: 2px 8px;       /* tighter vertical + horizontal space */
+  font-size: 0.7rem;      /* slightly smaller text */
+  font-weight: 500;       /* lighter than 600 */
+  border-radius: 999px;   /* keeps pill shape */
+  line-height: 1.2;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  letter-spacing: 0.2px;  /* tighter spacing */
+  margin: 2px 4px 0 0;    /* slimmer gap between tags */
+  /* keep your existing background, color, and border */
   background: #E8E8E4;
   color: #046D5D;
-  padding: 0.4rem 0.8rem;
-  border-radius: 20px;
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.3px;
   border: 1px solid #D4AF37;
 }
+
 
 /* === Card Buttons === */
 .card-buttons { display: flex; gap: 0.75rem; margin-top: auto; }
