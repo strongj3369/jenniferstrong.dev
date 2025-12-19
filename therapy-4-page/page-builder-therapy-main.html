@@ -7,10 +7,16 @@
     <title>Clear Path Therapy – Home</title>
 
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
         }
 
         :root {
@@ -26,20 +32,25 @@
         body {
             font-family: "Inter", sans-serif;
             background: #000;
+            /* desktop body bg */
             color: #fff;
         }
 
         /* HERO SECTION WRAPPER (includes NAV) */
         .therapy-hero {
-            min-height: 100vh;
+            min-height: 100dvh;
+            /* robust on desktop/tablet */
             padding: 3rem;
+            padding-top: 2rem; /* or try 2.5rem for more breathing room */
             display: flex;
             flex-direction: column;
-            background: radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
+            background:
+                radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
                 linear-gradient(135deg, #1A1A1A, #2b3430);
             color: white;
-            font-family: "Inter", sans-serif;
             position: relative;
+            overflow: clip;
+            /* prevent positioned children from leaking */
         }
 
         /* NAVIGATION */
@@ -48,6 +59,7 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 4rem;
+            width: 100%;
         }
 
         .logo {
@@ -55,6 +67,11 @@
             font-weight: 600;
             letter-spacing: -0.5px;
             color: var(--sand);
+        }
+
+        .nav-items {
+            display: flex;
+            align-items: center;
         }
 
         .nav-items a {
@@ -68,13 +85,6 @@
             opacity: 0.8;
         }
 
-        .cta-small {
-            padding: 8px 18px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 255, 255, 0.25);
-            background: rgba(255, 255, 255, 0.08);
-        }
-
         /* HERO CONTENT */
         .hero-inner {
             display: flex;
@@ -82,6 +92,7 @@
             align-items: center;
             gap: 4rem;
             margin-top: 2rem;
+            width: 100%;
         }
 
         .hero-left {
@@ -132,6 +143,8 @@
         .hero-image-wrap {
             position: relative;
             flex: 1;
+            min-width: 0;
+            /* prevent flex overflow issues */
         }
 
         .hero-img {
@@ -140,6 +153,7 @@
             object-fit: cover;
             border-radius: 22px;
             box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+            display: block;
         }
 
         /* DECORATIVE LINE */
@@ -154,11 +168,41 @@
             backdrop-filter: blur(3px);
         }
 
-/* MOBILE RESPONSIVE */
+        /* ====== RESPONSIVE ====== */
+
+        /* Tablet tweaks */
+        @media screen and (max-width: 1024px) {
+            .therapy-hero {
+                padding: 2rem;
+            }
+
+            .hero-inner {
+                gap: 2rem;
+            }
+
+            .hero-img {
+                height: 460px;
+            }
+
+            .hero-left h1 {
+                font-size: 3.1rem;
+            }
+        }
+
+   /* Mobile collapse */
 @media screen and (max-width: 768px) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
+      linear-gradient(135deg, #1A1A1A, #2b3430);
+  }
+
   .therapy-hero {
-    padding: 1.5rem;
-    min-height: auto;
+    min-height: 100svh;
+    height: auto;
+    padding: env(safe-area-inset-top) 1.25rem 1.25rem 1.25rem;
+    padding-top: 2rem;
+    overflow: hidden;
   }
 
   .therapy-nav {
@@ -182,19 +226,14 @@
   .nav-items a {
     margin-left: 0;
     padding: 0.5rem 0;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.85);
-    text-decoration: none;
-  }
-
-  .nav-items a:hover {
-    opacity: 0.8;
+    font-size: 0.92rem;
   }
 
   .hero-inner {
+    display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
   }
 
   .hero-left {
@@ -202,59 +241,89 @@
   }
 
   .hero-left h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     line-height: 1.2;
   }
 
   .hero-sub {
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-credential-note {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
+    font-size: 0.88rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-cta {
-    padding: 12px 24px;
+    padding: 12px 18px;
     font-size: 0.95rem;
     width: 100%;
     text-align: center;
   }
 
-  /* Hide image on mobile */
   .hero-image-wrap {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .soft-line {
     display: none;
   }
 }
 
-    </style>
+/* Ultra‑small phones (e.g., iPhone SE, 320–360px) */
+@media screen and (max-width: 380px) {
+  .therapy-nav {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-left h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.98rem;
+  }
+
+  .hero-credential-note {
+    font-size: 0.84rem;
+  }
+
+  .hero-img {
+    max-height: 260px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <!-- HERO (NAV INSIDE, LIKE ORIGINAL) -->
+    <!-- HERO (NAV INSIDE) -->
     <section class="therapy-hero">
 
-   
-      <!-- NAVIGATION BLOCK -->
-    <nav class="therapy-nav">
-      <div class="logo">Clear Path</div>
-    
-      <div class="nav-items">
-        <a href="page-builder-therapy-main.html">Home</a>
-        <a href="page-builder-therapy-testimonial.html">Trust</a>
-        <a href="page-builder-therapy-book-session.html">Book a Session</a>
-      </div>
-    </nav>
-
-
+        <!-- NAVIGATION BLOCK -->
+        <nav class="therapy-nav">
+            <div class="logo">Clear Path</div>
+            <div class="nav-items">
+                <a href="page-builder-therapy-main.html">Home</a>
+                <a href="page-builder-therapy-testimonial.html">Trust</a>
+                <a href="page-builder-therapy-book-session.html">Book a Session</a>
+            </div>
         </nav>
 
         <!-- HERO CONTENT -->
         <div class="hero-inner">
-
             <div class="hero-left">
                 <h1>A Path That Shapes<br>Your Future.</h1>
 
@@ -267,19 +336,15 @@
                     *Alicia Bennett is a Licensed Marriage & Family Therapist (LMFT).
                 </p>
 
-                <!-- FINAL CTA TEXT + LINK -->
                 <a href="/therapy-4-page/page-builder-therapy-about.html" class="hero-cta">
                     Learn About Licensed Care
                 </a>
             </div>
 
             <div class="hero-image-wrap">
-                <img src="/therapy-4-page/images/therapy-front-image.png"
-                    alt="Therapy session" class="hero-img" />
-
+                <img src="/therapy-4-page/images/therapy-front-image.png" alt="Therapy session" class="hero-img" />
                 <div class="soft-line"></div>
             </div>
-
         </div>
 
     </section>
@@ -287,6 +352,3 @@
 </body>
 
 </html>
-
-
-
