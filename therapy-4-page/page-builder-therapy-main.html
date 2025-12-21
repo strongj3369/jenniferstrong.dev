@@ -32,16 +32,15 @@
         body {
             font-family: "Inter", sans-serif;
             background: #000;
-            /* desktop body bg */
             color: #fff;
+            overflow-x: hidden;
         }
 
         /* HERO SECTION WRAPPER (includes NAV) */
         .therapy-hero {
             min-height: 100dvh;
-            /* robust on desktop/tablet */
             padding: 3rem;
-            padding-top: 2rem; /* or try 2.5rem for more breathing room */
+            padding-top: 2rem;
             display: flex;
             flex-direction: column;
             background:
@@ -50,7 +49,6 @@
             color: white;
             position: relative;
             overflow: clip;
-            /* prevent positioned children from leaking */
         }
 
         /* NAVIGATION */
@@ -67,6 +65,7 @@
             font-weight: 600;
             letter-spacing: -0.5px;
             color: var(--sand);
+            z-index: 3;
         }
 
         .nav-items {
@@ -79,10 +78,57 @@
             color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             font-size: 0.95rem;
+            transition: all 0.25s ease;
         }
 
         .nav-items a:hover {
-            opacity: 0.8;
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .nav-items a:last-child {
+            padding: 8px 18px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+        }
+
+        .nav-items a:last-child:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 3;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hamburger Animation */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
 
         /* HERO CONTENT */
@@ -144,7 +190,6 @@
             position: relative;
             flex: 1;
             min-width: 0;
-            /* prevent flex overflow issues */
         }
 
         .hero-img {
@@ -189,122 +234,148 @@
             }
         }
 
-   /* Mobile collapse */
-@media screen and (max-width: 768px) {
-  body {
-    background:
-      radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
-      linear-gradient(135deg, #1A1A1A, #2b3430);
-  }
+        /* Mobile collapse */
+        @media screen and (max-width: 768px) {
+            body {
+                background:
+                    radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
+                    linear-gradient(135deg, #1A1A1A, #2b3430);
+            }
 
-  .therapy-hero {
-    min-height: 100svh;
-    height: auto;
-    padding: env(safe-area-inset-top) 1.25rem 1.25rem 1.25rem;
-    padding-top: 2rem;
-    overflow: hidden;
-  }
+            .therapy-hero {
+                min-height: 100svh;
+                height: auto;
+                padding: env(safe-area-inset-top) 1.25rem 1.25rem 1.25rem;
+                padding-top: 1rem;
+                overflow: hidden;
+            }
 
-  .therapy-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
+            .therapy-nav {
+                margin-bottom: 2rem;
+                padding: 1rem 0;
+            }
 
-  .logo {
-    font-size: 1.2rem;
-  }
+            .logo {
+                font-size: 1.2rem;
+            }
 
-  .nav-items {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
+            .hamburger {
+                display: flex;
+            }
 
-  .nav-items a {
-    margin-left: 0;
-    padding: 0.5rem 0;
-    font-size: 0.92rem;
-  }
+            .nav-items {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: linear-gradient(135deg, #1A1A1A, #2b3430);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 80px 2rem 2rem;
+                gap: 0;
+                transition: right 0.3s ease-in-out;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            }
 
-  .hero-inner {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 0.75rem;
-  }
+            .nav-items.active {
+                right: 0;
+            }
 
-  .hero-left {
-    max-width: 100%;
-  }
+            .nav-items a {
+                margin: 0;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+                padding: 0.5rem 0;
+            }
 
-  .hero-left h1 {
-    font-size: 2.4rem;
-    line-height: 1.2;
-  }
+            .nav-items a:last-child {
+                margin-top: 1rem;
+                padding: 10px 20px;
+                text-align: center;
+                display: inline-block;
+                width: auto;
+            }
 
-  .hero-sub {
-    font-size: 1rem;
-    margin-bottom: 1.25rem;
-  }
+            .hero-inner {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-top: 0.75rem;
+            }
 
-  .hero-credential-note {
-    font-size: 0.88rem;
-    margin-bottom: 1.25rem;
-  }
+            .hero-left {
+                max-width: 100%;
+            }
 
-  .hero-cta {
-    padding: 12px 18px;
-    font-size: 0.95rem;
-    width: 100%;
-    text-align: center;
-  }
+            .hero-left h1 {
+                font-size: 2.4rem;
+                line-height: 1.2;
+            }
 
-  .hero-image-wrap {
-    display: block;
-    width: 100%;
-    margin-top: 1rem;
-  }
+            .hero-sub {
+                font-size: 1rem;
+                margin-bottom: 1.25rem;
+            }
 
-  .hero-img {
-    width: 100%;
-    height: auto;
-    max-height: 320px;
-    object-fit: cover;
-    border-radius: 18px;
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
-  }
+            .hero-credential-note {
+                font-size: 0.88rem;
+                margin-bottom: 1.25rem;
+            }
 
-  .soft-line {
-    display: none;
-  }
-}
+            .hero-cta {
+                padding: 12px 18px;
+                font-size: 0.95rem;
+                width: 100%;
+                text-align: center;
+            }
 
-/* Ultra‑small phones (e.g., iPhone SE, 320–360px) */
-@media screen and (max-width: 380px) {
-  .therapy-nav {
-    margin-bottom: 1.5rem;
-  }
+            .hero-image-wrap {
+                display: block;
+                width: 100%;
+                margin-top: 1rem;
+            }
 
-  .hero-left h1 {
-    font-size: 2.1rem;
-  }
+            .hero-img {
+                width: 100%;
+                height: auto;
+                max-height: 320px;
+                object-fit: cover;
+                border-radius: 18px;
+                box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+            }
 
-  .hero-sub {
-    font-size: 0.98rem;
-  }
+            .soft-line {
+                display: none;
+            }
+        }
 
-  .hero-credential-note {
-    font-size: 0.84rem;
-  }
+        /* Ultra‑small phones (e.g., iPhone SE, 320–360px) */
+        @media screen and (max-width: 380px) {
+            .therapy-nav {
+                margin-bottom: 1.5rem;
+            }
 
-  .hero-img {
-    max-height: 260px;
-  }
-}
-</style>
+            .hero-left h1 {
+                font-size: 2.1rem;
+            }
+
+            .hero-sub {
+                font-size: 0.98rem;
+            }
+
+            .hero-credential-note {
+                font-size: 0.84rem;
+            }
+
+            .hero-img {
+                max-height: 260px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -315,7 +386,15 @@
         <!-- NAVIGATION BLOCK -->
         <nav class="therapy-nav">
             <div class="logo">Clear Path</div>
-            <div class="nav-items">
+            
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <div class="nav-items" id="navItems">
                 <a href="page-builder-therapy-main.html">Home</a>
                 <a href="page-builder-therapy-testimonial.html">Trust</a>
                 <a href="page-builder-therapy-book-session.html">Book a Session</a>
@@ -348,6 +427,39 @@
         </div>
 
     </section>
+
+    <script>
+        // =============================
+        // HAMBURGER MENU TOGGLE
+        // =============================
+        const hamburger = document.getElementById('hamburger');
+        const navItems = document.getElementById('navItems');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navItems.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navItems.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navItems.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navItems.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            }
+        });
+    </script>
 
 </body>
 
