@@ -397,18 +397,39 @@
             color: var(--bt-text-soft);
         }
 
-        /* GRID SYSTEM */
-        .bt-grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.25rem;
-        }
+/* GRID SYSTEM */
+.bt-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.25rem;
+}
 
-        .bt-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
-        }
+.bt-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+/* RESPONSIVE GRIDS */
+@media (max-width: 768px) {
+    .bt-grid-2,
+    .bt-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+/* Tablet view - optional */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .bt-grid-3 {
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+
+
+
+        
 
         /* BADGES & CHIPS */
         .bt-badge-row {
@@ -503,6 +524,9 @@
 
 
 
+
+
+        
 
 
         /* ROUTE MAP (outer wrapper) */
@@ -1885,6 +1909,7 @@
 </body>
 
 </html>
+
 
 
 
