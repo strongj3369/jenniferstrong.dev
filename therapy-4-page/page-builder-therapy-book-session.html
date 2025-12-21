@@ -41,7 +41,6 @@
             left: 0;
             width: 100%;
             height: 110px;
-            /* same height impression as home */
             background: radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
                 linear-gradient(135deg, #1A1A1A, #2b3430);
             z-index: 1;
@@ -51,7 +50,6 @@
         .therapy-nav {
             position: relative;
             z-index: 2;
-            /* so it sits above the nav background */
             width: 100%;
             padding: 1.8rem 3rem;
             display: flex;
@@ -66,32 +64,66 @@
             color: white;
         }
 
-        .therapy-nav a {
+        /* Style the nav-items container */
+        .therapy-nav .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        /* Style the links inside nav-items */
+        .therapy-nav .nav-items a {
             color: rgba(255, 255, 255, 0.85);
             margin-left: 24px;
             text-decoration: none;
             font-size: 0.95rem;
+            transition: all 0.25s ease;
         }
 
-        .cta-small {
+        .therapy-nav .nav-items a:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        /* Last link gets the CTA styling */
+        .therapy-nav .nav-items a:last-child {
             padding: 8px 18px;
             border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.25);
             background: rgba(255, 255, 255, 0.08);
             backdrop-filter: blur(4px);
-            transition: all 0.25s ease;
         }
 
-
-        /* BOOK A SESSION — HOVER ELEVATION */
-        .cta-small:hover {
+        .therapy-nav .nav-items a:last-child:hover {
             background: rgba(255, 255, 255, 0.18);
             border-color: rgba(255, 255, 255, 0.45);
             transform: translateY(-2px);
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-            transition: all 0.25s ease;
         }
 
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .therapy-nav {
+                padding: 1rem;
+            }
+            
+            .therapy-nav .logo {
+                font-size: 1.2rem;
+            }
+            
+            .therapy-nav .nav-items {
+                gap: 0;
+            }
+            
+            .therapy-nav .nav-items a {
+                margin-left: 12px;
+                font-size: 0.85rem;
+            }
+            
+            .therapy-nav .nav-items a:last-child {
+                padding: 6px 12px;
+                font-size: 0.8rem;
+            }
+        }
 
         /* =============================
            PAGE WRAPPER / HERO
@@ -235,49 +267,49 @@
             font-size: 1.05rem;
         }
 
-  /* ==============================
+        /* ==============================
            UPDATED FOOTER STYLE
         ============================== */
-  .therapy-footer {
-  background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
-  padding: 2.5rem 1.5rem 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(199, 168, 108, 0.28);
-  margin-top: 3rem;
-}
+        .therapy-footer {
+            background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
+            padding: 2.5rem 1.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(199, 168, 108, 0.28);
+            margin-top: 3rem;
+        }
 
-.footer-tagline {
-  font-size: 1rem;
-  color: #2b322d;
-  margin-bottom: 1rem;
-}
+        .footer-tagline {
+            font-size: 1rem;
+            color: #2b322d;
+            margin-bottom: 1rem;
+        }
+        
+         .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem; /* slightly tighter gap */
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: #2b322d;
+            text-decoration: none;
+            font-size: 0.85rem; /* smaller from 0.9rem */
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+            white-space: nowrap; /* prevents links from breaking into multiple lines */
+        }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem; /* tighter spacing */
-  margin-bottom: 0.75rem;
-}
+        .footer-links a:hover {
+            color: var(--deep-sage);
+        }
 
-.footer-links a {
-  color: #2b322d;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out;
-}
-
-.footer-links a:hover {
-  color: var(--deep-sage); /* or #6a4ea8 if you prefer purple hover */
-}
-
-.footer-copy {
-  color: #555;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-}
-
+        .footer-copy {
+            color: #555;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 
@@ -290,18 +322,16 @@
 
         <nav class="therapy-nav">
             <div class="logo">Clear Path</div>
-<div class="nav-items">
-    <a href="page-builder-therapy-main.html">Home</a>
-    <a href="page-builder-therapy-testimonial.html">Trust</a>
-    <a href="page-builder-therapy-book-session.html">Book a Session</a>
-
-</div>
-
-
+                
+            <div class="nav-items">
+                <a href="page-builder-therapy-main.html">Home</a>
+                <a href="page-builder-therapy-testimonial.html">Trust</a>
+                <a href="page-builder-therapy-book-session.html">Book a Session</a>
+            </div>
         </nav>
-
     </header>
 
+    
     <!-- MAIN CONTENT -->
     <main class="intake-page">
         <div class="intake-container">
@@ -401,7 +431,7 @@
                 <!-- SECTION 6 — ADDITIONAL NOTES -->
                 <div class="form-section">
                     <h3>Additional Notes (Optional)</h3>
-                    <textarea placeholder="Anything else you’d like to share?"></textarea>
+                    <textarea placeholder="Anything else you'd like to share?"></textarea>
                 </div>
 
                 <!-- CONSENT -->
@@ -419,7 +449,7 @@
 
 
 
-     <!-- !-- FOOTER --> 
+    <!-- FOOTER -->
     <footer class="therapy-footer">
         <div class="footer-tagline">
             Guiding your journey toward clarity, balance, and emotional well-being.
@@ -440,11 +470,6 @@
             document.getElementById("year").textContent = new Date().getFullYear();
         </script>
     </footer>
-
-    </div>
-
-
-
 
     <script>
         // =============================
