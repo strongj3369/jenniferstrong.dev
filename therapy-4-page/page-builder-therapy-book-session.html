@@ -29,12 +29,16 @@
             background: #ffffff;
             color: var(--charcoal);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* =============================
-           TOP NAV — MATCH HOME PAGE
+           TOP NAV WITH HAMBURGER MENU
         ============================= */
-        /* DARK BACKGROUND BEHIND NAV – MATCH HOME HERO GRADIENT */
+        .site-header {
+            position: relative;
+        }
+
         .nav-background {
             position: absolute;
             top: 0;
@@ -46,7 +50,6 @@
             z-index: 1;
         }
 
-        /* NAV BAR STYLING EXACTLY LIKE HOME */
         .therapy-nav {
             position: relative;
             z-index: 2;
@@ -62,16 +65,15 @@
             font-weight: 600;
             letter-spacing: -0.5px;
             color: white;
+            z-index: 3;
         }
 
-        /* Style the nav-items container */
         .therapy-nav .nav-items {
             display: flex;
             align-items: center;
             gap: 0;
         }
 
-        /* Style the links inside nav-items */
         .therapy-nav .nav-items a {
             color: rgba(255, 255, 255, 0.85);
             margin-left: 24px;
@@ -84,7 +86,6 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        /* Last link gets the CTA styling */
         .therapy-nav .nav-items a:last-child {
             padding: 8px 18px;
             border-radius: 999px;
@@ -100,28 +101,86 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
         }
 
-        /* Mobile responsive */
+        /* Hamburger Menu Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 3;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hamburger Animation */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Navigation */
         @media (max-width: 768px) {
             .therapy-nav {
-                padding: 1rem;
+                padding: 1rem 1.5rem;
             }
-            
+
             .therapy-nav .logo {
                 font-size: 1.2rem;
             }
-            
+
+            .hamburger {
+                display: flex;
+            }
+
             .therapy-nav .nav-items {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: linear-gradient(135deg, #1A1A1A, #2b3430);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 80px 2rem 2rem;
                 gap: 0;
+                transition: right 0.3s ease-in-out;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
             }
-            
+
+            .therapy-nav .nav-items.active {
+                right: 0;
+            }
+
             .therapy-nav .nav-items a {
-                margin-left: 12px;
-                font-size: 0.85rem;
+                margin: 0;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+                padding: 0.5rem 0;
             }
-            
+
             .therapy-nav .nav-items a:last-child {
-                padding: 6px 12px;
-                font-size: 0.8rem;
+                margin-top: 1rem;
+                padding: 10px 20px;
+                text-align: center;
+                display: inline-block;
+                width: auto;
             }
         }
 
@@ -284,21 +343,21 @@
             margin-bottom: 1rem;
         }
         
-         .footer-links {
+        .footer-links {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 0.75rem; /* slightly tighter gap */
+            gap: 0.75rem;
             margin-bottom: 0.75rem;
         }
         
         .footer-links a {
             color: #2b322d;
             text-decoration: none;
-            font-size: 0.85rem; /* smaller from 0.9rem */
+            font-size: 0.85rem;
             font-weight: 500;
             transition: color 0.2s ease-in-out;
-            white-space: nowrap; /* prevents links from breaking into multiple lines */
+            white-space: nowrap;
         }
 
         .footer-links a:hover {
@@ -317,13 +376,19 @@
 
     <!-- TOP NAV -->
     <header class="site-header">
-        <!-- MATCH HOME PAGE NAV BAR -->
         <div class="nav-background"></div>
 
         <nav class="therapy-nav">
             <div class="logo">Clear Path</div>
+            
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
                 
-            <div class="nav-items">
+            <div class="nav-items" id="navItems">
                 <a href="page-builder-therapy-main.html">Home</a>
                 <a href="page-builder-therapy-testimonial.html">Trust</a>
                 <a href="page-builder-therapy-book-session.html">Book a Session</a>
@@ -465,17 +530,43 @@
         <div class="footer-copy">
             © <span id="year"></span> Clear Path Therapy • All rights reserved.
         </div>
-    
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
     </footer>
 
     <script>
         // =============================
-        // SEMI-WORKING FORM SCRIPT
+        // HAMBURGER MENU TOGGLE
         // =============================
+        const hamburger = document.getElementById('hamburger');
+        const navItems = document.getElementById('navItems');
 
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navItems.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navItems.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navItems.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navItems.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            }
+        });
+
+        // =============================
+        // FORM SUBMISSION SCRIPT
+        // =============================
         document.getElementById('intakeForm').addEventListener('submit', function(e) {
             e.preventDefault();
 
@@ -491,6 +582,11 @@
                 behavior: 'smooth'
             });
         });
+
+        // =============================
+        // FOOTER YEAR
+        // =============================
+        document.getElementById("year").textContent = new Date().getFullYear();
     </script>
 
 </body>
