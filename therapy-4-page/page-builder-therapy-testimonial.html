@@ -29,44 +29,159 @@
             background: #ffffff;
             color: var(--charcoal);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* ==============================
-           TOP NAV (MATCH HOME + ABOUT)
+           TOP NAV WITH HAMBURGER MENU
         ============================== */
+        .site-header {
+            position: relative;
+        }
+
+        .nav-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            background: radial-gradient(circle at top left, rgba(217, 195, 155, 0.35), rgba(159, 184, 168, 0.3)),
+                linear-gradient(135deg, #1A1A1A, #2b3430);
+            z-index: 1;
+        }
+
         .therapy-nav {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 1.8rem 3rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.8rem 5vw;
-            background: #ffffff;
-            border-bottom: 1px solid #eee;
         }
 
-        .logo {
+        .therapy-nav .logo {
             font-size: 1.4rem;
             font-weight: 600;
-            color: var(--charcoal);
+            letter-spacing: -0.5px;
+            color: white;
+            z-index: 3;
         }
 
-        .nav-items a {
-            margin-left: 28px;
-            color: #2b322d;
+        .therapy-nav .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .therapy-nav .nav-items a {
+            color: rgba(255, 255, 255, 0.85);
+            margin-left: 24px;
             text-decoration: none;
-            font-size: 0.98rem;
-            transition: 0.2s ease-in-out;
+            font-size: 0.95rem;
+            transition: all 0.25s ease;
         }
 
-        .nav-items a:hover {
-            color: var(--deep-sage);
+        .therapy-nav .nav-items a:hover {
+            color: rgba(255, 255, 255, 1);
         }
 
-        .cta-small {
-            background: var(--rich-gold);
+        .therapy-nav .nav-items a:last-child {
             padding: 8px 18px;
             border-radius: 999px;
-            color: #fff;
-            font-weight: 600;
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(4px);
+        }
+
+        .therapy-nav .nav-items a:last-child:hover {
+            background: rgba(255, 255, 255, 0.18);
+            border-color: rgba(255, 255, 255, 0.45);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        /* Hamburger Menu Icon */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            z-index: 3;
+            padding: 4px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 3px 0;
+            transition: 0.3s;
+            border-radius: 2px;
+        }
+
+        /* Hamburger Animation */
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .therapy-nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .therapy-nav .logo {
+                font-size: 1.2rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .therapy-nav .nav-items {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: linear-gradient(135deg, #1A1A1A, #2b3430);
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                padding: 80px 2rem 2rem;
+                gap: 0;
+                transition: right 0.3s ease-in-out;
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.3);
+            }
+
+            .therapy-nav .nav-items.active {
+                right: 0;
+            }
+
+            .therapy-nav .nav-items a {
+                margin: 0;
+                margin-bottom: 1.5rem;
+                font-size: 1.1rem;
+                width: 100%;
+                padding: 0.5rem 0;
+            }
+
+            .therapy-nav .nav-items a:last-child {
+                margin-top: 1rem;
+                padding: 10px 20px;
+                text-align: center;
+                display: inline-block;
+                width: auto;
+            }
         }
 
         /* ==============================
@@ -129,7 +244,7 @@
         }
 
         .featured-testimonial::before {
-            content: "“";
+            content: """;
             position: absolute;
             top: 1.6rem;
             right: 2.2rem;
@@ -143,7 +258,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid rgba(199, 168, 108, 0.35);
-            background: #faf8f4;
+            background: transparent;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
             margin-bottom: 1.4rem;
         }
@@ -164,8 +279,6 @@
             font-size: 0.95rem;
             color: #777;
         }
-
-
 
         /* ==============================
            GRID CARDS
@@ -190,7 +303,7 @@
             border-radius: 50%;
             overflow: hidden;
             border: 3px solid rgba(199, 168, 108, 0.35);
-            background: #faf8f4;
+            background: transparent;
             margin-bottom: 1rem;
         }
 
@@ -202,17 +315,6 @@
             display: block;
         }
 
-
-        .testimonial-avatar,
-        .featured-avatar {
-            position: relative;
-            overflow: hidden;
-            /* keep */
-            background: transparent;
-            /* FIX */
-        }
-
-        
         .testimonial-text {
             color: #555;
             margin-bottom: 1.2rem;
@@ -228,65 +330,81 @@
             color: #777;
         }
 
- /* ==============================
-           UPDATED FOOTER STYLE
+        /* ==============================
+           FOOTER STYLE
         ============================== */
-  .therapy-footer {
-  background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
-  padding: 2.5rem 1.5rem 2rem;
-  text-align: center;
-  border-top: 1px solid rgba(199, 168, 108, 0.28);
-  margin-top: 3rem;
-}
+        .therapy-footer {
+            background: linear-gradient(to bottom, #f5f1e9 0%, #f1ede6 70%, #ece8df 100%);
+            padding: 2.5rem 1.5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(199, 168, 108, 0.28);
+            margin-top: 3rem;
+        }
 
-.footer-tagline {
-  font-size: 1rem;
-  color: #2b322d;
-  margin-bottom: 1rem;
-}
+        .therapy-footer h3 {
+            font-size: 1.3rem;
+            color: #2b322d;
+            margin-bottom: 0.5rem;
+        }
 
-.footer-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem; /* tighter spacing */
-  margin-bottom: 0.75rem;
-}
+        .footer-tagline {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 1.5rem;
+        }
 
-.footer-links a {
-  color: #2b322d;
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: color 0.2s ease-in-out;
-}
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
 
-.footer-links a:hover {
-  color: var(--deep-sage); /* or #6a4ea8 if you prefer purple hover */
-}
+        .footer-links a {
+            color: #2b322d;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: color 0.2s ease-in-out;
+            white-space: nowrap;
+        }
 
-.footer-copy {
-  color: #555;
-  font-size: 0.8rem;
-  margin-top: 0.5rem;
-}
+        .footer-links a:hover {
+            color: var(--deep-sage);
+        }
 
+        .footer-copy {
+            color: #555;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
     </style>
 </head>
 
 <body>
 
     <!-- NAV -->
-    <nav class="therapy-nav">
-        <div class="logo">Clear Path</div>
+    <header class="site-header">
+        <div class="nav-background"></div>
 
-<div class="nav-items">
-    <a href="page-builder-therapy-main.html">Home</a>
-    <a href="page-builder-therapy-testimonial.html">Trust</a>
-    <a href="page-builder-therapy-book-session.html">Book a Session</a>
-</div>
-
-    </nav>
+        <nav class="therapy-nav">
+            <div class="logo">Clear Path</div>
+            
+            <!-- Hamburger Icon -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+                
+            <div class="nav-items" id="navItems">
+                <a href="page-builder-therapy-main.html">Home</a>
+                <a href="page-builder-therapy-testimonial.html">Trust</a>
+                <a href="page-builder-therapy-book-session.html">Book a Session</a>
+            </div>
+        </nav>
+    </header>
 
     <main class="testimonials-page">
         <div class="testimonials-inner">
@@ -309,11 +427,11 @@
                 </div>
 
                 <p class="featured-text">
-                    “Working with Alicia has been one of the most grounding experiences of my life.
+                    "Working with Alicia has been one of the most grounding experiences of my life.
                     I came in feeling overwhelmed, stuck, and disconnected from myself. Over time,
                     her calm presence, thoughtful questions, and gentle guidance helped me untangle
                     years of stress and self-doubt. I now feel more clear, confident, and able to
-                    navigate difficult moments without shutting down.”
+                    navigate difficult moments without shutting down."
                 </p>
 
                 <div class="featured-author">S.M.</div>
@@ -330,9 +448,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “Alicia helped my partner and me actually hear each other again.
+                        "Alicia helped my partner and me actually hear each other again.
                         Our sessions gave us a safe space to talk honestly and learn
-                        how to repair after conflict instead of avoiding it.”
+                        how to repair after conflict instead of avoiding it."
                     </p>
                     <div class="testimonial-author">J. & T.</div>
                     <div class="testimonial-meta">Couples Counseling</div>
@@ -344,9 +462,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “I used to live in a constant state of anxiety. Alicia taught me
+                        "I used to live in a constant state of anxiety. Alicia taught me
                         practical tools to manage my thoughts and calm my body. I still
-                        have stressful days, but I don’t feel controlled by them anymore.”
+                        have stressful days, but I don't feel controlled by them anymore."
                     </p>
                     <div class="testimonial-author">L.R.</div>
                     <div class="testimonial-meta">Anxiety & Stress Support</div>
@@ -358,9 +476,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “Going through a major career change and divorce at the same time
+                        "Going through a major career change and divorce at the same time
                         was overwhelming. Therapy helped me grieve, reorganize my life,
-                        and slowly build something that actually fits who I am now.”
+                        and slowly build something that actually fits who I am now."
                     </p>
                     <div class="testimonial-author">K.D.</div>
                     <div class="testimonial-meta">Life Transitions</div>
@@ -372,9 +490,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “I came into therapy feeling like I constantly had to ‘hold it all together.’
+                        "I came into therapy feeling like I constantly had to 'hold it all together.'
                         Over time, Alicia helped me reconnect with my own needs, set boundaries,
-                        and feel less guilty about taking care of myself.”
+                        and feel less guilty about taking care of myself."
                     </p>
                     <div class="testimonial-author">M.P.</div>
                     <div class="testimonial-meta">Emotional Resilience Coaching</div>
@@ -386,9 +504,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “Working with Alicia helped me build simple routines and check-ins that keep
+                        "Working with Alicia helped me build simple routines and check-ins that keep
                         me from slipping back into old patterns. I finally have tools I actually use
-                        during the week, not just in session.”
+                        during the week, not just in session."
                     </p>
                     <div class="testimonial-author">J.A.</div>
                     <div class="testimonial-meta">Ongoing Client</div>
@@ -400,9 +518,9 @@
                     </div>
 
                     <p class="testimonial-text">
-                        “Therapy gave me a structured place to sort through decisions instead of spiraling.
+                        "Therapy gave me a structured place to sort through decisions instead of spiraling.
                         Having clear next steps after each session has made a huge difference in how I
-                        handle stress and change.”
+                        handle stress and change."
                     </p>
                     <div class="testimonial-author">R.S.</div>
                     <div class="testimonial-meta">Career & Stress Support</div>
@@ -414,32 +532,60 @@
     </main>
 
     <!-- FOOTER -->
-    <div class="therapy-footer">
-
+    <footer class="therapy-footer">
         <h3>Clear Path Therapy</h3>
         <p class="footer-tagline">Guiding your journey toward clarity, balance, and emotional well-being.</p>
 
-        <div class="nav-items">
+        <div class="footer-links">
             <a href="page-builder-therapy-main.html">Home</a>
             <a href="page-builder-therapy-testimonial.html">Trust</a>
             <a href="page-builder-therapy-about.html">About</a>
             <a href="page-builder-therapy-book-session.html">Book a Session</a>
         </div>
 
-
         <div class="footer-copy">
             © <span id="year"></span> Clear Path Therapy • All rights reserved.
         </div>
-        
-        <script>
-            document.getElementById("year").textContent = new Date().getFullYear();
-        </script>
+    </footer>
 
-    </div>
+    <script>
+        // =============================
+        // HAMBURGER MENU TOGGLE
+        // =============================
+        const hamburger = document.getElementById('hamburger');
+        const navItems = document.getElementById('navItems');
+
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navItems.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const navLinks = navItems.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const isClickInsideNav = navItems.contains(event.target);
+            const isClickOnHamburger = hamburger.contains(event.target);
+            
+            if (!isClickInsideNav && !isClickOnHamburger && navItems.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navItems.classList.remove('active');
+            }
+        });
+
+        // =============================
+        // FOOTER YEAR
+        // =============================
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
 </body>
 
-
 </html>
-
-
