@@ -781,6 +781,14 @@
             align-items: center;
         }
 
+        /* Make VR grid responsive on mobile */
+            @media (max-width: 768px) {
+                .bt-vr-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+            }
+
         .bt-vr-chip-row {
             display: flex;
             flex-wrap: wrap;
@@ -1919,6 +1927,7 @@
 </body>
 
 </html>
+
 
 
 
