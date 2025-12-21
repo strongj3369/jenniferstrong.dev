@@ -60,14 +60,16 @@
             align-items: center;
         }
 
-        .therapy-nav .logo {
+          .therapy-nav .logo {
             font-size: 1.4rem;
             font-weight: 600;
             letter-spacing: -0.5px;
             color: white;
             z-index: 3;
+            text-decoration: none;  /* ADD THIS */
+            cursor: pointer;        /* ADD THIS */
         }
-
+        
         .therapy-nav .nav-items {
             display: flex;
             align-items: center;
@@ -101,6 +103,11 @@
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
         }
 
+
+
+
+
+        
         /* Hamburger Menu Icon */
         .hamburger {
             display: none;
@@ -389,7 +396,7 @@
         <div class="nav-background"></div>
 
         <nav class="therapy-nav">
-            <div class="logo">Clear Path</div>
+          <a href="page-builder-therapy-main.html" class="logo">Clear Path</a>
             
             <!-- Hamburger Icon -->
             <div class="hamburger" id="hamburger">
@@ -589,3 +596,4 @@
 </body>
 
 </html>
+
