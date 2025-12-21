@@ -676,6 +676,16 @@
             align-items: center;
         }
 
+
+        /* Make feature row stack on mobile */
+            @media (max-width: 768px) {
+                .bt-feature-row {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+            }
+
+        
         .bt-price-list {
             list-style: none;
             padding: 0;
@@ -1909,6 +1919,7 @@
 </body>
 
 </html>
+
 
 
 
