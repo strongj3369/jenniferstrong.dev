@@ -661,15 +661,25 @@ section { padding: 5rem 2rem; }
 .benefit-item p { font-size: 0.95rem; color: #046D5D; line-height: 1.6; margin: 0; }
 
 /* CTA */
-.early-access-cta { text-align: center; margin-top: 2rem; }
+.early-access-cta { 
+  text-align: center; 
+  margin-top: 2rem; 
+}
+
 .primary-cta {
-  display: inline-block; padding: 1rem 2.2rem;
+  display: inline-block;
+  padding: 1rem 2.2rem;
   background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-  color: #F8F8F4; text-decoration: none; border-radius: 50px;
-  font-size: 1.02rem; font-weight: 700; transition: all var(--t);
+  color: #F8F8F4;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.02rem;
+  font-weight: 700;
+  transition: all var(--t);
   box-shadow: var(--shadow-soft);
   border: 1px solid rgba(212, 175, 55, 0.25);
 }
+
 .primary-cta:hover {
   background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
   transform: translateY(-2px); box-shadow: 0 10px 26px rgba(212, 175, 55, 0.35);
