@@ -667,17 +667,17 @@ section { padding: 5rem 2rem; }
 }
 
 .primary-cta {
-  display: inline-block;
-  padding: 1rem 2.2rem;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
-  color: #F8F8F4;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.02rem;
-  font-weight: 700;
-  transition: all var(--t);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+ display: inline-block;
+    padding: 1rem 2.2rem;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    color: #F8F8F4;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.02rem;
+    font-weight: 700;
+    transition: all var(--t);
+    box-shadow: var(--shadow-soft);
+    border: 1px solid rgba(212, 175, 55, 0.25);
 }
 
 .primary-cta:hover {
