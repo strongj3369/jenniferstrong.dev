@@ -134,14 +134,47 @@ document.addEventListener('DOMContentLoaded', function() {
   
 });
 
+/* -----------------------------------------
+   GA4 EVENT TRACKING — PREMIUM, RELIABLE
+------------------------------------------*/
 
-// GA4: Track CTA clicks
-document.querySelectorAll('[data-cta]').forEach(button => {
-  button.addEventListener('click', function() {
+// Track CTA clicks (any element with data-cta)
+document.querySelectorAll('[data-cta]').forEach(el => {
+  el.addEventListener('click', () => {
     gtag('event', 'cta_click', {
       event_category: 'engagement',
-      event_label: this.textContent.trim(),
-      value: 1
+      event_label: el.textContent.trim()
     });
   });
 });
+
+// Track outbound template previews (Launch Preview buttons)
+document.querySelectorAll('[data-template-preview]').forEach(el => {
+  el.addEventListener('click', () => {
+    gtag('event', 'outbound_click', {
+      event_category: 'template',
+      event_label: el.getAttribute('data-template-preview')
+    });
+  });
+});
+
+// Track ExtendedCode waitlist CTA
+document.querySelectorAll('[data-waitlist]').forEach(el => {
+  el.addEventListener('click', () => {
+    gtag('event', 'waitlist_click', {
+      event_category: 'CTA',
+      event_label: 'ExtendedCode Waitlist'
+    });
+  });
+});
+
+// Track contact form submission
+const contactForm = document.querySelector('.contact-form-card');
+if (contactForm) {
+  contactForm.addEventListener('submit', () => {
+    gtag('event', 'form_submit', {
+      event_category: 'contact',
+      event_label: 'Contact Form Submission'
+    });
+  });
+}
