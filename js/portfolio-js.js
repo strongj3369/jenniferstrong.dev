@@ -133,3 +133,15 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('Slider initialized with', totalSlides, 'slides');
   
 });
+
+
+// GA4: Track CTA clicks
+document.querySelectorAll('[data-cta]').forEach(button => {
+  button.addEventListener('click', function() {
+    gtag('event', 'cta_click', {
+      event_category: 'engagement',
+      event_label: this.textContent.trim(),
+      value: 1
+    });
+  });
+});
