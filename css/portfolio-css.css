@@ -693,7 +693,6 @@ section { padding: 5rem 2rem; }
   padding: 4rem 2rem 0;
   margin: 0;
   border-top: 1px solid #D4AF37;
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
 }

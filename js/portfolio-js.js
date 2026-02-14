@@ -168,13 +168,17 @@ document.querySelectorAll('[data-waitlist]').forEach(el => {
   });
 });
 
-// Track contact form submission
-const contactForm = document.querySelector('.contact-form-card');
-if (contactForm) {
-  contactForm.addEventListener('submit', () => {
-    gtag('event', 'form_submit', {
-      event_category: 'contact',
-      event_label: 'Contact Form Submission'
-    });
+// Track scroll depth
+let scrollTracked = {};
+window.addEventListener('scroll', function () {
+  var scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+  [25, 50, 75, 90].forEach(function (threshold) {
+    if (scrollPercent >= threshold && !scrollTracked[threshold]) {
+      scrollTracked[threshold] = true;
+      gtag('event', 'scroll_depth', {
+        event_category: 'engagement',
+        event_label: threshold + '%'
+      });
+    }
   });
-}
+});
