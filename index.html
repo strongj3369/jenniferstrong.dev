@@ -441,56 +441,29 @@
 
     <!-- Footer Contact Section -->
     <footer class="footer-contact" id="contact">
-        <div class="contact-section-inner">
-            <p class="contact-eyebrow">LET'S CONNECT</p>
-            <h2 class="contact-heading">Ready to Work Together?</h2>
-            <div class="contact-content">
-                <div class="contact-left">
-                    <h3>Let's build something exceptional.</h3>
-                    <p class="contact-description">
-                        I collaborate with people who care about clear communication, good design, and smooth web experiences.
-                    </p>
+        <div class="chatbot-section-inner">
+            <p class="contact-eyebrow">LET'S CHAT</p>
+            <h2 class="contact-heading">Ask Me Anything <span class="wave">👋</span></h2>
 
-                    <p class="contact-description">
-                        I'm available for freelance projects and strategic partnerships. Tell me about your project and let's see if we're a good fit.
-                    </p>
-
+            <!-- Chatbot -->
+            <div class="chatbot-container">
+                <div class="chatbot-header">
+                    <span class="chatbot-header-dot"></span>
+                    Jen's Portfolio Assistant
                 </div>
-                <div class="contact-right">
-                    <form action="https://formsubmit.co/jstrong264@gmail.com" method="POST" class="contact-form-card" data-form>
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://jenniferstrong.dev/thank-you.html">
-
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Tell me about your project</label>
-                            <textarea id="message" name="message" rows="5" placeholder="What are you looking to build? What's your timeline?" required></textarea>
-                        </div>
-
-                        <button type="submit" class="submit-button" data-cta="Contact Form Submit">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                <div class="chatbot-messages" id="chatbot-messages"></div>
+                <div class="chatbot-chips" id="chatbot-chips"></div>
             </div>
         </div>
 
         <div class="footer-bottom">
-            <p>Open to creative partnerships, freelance opportunities, or thoughtful collaboration. Let's connect <span class="wave">👋</span></p>
-            <p class="footer-copyright">© 2024 Jennifer Strong. Built with precision, clarity, and AI collaboration.</p>
+            <p>Open to creative partnerships, freelance opportunities, or thoughtful collaboration.</p>
+            <p class="footer-copyright">&copy; 2024 Jennifer Strong. Built with precision, clarity, and AI collaboration.</p>
         </div>
     </footer>
 
     <script src="js/portfolio-js.js"></script>
+    <script src="js/chatbot.js"></script>
    
 </body>
 </html>
