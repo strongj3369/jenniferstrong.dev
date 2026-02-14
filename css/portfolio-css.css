@@ -801,7 +801,7 @@ section { padding: 5rem 2rem; }
 }
 
 .chatbot-chips {
-  padding: 0.8rem 1.2rem 1rem;
+  padding: 0.8rem 1.2rem 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -855,7 +855,7 @@ section { padding: 5rem 2rem; }
   max-width: 1400px;
   width: 100%;
   margin: auto auto 0;
-  padding: 3rem 2rem 1.5rem;
+  padding: 3rem 2rem 2rem;
   border-top: 1px solid #D4AF37;
   text-align: center;
 }

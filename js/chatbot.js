@@ -12,21 +12,21 @@
         "Jennifer is a creative technologist and systems builder who crafts modular, high-performing templates and landing pages.",
         "She combines emotional intelligence with technical precision \u2014 blending human-centered design with AI-assisted development."
       ],
-      chips: ["Skills", "Experience", "My Work", "Let's Connect"]
+      chips: ["Skills", "Experience", "My Work", "Start Over"]
     },
     Skills: {
       messages: [
         "Here\u2019s what Jen works with:",
         "\u2022 HTML5, CSS3, JavaScript (responsive design)\n\u2022 Responsive email development (cross-client)\n\u2022 Landing page design & conversion optimization\n\u2022 Modular design systems & component architecture\n\u2022 AI-assisted workflows (Claude, GPT-4)\n\u2022 Google Analytics (GA4) & funnel tracking\n\u2022 Accessibility & SEO best practices"
       ],
-      chips: ["About Me", "My Work", "Let's Connect"]
+      chips: ["About Me", "My Work", "Let's Connect", "Start Over"]
     },
     Experience: {
       messages: [
         "Jen has 8+ years building conversion-focused digital experiences \u2014 from airline promo emails and event invites to coffee brand landing pages, luxury showcases, and premium multipage sites.",
         "Every project is crafted with intention: mobile-first, accessible, and designed to convert. She\u2019s also an AI-assisted workflow pioneer and educator."
       ],
-      chips: ["My Work", "Skills", "Let's Connect"]
+      chips: ["My Work", "Skills", "Let's Connect", "Start Over"]
     },
     "My Work": {
       messages: [
@@ -34,7 +34,7 @@
         "\u2709\uFE0F Email Templates \u2014 responsive, modular emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Sites \u2014 full multipage builds engineered for performance",
         "Scroll up to explore them, or pick a category below!"
       ],
-      chips: ["Email Templates", "Landing Pages", "Premium Sites", "Let's Connect"]
+      chips: ["Email Templates", "Landing Pages", "Premium Sites", "Start Over"]
     },
     "Email Templates": {
       messages: [
@@ -42,7 +42,7 @@
         "\u2708\uFE0F Flight Booking Promo \u2014 vibrant airline deal layout\n\uD83C\uDFB5 Arts Fest Invite \u2014 bold event-style email\n\uD83D\uDCE6 Transactional Receipt \u2014 clean order confirmation\n\u2708\uFE0F Travel Promo \u2014 aspirational travel email",
         "All built with table-based layouts for maximum email client compatibility."
       ],
-      chips: ["Landing Pages", "Premium Sites", "Let's Connect"]
+      chips: ["Landing Pages", "Premium Sites", "Let's Connect", "Start Over"]
     },
     "Landing Pages": {
       messages: [
@@ -50,7 +50,7 @@
         "\uD83D\uDC14 Blue Chicken \u2014 playful brand page with interactive modals\n\u2615 Warm Brew \u2014 cozy coffee brand showcase\n\uD83D\uDC8E Fine Jewelry \u2014 luxury aesthetic with refined typography\n\uD83C\uDF3F Solace \u2014 calm, wellness-focused layout",
         "Each one is fully responsive and built from scratch."
       ],
-      chips: ["Email Templates", "Premium Sites", "Let's Connect"]
+      chips: ["Email Templates", "Premium Sites", "Let's Connect", "Start Over"]
     },
     "Premium Sites": {
       messages: [
@@ -58,7 +58,7 @@
         "\uD83E\uDDD8 Therapy Multipage \u2014 responsive multipage site for therapy practices\n\u26F0\uFE0F SummitQuest \u2014 single-page adventure coaching layout\n\uD83D\uDE80 SaaS Agency \u2014 dark/light mode template for modern SaaS",
         "These are full-featured, engineered for performance and conversion."
       ],
-      chips: ["Email Templates", "Landing Pages", "Let's Connect"]
+      chips: ["Email Templates", "Landing Pages", "Let's Connect", "Start Over"]
     },
     "Let's Connect": {
       messages: [
@@ -66,14 +66,14 @@
         "The best way to connect with Jen is via email:"
       ],
       email: true,
-      chips: ["About Me", "My Work", "Availability"]
+      chips: ["About Me", "My Work", "Availability", "Start Over"]
     },
     Availability: {
       messages: [
         "Jen is currently available for freelance projects, creative partnerships, and strategic collaborations.",
         "If you have a project in mind, don\u2019t hesitate to reach out!"
       ],
-      chips: ["Let's Connect", "About Me", "My Work"]
+      chips: ["Let's Connect", "About Me", "My Work", "Start Over"]
     }
   };
 
@@ -145,6 +145,13 @@
   }
 
   function handleChipClick(topic) {
+    if (topic === "Start Over") {
+      messagesEl.innerHTML = "";
+      chipsEl.innerHTML = "";
+      init();
+      return;
+    }
+
     var data = responses[topic];
     if (!data) return;
 
