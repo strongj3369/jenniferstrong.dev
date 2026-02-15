@@ -30,11 +30,11 @@
     },
     "My Work": {
       messages: [
-        "Jen\u2019s portfolio spans three categories:",
-        "\u2709\uFE0F Email Templates \u2014 responsive, modular emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Sites \u2014 full multipage builds engineered for performance",
+        "Jen\u2019s portfolio spans four categories:",
+        "\u2709\uFE0F Email Templates \u2014 responsive, modular emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Sites \u2014 full multipage builds engineered for performance\n\uD83E\uDD16 AI Engines \u2014 live automated systems powered by AI",
         "Scroll up to explore them, or pick a category below!"
       ],
-      chips: ["Email Templates", "Landing Pages", "Premium Sites", "Start Over"]
+      chips: ["Email Templates", "Landing Pages", "Premium Sites", "AI Engines", "Start Over"]
     },
     "Email Templates": {
       messages: [
@@ -59,6 +59,30 @@
         "These are full-featured, engineered for performance and conversion."
       ],
       chips: ["Email Templates", "Landing Pages", "Let's Connect", "Start Over"]
+    },
+    "AI Engines": {
+      messages: [
+        "Jen builds AI-powered engines that actually run \u2014 not just demos:",
+        "\uD83C\uDFB5 ColorTuneLyrics \u2014 a real-time neon lyric visualizer that syncs music, timing, and animation. It\u2019s live at colortunelyrics.com.\n\uD83D\uDCC8 Stock Market MCP Engine \u2014 an AI engine that monitors portfolio performance, analyzes market signals, and automates trades through a brokerage API.",
+        "Both are live and running. Want to know more about either one?"
+      ],
+      chips: ["ColorTuneLyrics", "Stock Market MCP", "My Work", "Start Over"]
+    },
+    ColorTuneLyrics: {
+      messages: [
+        "ColorTuneLyrics is a real-time lyric visualizer that Jen built from scratch.",
+        "It syncs audio playback with animated sheet music and lyric display \u2014 AI powers the coordination between audio analysis, timing, and dynamic visual effects.",
+        "It\u2019s live right now at colortunelyrics.com \u2014 you can scroll up to the AI Engines section and launch it!"
+      ],
+      chips: ["Stock Market MCP", "AI Engines", "Let's Connect", "Start Over"]
+    },
+    "Stock Market MCP": {
+      messages: [
+        "The Stock Market MCP Engine is an AI-powered system that Jen built to autonomously manage a portfolio.",
+        "It connects to a brokerage API to monitor positions like SPY, GLD, TSLA, and KO \u2014 analyzing market signals and executing trades in real time.",
+        "The dashboard is private, but you can see a screenshot of it in action in the AI Engines section above."
+      ],
+      chips: ["ColorTuneLyrics", "AI Engines", "Let's Connect", "Start Over"]
     },
     "Let's Connect": {
       messages: [
