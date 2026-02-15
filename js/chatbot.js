@@ -25,9 +25,9 @@
     },
     "Email Development": {
       messages: [
-        "Jen builds responsive HTML emails that work across 50+ email clients. Here are some examples:",
+        "Jen builds responsive HTML emails engineered for 90+ email clients and devices. Here are some examples:",
         "\u2708\uFE0F Flight Booking Promo \u2014 urgency-driven airline email\n\uD83C\uDFB5 Arts Fest Invite \u2014 bold event invitation\n\uD83D\uDCE6 Transactional Receipt \u2014 clean order confirmation\n\u2708\uFE0F Travel Promo \u2014 aspirational travel email",
-        "Each one is table-based for maximum inbox compatibility and tested across major email clients."
+        "Each one is table-based for maximum inbox compatibility."
       ],
       chips: ["Landing Pages", "Premium Websites", "Get in Touch", "Start Over"]
     },
