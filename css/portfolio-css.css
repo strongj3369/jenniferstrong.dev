@@ -277,6 +277,70 @@ section { padding: 5rem 2rem; }
   box-shadow: 0 10px 24px rgba(212, 175, 55, 0.35);
 }
 
+/* === Tools Strip === */
+.tools-strip {
+  background: #1C1C1C;
+  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+  padding: 1.25rem 2rem;
+  overflow: hidden;
+}
+
+.tools-strip-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.tool-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #8A8A8A;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.tool-badge i {
+  font-size: 1.1rem;
+  color: rgba(212, 175, 55, 0.6);
+  transition: color 0.3s ease;
+}
+
+.tool-badge:hover {
+  color: #F8F8F4;
+}
+
+.tool-badge:hover i {
+  color: #D4AF37;
+}
+
+@media (max-width: 768px) {
+  .tools-strip {
+    padding: 1rem 1.5rem;
+  }
+
+  .tools-strip-inner {
+    gap: 1.25rem;
+    justify-content: center;
+  }
+
+  .tool-badge {
+    font-size: 0.75rem;
+  }
+
+  .tool-badge i {
+    font-size: 0.95rem;
+  }
+}
+
 /* === Portfolio Sections === */
 .portfolio-section {
   background: var(--bg-white);
@@ -625,6 +689,138 @@ section { padding: 5rem 2rem; }
 
 
 
+/* === Process Section === */
+.process-section {
+  background: linear-gradient(135deg, #1C1C1C 0%, #2a3a35 50%, #046D5D 100%);
+  padding: 5rem 2rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.process-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.process-eyebrow {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #D4AF37;
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.process-section h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: #F8F8F4;
+  margin-bottom: 1rem;
+  letter-spacing: -0.4px;
+  position: relative;
+  z-index: 1;
+}
+
+.process-section .section-subtitle {
+  color: #8A8A8A;
+  position: relative;
+  z-index: 1;
+}
+
+.process-strip {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.process-step {
+  flex: 1;
+  max-width: 240px;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.process-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.15);
+  border: 2px solid rgba(212, 175, 55, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  transition: all 0.3s ease;
+}
+
+.process-icon i {
+  font-size: 1.5rem;
+  color: #D4AF37;
+}
+
+.process-step:hover .process-icon {
+  background: rgba(212, 175, 55, 0.25);
+  border-color: #D4AF37;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.25);
+}
+
+.process-step h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #F8F8F4;
+  margin-bottom: 0.65rem;
+  letter-spacing: -0.2px;
+}
+
+.process-step p {
+  font-size: 0.88rem;
+  color: #8A8A8A;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.process-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2.75rem;
+  color: rgba(212, 175, 55, 0.5);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .process-strip {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+
+  .process-step {
+    max-width: 320px;
+  }
+
+  .process-connector {
+    padding-top: 0;
+    transform: rotate(90deg);
+    margin: 0.5rem 0;
+  }
+}
+
 /* === AI Engines Section === */
 .ai-engines-section {
   background: linear-gradient(135deg, #F0F0EC 0%, #F8F8F4 50%, #F0F0EC 100%);
@@ -955,7 +1151,6 @@ section { padding: 5rem 2rem; }
 .footer-copyright {
   font-size: 0.85rem;
   color: #046D5D;
-  opacity: 0.8;
 }
 
 /* Wave animation */

@@ -2,102 +2,89 @@
   var responses = {
     greeting: {
       messages: [
-        "Hi there! I'm Jen's portfolio assistant.",
-        "I can tell you about her work, skills, or how to get in touch. What are you curious about?"
+        "Hi there! I'm Jen's project assistant.",
+        "I can tell you about the services she offers, show you examples, or help you get in touch. What would you like to know?"
       ],
-      chips: ["About Me", "My Work", "Let's Connect", "Availability"]
+      chips: ["Services", "See Examples", "Get in Touch", "Availability"]
     },
-    "About Me": {
+    Services: {
       messages: [
-        "Jennifer is a creative technologist and systems builder who crafts modular, high-performing templates and landing pages.",
-        "She combines emotional intelligence with technical precision \u2014 blending human-centered design with AI-assisted development."
+        "Jen offers four core services:",
+        "\u2709\uFE0F Email Development \u2014 responsive HTML emails that look great in every inbox\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused pages built for results\n\uD83D\uDC8E Premium Websites \u2014 full multipage sites engineered for performance\n\uD83E\uDD16 AI Solutions \u2014 custom engines and automations that solve real problems",
+        "Want to see examples of any of these?"
       ],
-      chips: ["Skills", "Experience", "My Work", "Start Over"]
+      chips: ["Email Development", "Landing Pages", "Premium Websites", "AI Solutions", "Start Over"]
     },
-    Skills: {
+    "See Examples": {
       messages: [
-        "Here\u2019s what Jen works with:",
-        "\u2022 HTML5, CSS3, JavaScript (responsive design)\n\u2022 Responsive email development (cross-client)\n\u2022 Landing page design & conversion optimization\n\u2022 Modular design systems & component architecture\n\u2022 AI-assisted workflows (Claude, GPT-4)\n\u2022 Google Analytics (GA4) & funnel tracking\n\u2022 Accessibility & SEO best practices"
-      ],
-      chips: ["About Me", "My Work", "Let's Connect", "Start Over"]
-    },
-    Experience: {
-      messages: [
-        "Jen has 8+ years building conversion-focused digital experiences \u2014 from airline promo emails and event invites to coffee brand landing pages, luxury showcases, and premium multipage sites.",
-        "Every project is crafted with intention: mobile-first, accessible, and designed to convert. She\u2019s also an AI-assisted workflow pioneer and educator."
-      ],
-      chips: ["My Work", "Skills", "Let's Connect", "Start Over"]
-    },
-    "My Work": {
-      messages: [
-        "Jen\u2019s portfolio spans four categories:",
-        "\u2709\uFE0F Email Templates \u2014 responsive, modular emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Sites \u2014 full multipage builds engineered for performance\n\uD83E\uDD16 AI Engines \u2014 live automated systems powered by AI",
+        "Jen\u2019s work spans four areas:",
+        "\u2709\uFE0F Email Development \u2014 responsive, brand-aligned emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Websites \u2014 full multipage builds engineered for performance\n\uD83E\uDD16 AI Solutions \u2014 live automated systems powered by AI",
         "Scroll up to explore them, or pick a category below!"
       ],
-      chips: ["Email Templates", "Landing Pages", "Premium Sites", "AI Engines", "Start Over"]
+      chips: ["Email Development", "Landing Pages", "Premium Websites", "AI Solutions", "Start Over"]
     },
-    "Email Templates": {
+    "Email Development": {
       messages: [
-        "Jen\u2019s email templates include:",
-        "\u2708\uFE0F Flight Booking Promo \u2014 vibrant airline deal layout\n\uD83C\uDFB5 Arts Fest Invite \u2014 bold event-style email\n\uD83D\uDCE6 Transactional Receipt \u2014 clean order confirmation\n\u2708\uFE0F Travel Promo \u2014 aspirational travel email",
-        "All built with table-based layouts for maximum email client compatibility."
+        "Jen builds responsive HTML emails that work across 50+ email clients. Here are some examples:",
+        "\u2708\uFE0F Flight Booking Promo \u2014 urgency-driven airline email\n\uD83C\uDFB5 Arts Fest Invite \u2014 bold event invitation\n\uD83D\uDCE6 Transactional Receipt \u2014 clean order confirmation\n\u2708\uFE0F Travel Promo \u2014 aspirational travel email",
+        "Each one is table-based for maximum inbox compatibility and tested across major email clients."
       ],
-      chips: ["Landing Pages", "Premium Sites", "Let's Connect", "Start Over"]
+      chips: ["Landing Pages", "Premium Websites", "Get in Touch", "Start Over"]
     },
     "Landing Pages": {
       messages: [
-        "Jen\u2019s landing pages include:",
-        "\uD83D\uDC14 Blue Chicken \u2014 playful brand page with interactive modals\n\u2615 Warm Brew \u2014 cozy coffee brand showcase\n\uD83D\uDC8E Fine Jewelry \u2014 luxury aesthetic with refined typography\n\uD83C\uDF3F Solace \u2014 calm, wellness-focused layout",
-        "Each one is fully responsive and built from scratch."
+        "Jen designs and builds landing pages that guide visitors toward action. Examples include:",
+        "\uD83D\uDC14 Blue Chicken \u2014 playful brand page with interactive elements\n\u2615 Warm Brew \u2014 cozy coffee brand showcase\n\uD83D\uDC8E Fine Jewelry \u2014 luxury aesthetic with refined typography\n\uD83C\uDF3F Solace \u2014 calm, wellness-focused layout",
+        "Every page is fully responsive and hand-coded from scratch."
       ],
-      chips: ["Email Templates", "Premium Sites", "Let's Connect", "Start Over"]
+      chips: ["Email Development", "Premium Websites", "Get in Touch", "Start Over"]
     },
-    "Premium Sites": {
+    "Premium Websites": {
       messages: [
-        "Jen\u2019s premium builds include:",
-        "\uD83E\uDDD8 Therapy Multipage \u2014 responsive multipage site for therapy practices\n\u26F0\uFE0F SummitQuest \u2014 single-page adventure coaching layout\n\uD83D\uDE80 SaaS Agency \u2014 dark/light mode template for modern SaaS",
-        "These are full-featured, engineered for performance and conversion."
+        "Jen\u2019s premium website builds include:",
+        "\uD83E\uDDD8 Therapy Multipage \u2014 responsive site built for trust and conversion\n\u26F0\uFE0F SummitQuest \u2014 single-page coaching site with bold visuals\n\uD83D\uDE80 SaaS Agency \u2014 dark/light mode site for modern SaaS",
+        "These are full-featured, performance-optimized, and ready for real-world use."
       ],
-      chips: ["Email Templates", "Landing Pages", "Let's Connect", "Start Over"]
+      chips: ["Email Development", "Landing Pages", "Get in Touch", "Start Over"]
     },
-    "AI Engines": {
+    "AI Solutions": {
       messages: [
-        "Jen builds AI-powered engines that actually run \u2014 not just demos:",
-        "\uD83C\uDFB5 ColorTuneLyrics \u2014 a real-time neon lyric visualizer that syncs music, timing, and animation. It\u2019s live at colortunelyrics.com.\n\uD83D\uDCC8 Stock Market MCP Engine \u2014 an AI engine that monitors portfolio performance, analyzes market signals, and automates trades through a brokerage API.",
+        "Jen builds custom AI engines that actually run \u2014 not just demos:",
+        "\uD83C\uDFB5 ColorTuneLyrics \u2014 a live real-time lyric visualizer that syncs music, timing, and animation. Check it out at colortunelyrics.com.\n\uD83D\uDCC8 Stock Market MCP Engine \u2014 an AI engine that monitors portfolio performance, analyzes market signals, and automates trades.",
         "Both are live and running. Want to know more about either one?"
       ],
-      chips: ["ColorTuneLyrics", "Stock Market MCP", "My Work", "Start Over"]
+      chips: ["ColorTuneLyrics", "Stock Market MCP", "Services", "Start Over"]
     },
     ColorTuneLyrics: {
       messages: [
-        "ColorTuneLyrics is a real-time lyric visualizer that Jen built from scratch.",
-        "It syncs audio playback with animated sheet music and lyric display \u2014 AI powers the coordination between audio analysis, timing, and dynamic visual effects.",
-        "It\u2019s live right now at colortunelyrics.com \u2014 you can scroll up to the AI Engines section and launch it!"
+        "ColorTuneLyrics is a live AI-powered lyric visualizer that Jen built from scratch.",
+        "It syncs audio playback with animated sheet music and lyric display \u2014 AI coordinates audio analysis, timing, and dynamic visual effects in real time.",
+        "It\u2019s live at colortunelyrics.com \u2014 scroll up to the AI Engines section to launch it!"
       ],
-      chips: ["Stock Market MCP", "AI Engines", "Let's Connect", "Start Over"]
+      chips: ["Stock Market MCP", "AI Solutions", "Get in Touch", "Start Over"]
     },
     "Stock Market MCP": {
       messages: [
-        "The Stock Market MCP Engine is an AI-powered system that Jen built to autonomously manage a portfolio.",
-        "It connects to a brokerage API to monitor positions like SPY, GLD, TSLA, and KO \u2014 analyzing market signals and executing trades in real time.",
-        "The dashboard is private, but you can see a screenshot of it in action in the AI Engines section above."
+        "The Stock Market MCP Engine is a custom AI system that Jen built to autonomously manage a portfolio.",
+        "It connects to a brokerage API to monitor positions, analyze market signals, and execute trades in real time.",
+        "The dashboard is private, but you can see a screenshot in the AI Engines section above."
       ],
-      chips: ["ColorTuneLyrics", "AI Engines", "Let's Connect", "Start Over"]
+      chips: ["ColorTuneLyrics", "AI Solutions", "Get in Touch", "Start Over"]
     },
-    "Let's Connect": {
+    "Get in Touch": {
       messages: [
-        "I\u2019d love for you to reach out!",
-        "The best way to connect with Jen is via email:"
+        "Great \u2014 let\u2019s get the conversation started!",
+        "The best way to reach Jen is by email:"
       ],
       email: true,
-      chips: ["About Me", "My Work", "Availability", "Start Over"]
+      chips: ["Services", "See Examples", "Availability", "Start Over"]
     },
     Availability: {
       messages: [
-        "Jen is currently available for freelance projects, creative partnerships, and strategic collaborations.",
-        "If you have a project in mind, don\u2019t hesitate to reach out!"
+        "Jen is currently taking on new projects \u2014 from single email builds to full website packages.",
+        "If you have something in mind, reach out and let\u2019s talk about scope, timeline, and budget."
       ],
-      chips: ["Let's Connect", "About Me", "My Work", "Start Over"]
+      chips: ["Get in Touch", "Services", "See Examples", "Start Over"]
     }
   };
 
