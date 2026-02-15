@@ -725,10 +725,12 @@ section { padding: 5rem 2rem; }
 
 .engine-image {
   width: 100%;
+  height: 240px;
   border-radius: 10px;
   margin-bottom: 1.25rem;
   border: 1px solid #E8E8E4;
   object-fit: cover;
+  object-position: top;
 }
 
 .engine-card h3 {
