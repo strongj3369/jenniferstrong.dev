@@ -158,12 +158,12 @@ document.querySelectorAll('[data-template-preview]').forEach(el => {
   });
 });
 
-// Track ExtendedCode waitlist CTA
-document.querySelectorAll('[data-waitlist]').forEach(el => {
+// Track AI Engine preview clicks
+document.querySelectorAll('.engine-card [data-template-preview]').forEach(el => {
   el.addEventListener('click', () => {
-    gtag('event', 'waitlist_click', {
-      event_category: 'CTA',
-      event_label: 'ExtendedCode Waitlist'
+    gtag('event', 'ai_engine_click', {
+      event_category: 'engagement',
+      event_label: el.getAttribute('data-template-preview')
     });
   });
 });
