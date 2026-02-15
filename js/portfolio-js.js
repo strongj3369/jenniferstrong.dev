@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const moveAmount = currentIndex * getCardWidth();
     sliderTrack.style.transform = `translateX(-${moveAmount}px)`;
     updateDots();
-    updateButtons();
   }
   
   // Update active dot
@@ -39,30 +38,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
   
-  // Update button disabled states
-  function updateButtons() {
-    prevButton.disabled = currentIndex === 0;
-    nextButton.disabled = currentIndex >= totalSlides - 1;
-    prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
-    nextButton.style.opacity = nextButton.disabled ? '0.5' : '1';
-    prevButton.style.cursor = prevButton.disabled ? 'not-allowed' : 'pointer';
-    nextButton.style.cursor = nextButton.disabled ? 'not-allowed' : 'pointer';
-  }
-  
-  // Go to next slide
+  // Go to next slide (loops back to first)
   function nextSlide() {
-    if (currentIndex < totalSlides - 1) {
-      currentIndex++;
-      updateSlider();
-    }
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateSlider();
   }
-  
-  // Go to previous slide
+
+  // Go to previous slide (loops to last)
   function prevSlide() {
-    if (currentIndex > 0) {
-      currentIndex--;
-      updateSlider();
-    }
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateSlider();
   }
   
   // Go to specific slide

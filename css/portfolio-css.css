@@ -425,12 +425,12 @@ section { padding: 5rem 2rem; }
 
 
 
-.slider-container { 
-  position: relative; 
-  max-width: 450px; 
-  margin: 0 auto; 
+.slider-container {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
   padding: 0;
-  z-index: 1; 
+  z-index: 1;
 }
 
 .slider-wrapper { 
@@ -618,8 +618,8 @@ section { padding: 5rem 2rem; }
 
 @media screen and (min-width: 1024px) {
   .slider-card {
-    flex: 0 0 450px;
-    max-width: 450px;
+    flex: 0 0 650px;
+    max-width: 650px;
   }
 }
 
