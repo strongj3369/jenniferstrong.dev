@@ -9,67 +9,75 @@
     },
     Services: {
       messages: [
-        "Jen offers four core services:",
-        "\u2709\uFE0F Email Development \u2014 responsive HTML emails that look great in every inbox\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused pages built for results\n\uD83D\uDC8E Premium Websites \u2014 full multipage sites engineered for performance\n\uD83E\uDD16 AI Solutions \u2014 custom engines and automations that solve real problems",
+        "Jen works across four areas \u2014 here\u2019s the quick rundown:",
+        "\u2709\uFE0F Email Development \u2014 hand-coded emails that land right in every inbox\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 pages designed to keep visitors scrolling and clicking\n\uD83D\uDC8E Premium Websites \u2014 complete sites built for speed, mobile, and results\n\uD83E\uDD16 AI Solutions \u2014 intelligent systems that run and make decisions on their own",
         "Want to see examples of any of these?"
       ],
       chips: ["Email Development", "Landing Pages", "Premium Websites", "AI Solutions", "Start Over"]
     },
     "See Examples": {
       messages: [
-        "Jen\u2019s work spans four areas:",
-        "\u2709\uFE0F Email Development \u2014 responsive, brand-aligned emails for real-world inboxes\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 conversion-focused layouts with personality\n\uD83D\uDC8E Premium Websites \u2014 full multipage builds engineered for performance\n\uD83E\uDD16 AI Solutions \u2014 live automated systems powered by AI",
+        "Jen\u2019s work covers four categories:",
+        "\u2709\uFE0F Email Development \u2014 pixel-perfect emails tested across every major client\n\uD83D\uDDA5\uFE0F Landing Pages \u2014 eye-catching pages that guide visitors to take action\n\uD83D\uDC8E Premium Websites \u2014 polished multi-page builds ready for the real world\n\uD83E\uDD16 AI Solutions \u2014 smart engines doing real work behind the scenes",
         "Scroll up to explore them, or pick a category below!"
       ],
       chips: ["Email Development", "Landing Pages", "Premium Websites", "AI Solutions", "Start Over"]
     },
     "Email Development": {
       messages: [
-        "Jen builds responsive HTML emails engineered for 90+ email clients and devices. Here are some examples:",
-        "\u2708\uFE0F Flight Booking Promo \u2014 urgency-driven airline email\n\uD83C\uDFB5 Arts Fest Invite \u2014 bold event invitation\n\uD83D\uDCE6 Transactional Receipt \u2014 clean order confirmation\n\u2708\uFE0F Travel Promo \u2014 aspirational travel email",
-        "Each one is table-based for maximum inbox compatibility."
+        "Jen hand-codes every email from scratch \u2014 no drag-and-drop builders, no templates. Here are a few:",
+        "\u2708\uFE0F Flight Booking Promo \u2014 gets people clicking with a time-sensitive offer layout\n\uD83C\uDFB5 Arts Fest Invite \u2014 high-energy event email that turns heads in any inbox\n\uD83D\uDCE6 Transactional Receipt \u2014 the kind of order confirmation that actually builds brand trust\n\u2708\uFE0F Travel Promo \u2014 makes you want to pack a bag the second you open it",
+        "All of them are tested across 90+ email clients to make sure nothing breaks."
       ],
       chips: ["Landing Pages", "Premium Websites", "Get in Touch", "Start Over"]
     },
     "Landing Pages": {
       messages: [
-        "Jen designs and builds landing pages that guide visitors toward action. Examples include:",
-        "\uD83D\uDC14 Blue Chicken \u2014 playful brand page with interactive elements\n\u2615 Warm Brew \u2014 cozy coffee brand showcase\n\uD83D\uDC8E Fine Jewelry \u2014 luxury aesthetic with refined typography\n\uD83C\uDF3F Solace \u2014 calm, wellness-focused layout",
-        "Every page is fully responsive and hand-coded from scratch."
+        "Every landing page Jen builds is designed to keep people on the page \u2014 and then take action. Here are a few:",
+        "\uD83D\uDC14 Blue Chicken \u2014 fun brand energy with a layout that keeps you exploring\n\u2615 Warm Brew \u2014 the kind of page that makes you crave a cup just by looking at it\n\uD83D\uDC8E Fine Jewelry \u2014 high-end feel with every detail in the right place\n\uD83C\uDF3F Solace \u2014 soft, calming design that puts visitors at ease",
+        "All hand-coded, no page builders, and fully responsive on every screen size."
       ],
       chips: ["Email Development", "Premium Websites", "Get in Touch", "Start Over"]
     },
     "Premium Websites": {
       messages: [
-        "Jen\u2019s premium website builds include:",
-        "\uD83E\uDDD8 Therapy Multipage \u2014 responsive site built for trust and conversion\n\u26F0\uFE0F SummitQuest \u2014 single-page coaching site with bold visuals\n\uD83D\uDE80 SaaS Agency \u2014 dark/light mode site for modern SaaS",
-        "These are full-featured, performance-optimized, and ready for real-world use."
+        "Jen\u2019s premium builds are full websites \u2014 not just pages, but complete experiences:",
+        "\uD83E\uDDD8 Therapy Multipage \u2014 a multi-page site that makes visitors feel safe enough to reach out\n\u26F0\uFE0F SummitQuest \u2014 high-energy one-pager that gets coaching clients fired up\n\uD83D\uDE80 SaaS Agency \u2014 clean, modern site with theme switching built right in",
+        "Everything is built for speed, mobile-first, and designed to convert."
       ],
       chips: ["Email Development", "Landing Pages", "Get in Touch", "Start Over"]
     },
     "AI Solutions": {
       messages: [
-        "Jen builds custom AI engines that actually run \u2014 not just demos:",
-        "\uD83C\uDFB5 ColorTuneLyrics \u2014 a live real-time lyric visualizer that syncs music, timing, and animation. Check it out at colortunelyrics.com.\n\uD83D\uDCC8 Stock Market MCP Engine \u2014 an AI engine that monitors portfolio performance, analyzes market signals, and automates trades.",
-        "Both are live and running. Want to know more about either one?"
+        "This is where Jen goes beyond the browser \u2014 building systems that think, react, and run on their own:",
+        "\uD83C\uDFB5 ColorTuneLyrics \u2014 a music experience that brings lyrics to life on screen in real time.\n\uD83D\uDCC8 Stock Market MCP Engine \u2014 an autonomous trading system wired into a live brokerage.\n\uD83D\uDCDE Nicole AI \u2014 a complete AI sales pipeline from first conversation to booked appointment.",
+        "All three are built. Want the details on any of them?"
       ],
-      chips: ["ColorTuneLyrics", "Stock Market MCP", "Services", "Start Over"]
+      chips: ["ColorTuneLyrics", "Stock Market MCP", "Nicole AI", "Start Over"]
     },
     ColorTuneLyrics: {
       messages: [
-        "ColorTuneLyrics is a live AI-powered lyric visualizer that Jen built from scratch.",
-        "It syncs audio playback with animated sheet music and lyric display \u2014 AI coordinates audio analysis, timing, and dynamic visual effects in real time.",
-        "It\u2019s live at colortunelyrics.com \u2014 scroll up to the AI Engines section to launch it!"
+        "ColorTuneLyrics is Jen\u2019s most visual build \u2014 a full music experience running live at colortunelyrics.com.",
+        "Pick a song and the whole screen lights up \u2014 lyrics scroll in time, sheet music follows along, and the visuals react to every beat.",
+        "It\u2019s live right now \u2014 scroll up to the AI Engines section to try it!"
       ],
-      chips: ["Stock Market MCP", "AI Solutions", "Get in Touch", "Start Over"]
+      chips: ["Stock Market MCP", "Nicole AI", "Get in Touch", "Start Over"]
     },
     "Stock Market MCP": {
       messages: [
-        "The Stock Market MCP Engine is a custom AI system that Jen built to autonomously manage a portfolio.",
-        "It connects to a brokerage API to monitor positions, analyze market signals, and execute trades in real time.",
+        "The Stock Market MCP Engine is Jen\u2019s most technical build \u2014 an AI that manages real money.",
+        "It watches the market around the clock, spots opportunities, makes decisions, and places trades through a real brokerage account \u2014 all without human input.",
         "The dashboard is private, but you can see a screenshot in the AI Engines section above."
       ],
-      chips: ["ColorTuneLyrics", "AI Solutions", "Get in Touch", "Start Over"]
+      chips: ["ColorTuneLyrics", "Nicole AI", "Get in Touch", "Start Over"]
+    },
+    "Nicole AI": {
+      messages: [
+        "Nicole AI is Jen\u2019s take on a fully automated sales pipeline \u2014 built to handle outreach from start to finish.",
+        "It kicks off with a chatbot that screens potential leads and figures out if they\u2019re a good fit \u2014 then a voice AI agent picks up the phone, has the conversation, and books the call. Everything syncs through MCP tools and a live calendar.",
+        "The demo is private, but you can check out the dashboard in the AI Engines section above."
+      ],
+      chips: ["ColorTuneLyrics", "Stock Market MCP", "AI Solutions", "Start Over"]
     },
     "Get in Touch": {
       messages: [
