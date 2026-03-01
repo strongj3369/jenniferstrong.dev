@@ -118,9 +118,9 @@
         var bubble = document.createElement("div");
         bubble.className = "chat-bubble bot";
         var link = document.createElement("a");
-        link.href = "mailto:jstrong264@gmail.com";
+        link.href = "mailto:team@extendedcode.com";
         link.className = "chatbot-email-link";
-        link.textContent = "jstrong264@gmail.com";
+        link.textContent = "team@extendedcode.com";
         link.addEventListener("click", function () {
           if (typeof gtag === "function") {
             gtag("event", "email_click", {
