@@ -959,6 +959,13 @@ section { padding: 5rem 2rem; }
   pointer-events: none;
 }
 
+/* Allow disabled engine buttons (private demos) to register GA interest clicks
+   without becoming links — they stay non-navigating spans. */
+.engine-card .view-button.disabled[data-template-preview] {
+  pointer-events: auto;
+  cursor: default;
+}
+
 @media (max-width: 768px) {
   .ai-engines-grid {
     grid-template-columns: 1fr;
