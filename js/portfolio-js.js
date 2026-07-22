@@ -133,6 +133,16 @@ document.querySelectorAll('[data-cta]').forEach(el => {
   });
 });
 
+// Track top-nav section clicks
+document.querySelectorAll('.nav-link').forEach(el => {
+  el.addEventListener('click', () => {
+    gtag('event', 'nav_click', {
+      event_category: 'navigation',
+      event_label: el.textContent.trim()
+    });
+  });
+});
+
 // Track outbound template previews (Launch Preview buttons)
 document.querySelectorAll('[data-template-preview]').forEach(el => {
   el.addEventListener('click', () => {
